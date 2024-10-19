@@ -1,0 +1,76 @@
+{% extends 'web/base.html' %}
+{% load static %}
+{% block content %}
+<section class="mt5">
+    <div class="container pt-20">
+        <div class="section__title text-center mb-20">
+            <h2 class="title tg-svg">Upload you CV here </h2>
+            <p>Please upload your resume here , we will get back to you if we have something matching your interest </p>
+        </div>
+    </div>
+    <!-- cv-area -->
+    <section class="cv-area pt-20 pb-30 pattern_bg">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-xl-10 col-lg-10">
+                    <div class="faq-wrap">
+                        <div class="contact-card shadow-sm">
+                            <div class="contact-form-wrap border shadow p-5">
+
+                                <form class="ajax reload" action="" method="POST" enctype="multipart/form-data">
+                                    {% csrf_token %}
+                                    <div class="row">
+
+                                        <div class="col-12">
+                                            <div class="form-grp">
+                                                <label for="name">Name</label>
+                                                {{form.name}}
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-6">
+                                            <div class="form-grp">
+                                                <label for="email">Email</label>
+                                                {{form.email}}
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-6">
+                                            <div class="form-grp">
+                                                <label for="phone">Phone</label>
+                                                {{form.phone}}
+                                            </div>
+                                        </div>
+
+                                        <div class="col-12">
+                                            <div class="form-grp">
+                                                <label for="cv">Upload CV</label>
+                                                {{form.resume}}
+                                            </div>
+                                        </div>
+
+                                        <div class="col-12">
+                                            <div class="form-grp">
+                                                <label for="id_description">What kind of job you are looking for</label>
+                                                {{form.description}}
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="text-center">
+                                        <button type="submit" class="btn w-100 btn-primary">Submit Application</button>
+                                    </div>
+
+                                </form>
+                                <p class="ajax-response mb-0"></p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- cv-area-end -->
+</section>
+{% endblock content %}

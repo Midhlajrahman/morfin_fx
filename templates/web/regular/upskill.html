@@ -1,0 +1,29 @@
+{% extends 'web/base.html' %}
+{% load static %}
+{% block content %}
+<!-- upskill area -->
+<section class="upskill-area section-py-15-120">
+    <div class="container">
+        <div class="breadcrumb" class="fs-14">
+            <a href="{% url 'web:index' %}">Home / </a>
+            <a href="{% url 'web:regular' %}">Regular / </a>
+            <span class="text-green">Upskill</span>
+        </div>
+
+        <div class="banner-head">
+            <div class="head">Welcome back to upskill your trade practice </div>
+            <p>Elevate your Knowledge</p>
+        </div>
+        {% if instances %}
+        <div class="row justify-content-center pt-30">
+            <div class="col-xl-12">
+                <div class="faq-wrap">
+                    {% include 'web/includes/accordion.html' %}
+                </div>
+            </div>
+        </div>
+        {% endif %}
+    </div>
+</section>
+<!-- upskill area end-->
+{% endblock content %}

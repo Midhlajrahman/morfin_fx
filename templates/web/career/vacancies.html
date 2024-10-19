@@ -1,0 +1,141 @@
+{% extends 'web/base.html' %}
+{% load static %}
+{% block content %}
+<section class="mt5-area">
+    <div class="container pt-50">
+        <div class="section__title text-center mb-20">
+            <h2 class="title">Our current vacancies </h2>
+            <p>Unlock Your Potential: Join Our Team </p>
+        </div>
+    </div>
+    <!-- vacancies-area -->
+    <section class="vacancies-area section-py-15-120 pattern_bg">
+        <div class="container">
+            {% for instance in instances %}
+            <div class="faq-wrap career-wrap mb-20 border">
+                <div class="accordion">
+                    <div class="top-head">
+                        <span><b>{{instance.title}}</b> <span class="pl-15">{{instance.subtitle}}</span></span>
+                    </div>
+                    <div class="content">
+                        <span>Job description</span>
+                        <p>{{instance.description|linebreaksbr}}</p>
+                    </div>
+
+                    <div class="accordion-item p-0">
+                        <div id="collapse{{forloop.counter}}" class="accordion-collapse collapse">
+                            <div class="accordion-body p-0">
+
+                                {% if instance.responsibilities %}
+                                <div class="content">
+                                    <span>Responsibilities</span>
+                                    <p>{{instance.responsibilities|linebreaksbr}}</p>
+                                </div>
+                                {% endif %}
+
+                                {% if instance.skills %}
+                                <div class="content">
+                                    <span>Skills You Need</span>
+                                    <p>{{instance.skills|linebreaksbr}}</p>
+                                </div>
+                                {% endif %}
+
+                                {% if instance.key_skills %}
+                                <div class="content">
+                                    <span>Key Skills</span>
+                                    <p>{{instance.key_skills|linebreaksbr}}</p>
+                                </div>
+                                {% endif %}
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <hr>
+
+                    <div class="row card-end">
+                        <div class="col-xl-2 col-lg-2 col-md-4 col-sm-6 item" id="aaa">
+                            <div class="d-flex">
+                                <img src="{% static 'assets/img/assets/career/Work.svg' %}" alt="">
+                                <p>Experience</p>
+                            </div>
+                            <span>{{instance.experience}}</span>
+                        </div>
+                        <div class="col-xl-2 col-lg-2 col-md-4 col-sm-6 item">
+                            <div class="d-flex">
+                                <img src="{% static 'assets/img/assets/career/Education.svg' %}" alt="">
+                                <p>Qualification</p>
+                            </div>
+                            <span>{{instance.qualification}}</span>
+                        </div>
+                        <div class="col-xl-2 col-lg-2 col-md-4 col-sm-6 item">
+                            <div class="d-flex">
+                                <img src="{% static 'assets/img/assets/career/user-check.svg' %}" alt="">
+                                <p>Role</p>
+                            </div>
+                            <span>{{instance.role}}</span>
+                        </div>
+                        <div class="col-xl-2 col-lg-2 col-md-4 col-sm-6 item">
+                            <div class="d-flex">
+                                <img src="{% static 'assets/img/assets/career/location.svg' %}" alt="">
+                                <p>Location</p>
+                            </div>
+                            <span>{{instance.location}}</span>
+                        </div>
+                        <div class="col-xl-2 col-lg-2 col-md-4 col-sm-6 item">
+                            <div class="d-flex">
+                                <img src="{% static 'assets/img/assets/career/server.svg' %}" alt="">
+                                <p>Department</p>
+                            </div>
+                            <span>{{instance.department}}</span>
+                        </div>
+                        <div class="col-xl-2 col-lg-2 col-md-4 col-sm-6 item">
+                            <div class="d-flex">
+                                <img src="{% static 'assets/img/assets/career/2 User.svg' %}" alt="">
+                                <p>Employment type</p>
+                            </div>
+                            <span>{{instance.employement_type}}</span>
+                        </div>
+                    </div>
+
+                    <div class="last justify-content-end d-flex align-items-center">
+                        <button class="accordion-button fs-13 fw-light expand_btn me-2" type="button"
+                            data-bs-toggle="collapse" data-bs-target="#collapse{{forloop.counter}}" aria-expanded="true"
+                            aria-controls="collapse{{forloop.counter}}">
+                            View More
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="none">
+                                <path stroke="#378400" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                    d="M11.083 4.958 6.999 9.043 2.916 4.959" />
+                            </svg>
+                        </button>
+                        <a href="{% url 'web:vacancies_application' instance.pk %}" class="btn btn-primary fs-13">
+                            Apply Now</a>
+                    </div>
+
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </section>
+    <!-- vacancies-area-end -->
+</section>
+{% endblock content %}
+
+
+{% block javascript %}
+<script>
+    const accordionButtons = document.querySelectorAll('.accordion-button');
+    const rotatedIcon = `<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="none"> <path stroke="#378400" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M11.083 4.958 6.999 9.043 2.916 4.959" /></svg>`
+    const icon = `<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="none"><path stroke="#378400" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M11.083 9.043 6.999 4.958 2.916 9.042"/></svg>`;
+
+    accordionButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            if (button.getAttribute('aria-expanded') === 'true') {
+                button.innerHTML = `View less ${icon}`;
+            } else {
+                button.innerHTML = `View more ${rotatedIcon}`;
+            }
+        });
+    });
+</script>
+{% endblock %}

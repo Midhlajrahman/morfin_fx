@@ -1,0 +1,75 @@
+{% extends 'web/base.html' %}
+{% load static %}
+{% block content %}
+<!-- share_story area -->
+<section class="share_story-area section-py-15-120">
+    <div class="container">
+        <div class="breadcrumb" class="fs-14">
+            <a href="{% url 'web:index' %}">Home / </a>
+            <a href="{% url 'web:stories' %}"> Stories / </a>
+            <span class="text-green">Share Story</span>
+        </div>
+
+        <div class="row justify-content-center pt-40">
+            <div class="col-12">
+                <div class="faq-wrap">
+                    <div class="contact-card shadow-sm">
+                        <div class="contact-form-wrap border shadow p-5">
+                            <h4 class="title mb-4 fw-bold">Share Your Story</h4>
+                            <form action="" method="POST" class="form ajax redirect" enctype="multipart/form-data"
+                                data-redirect="{% url 'web:ib_testimonials' %}">
+                                {% csrf_token%}
+
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-grp">
+                                            <label for="name">Name</label>
+                                            {{form.name}}
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-grp">
+                                            <label for="designation">Country/City</label>
+                                            {{form.city}}
+                                        </div>
+                                    </div>
+                                    <div class="form-grp">
+                                        <label for="photo">Upload your photo</label>
+                                        {{form.photo}}
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-grp">
+                                            <label for="email">Email</label>
+                                            {{form.email}}
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-grp">
+                                            <label for="mt5_account">MT5 account Number </label>
+                                            {{form.mt5_account}}
+                                        </div>
+                                    </div>
+                                    <div class="form-grp">
+                                        <label for="content">Share your story / testimonial</label>
+                                        {{form.content}}
+                                    </div>
+                                    <div class="form-grp">
+                                        <label for="video">Attach video testimonial (optional)</label>
+                                        {{form.video}}
+                                    </div>
+                                </div>
+                                <div class="text-center">
+                                    <button type="submit" class="btn btn-primary">Submit </button>
+                                </div>
+
+                            </form>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- share_story area end-->
+{% endblock content %}

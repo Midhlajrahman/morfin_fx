@@ -1,0 +1,207 @@
+{% extends 'web/base.html' %}
+{% load static %}
+{% block content %}
+
+<div class="breadcrumb">
+    <div class="container">
+        <a href="{% url 'web:index' %}">Home / </a>
+        <span class="text-green">Partner</span>
+    </div>
+</div>
+
+<!-- partner area -->
+<section class="partner-area section_padding_lg" data-background="{% static 'assets/img/assets/home_pattern.png' %}">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-5 col-xl-5">
+                <div class="fact__item d-flex justify-content-between" style="background: #FFF7E8;">
+                    <div class="fact__content" style="padding: 25px;">
+                        <p>I am a</p>
+                        <h3>Partner</h3>
+                    </div>
+                    <div class="fact__img">
+                        <img src="{% static 'assets/img/gif/partner.gif' %}" alt="img">
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-7 col-xl-7 right-content">
+                <h6>We are glad to shake hands with you </h6>
+                <p class="pt-10">
+                    We extend a warm welcome as we join forces with you. Your partnership brings us immense joy, and
+                    together, we are poised to achieve remarkable feats. At every step, our collaboration will be the
+                    cornerstone of success and innovation.
+                </p>
+            </div>
+        </div>
+
+        <div class="row pt-40">
+
+            <div class="col-xl-4 col-lg-4">
+                <a href="{% url 'web:grow_with_us' %}">
+                    <div class="item_card">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="left d-flex align-items-center">
+                                <div class="me-3">
+                                    <i class="circle">
+                                        <img src="{% static 'assets/img/assets/Partner/growus.svg' %}" alt="shield">
+                                    </i>
+                                </div>
+                                <div>
+                                    <h6>Grow with us</h6>
+                                    <p>Nurture Growth Together</p>
+                                </div>
+                            </div>
+                            <div>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
+                                    viewBox="0 0 20 20">
+                                    <path stroke="#000" stroke-linecap="round" stroke-linejoin="round"
+                                        stroke-width="1.5" d="M7.083 4.167 12.916 10l-5.833 5.834" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="col-xl-4 col-lg-4">
+                <a href="https://my.morfinfx.com/en/login">
+                    <div class="item_card">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="left d-flex align-items-center">
+                                <div class="me-3">
+                                    <i class="circle">
+                                        <img src="{% static 'assets/img/assets/Partner/dashboard.svg' %}" alt="shield">
+                                    </i>
+                                </div>
+                                <div>
+                                    <h6>IB dashboard</h6>
+                                    <p>Partner Performance Insights</p>
+                                </div>
+                            </div>
+                            <div>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
+                                    viewBox="0 0 20 20">
+                                    <path stroke="#000" stroke-linecap="round" stroke-linejoin="round"
+                                        stroke-width="1.5" d="M7.083 4.167 12.916 10l-5.833 5.834" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="col-xl-4 col-lg-4">
+                <a href="{% url 'web:profit_calculator' %}">
+                    <div class="item_card">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="left d-flex align-items-center">
+                                <div class="me-3">
+                                    <i class="circle">
+                                        <img src="{% static 'assets/img/assets/Partner/profitcalculator.svg' %}"
+                                            alt="shield">
+                                    </i>
+                                </div>
+                                <div>
+                                    <h6>Income Calculator</h6>
+                                    <p>Calculate Potential Profits</p>
+                                </div>
+                            </div>
+                            <div>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
+                                    viewBox="0 0 20 20">
+                                    <path stroke="#000" stroke-linecap="round" stroke-linejoin="round"
+                                        stroke-width="1.5" d="M7.083 4.167 12.916 10l-5.833 5.834" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="col-xl-4 col-lg-4">
+                <a href="{% url 'web:partner_updates' %}">
+                    <div class="item_card">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="left d-flex align-items-center">
+                                <div class="me-3">
+                                    <i class="circle">
+                                        <img src="{% static 'assets/img/assets/Partner/updates.svg' %}" alt="shield">
+                                    </i>
+                                </div>
+                                <div>
+                                    <h6>Updates</h6>
+                                    <p>IB News Stream</p>
+                                </div>
+                            </div>
+                            <div>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
+                                    viewBox="0 0 20 20">
+                                    <path stroke="#000" stroke-linecap="round" stroke-linejoin="round"
+                                        stroke-width="1.5" d="M7.083 4.167 12.916 10l-5.833 5.834" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="col-xl-4 col-lg-4">
+                <a href="{% url 'web:ib_testimonials' %}">
+                    <div class="item_card">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="left d-flex align-items-center">
+                                <div class="me-3">
+                                    <i class="circle">
+                                        <img src="{% static 'assets/img/assets/Partner/ibtestimonials.svg' %}"
+                                            alt="shield">
+                                    </i>
+                                </div>
+                                <div>
+                                    <h6>IB Testimonials</h6>
+                                    <p>Partner Success Stories</p>
+                                </div>
+                            </div>
+                            <div>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
+                                    viewBox="0 0 20 20">
+                                    <path stroke="#000" stroke-linecap="round" stroke-linejoin="round"
+                                        stroke-width="1.5" d="M7.083 4.167 12.916 10l-5.833 5.834" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="col-xl-4 col-lg-4">
+                <a href="https://my.morfinfx.com/en/login">
+                    <div class="item_card">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="left d-flex align-items-center">
+                                <div class="me-3">
+                                    <i class="circle">
+                                        <img src="{% static 'assets/img/assets/Partner/helpdesk.svg' %}" alt="shield">
+                                    </i>
+                                </div>
+                                <div>
+                                    <h6>Helpdesk</h6>
+                                    <p>Support Whenever Needed</p>
+                                </div>
+                            </div>
+                            <div>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
+                                    viewBox="0 0 20 20">
+                                    <path stroke="#000" stroke-linecap="round" stroke-linejoin="round"
+                                        stroke-width="1.5" d="M7.083 4.167 12.916 10l-5.833 5.834" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+        </div>
+    </div>
+</section>
+<!-- partner area end-->
+{% endblock content %}

@@ -1,0 +1,39 @@
+{% extends 'web/base.html' %}
+{% load static %}
+
+
+{% block content %}
+
+<div class="breadcrumb">
+    <div class="container">
+        <a href="/">Home / </a>
+        <span class="text-green">Awards</span>
+    </div>
+</div>
+
+<section class="learn-area section_padding_xl">
+    <div class="container">
+        <div class="banner-head">
+            <div class="head">Awards & Recognitions </div>
+            <p>Elevating Excellence Everywhere</p>
+        </div>
+
+        <div class="row justify-content-center row-cols-2 row-cols-md-3 pt-30">
+            {% for award in awards %}
+            <div class="col-sm-6 wow fadeInLeft" data-wow-duration="2s">
+                <div class="categories__item imge_hover_zoom_in">
+                    <div class="text-center">
+                        <img src="{{award.image.url}}"
+                            style="width:200px;height:200px;object-fit: contain;" alt="{{award.award_name}}">
+                    </div>
+                    <h4 class="award-title">{{award.title}}</h4>
+                    <span class="courses">{{award.award_name}}</span>
+                </div>
+            </div>
+            {% endfor %}
+            
+        </div>
+    </div>
+</section>
+
+{% endblock %}

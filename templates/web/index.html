@@ -1,0 +1,281 @@
+{% extends 'web/base.html' %}
+{% load static %}
+
+
+{% block content %}
+<!-- slider-area -->
+<section class="slider-area">
+    <div class="slider__active">
+
+        {% comment %}
+        <div class="slider__item d-flex" data-background="{% static 'assets/img/assets/slider/home_1.webp' %}">
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-6 col-lg-6 col-md-5 col-5">
+                        <div class="large_text_container">
+                            <span class="large_text count_value" id="counter_1">0</span>
+                        </div>
+                    </div>
+                    <div class="col-xl-6 col-lg-6 col-md-5 col-6">
+                        <div class="slider__content slider_content__2">
+                            <h5 class="text-white fs-24">This Week</h5>
+                            <h4 class="title tg-svg">
+                                <span class="text-green" id="counter_2">0 </span>
+                                <span class="text-white" id="counter_text">Accounts Opened</span>
+                            </h4>
+                            <span class="fs-20 text-white fw-bold">Still Counting ...</span>
+                            <div class=" block mt-3">
+                                <a href="https://my.morfinfx.com/en/register" class=" btn slider_btn">
+                                    <span class="text me-2">Create Account</span>
+                                    <i class="fa fa-arrow-right wow shake" data-wow-iteration="infinite"
+                                        data-wow-duration="10000ms"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        {% endcomment %}
+
+        <div class="slider__item d-flex" data-background="{% static 'assets/img/assets/slider/home_3.webp' %}">
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-6 col-lg-6 col-md-5 col-2"></div>
+                    <div class="col-xl-6 col-lg-6 col-md-7 col-10">
+                        <div class="slider__content slider_content__2 top-50">
+                            <p class="text-white fs-26">Step into the world's largest financial market</p>
+                            <a href="https://my.morfinfx.com/en/register" class=" btn slider_btn mt-3">
+                                <span class="text me-2">Create Account</span>
+                                <i class="fa fa-arrow-right wow shake" data-wow-iteration="infinite"
+                                    data-wow-duration="10000ms"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        {% comment %}
+        <div class="slider__item d-flex" data-background="{% static 'assets/img/assets/slider/home_4.webp' %}"
+            style="background-position: 70% 0;">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-xl-6 col-lg-6 col-md-5 col-7">
+                        <div class="slider__content ceo_content">
+                            <h2 class="title " data-animation-in="slideInRight" data-delay-in=".2"
+                                data-duration-in="1.5">
+                                <span class="text-white">Explore & Enjoy</span> <br>
+                                <span>Learning through Online</span>
+                            </h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="slider__item d-flex" data-background="{% static 'assets/img/assets/slider/home_5.png' %}">
+            <div class="container">
+                <div class="slider__content">
+                    <h2 class=" title" data-animation-in="slideInLeft" data-delay-in=".1" data-duration-in="1">
+                        <span class="position-relative text-green"> Fast </span> execution
+                    </h2>
+                    <h2 class=" title" data-animation-in="slideInLeft" data-delay-in=".2" data-duration-in="1">
+                        <span class="position-relative text-green">Zero balance </span> account
+                        activation
+                    </h2>
+                    <h2 class=" title" data-animation-in="slideInLeft" data-delay-in=".3" data-duration-in="1">
+                        <span class="position-relative text-green">Fastest </span> withdrawal
+                    </h2>
+                </div>
+            </div>
+        </div>
+
+        <div class="slider__item d-flex" data-background="{% static 'assets/img/assets/slider/home8.png' %}" style="background-position: 50% center;">
+            <div class="container">
+                <div class="slider__content">
+                    <h2 class=" title" data-animation-in="slideInLeft" data-delay-in=".1" data-duration-in="1">
+                        <span class="position-relative"> Fastest Withdrawal & Deposit  </span>  
+                    </h2>
+                    <h2 class=" title" data-animation-in="slideInLeft" data-delay-in=".2" data-duration-in="1">
+                        <span class="position-relative text-green">Award  Winner</span> 
+                    </h2>
+                    <h2 class=" title" data-animation-in="slideInLeft" data-delay-in=".3" data-duration-in="1">
+                        <span class="position-relative">at Money Expo 2023 Mumbai</span>
+                    </h2>
+                </div>
+            </div>
+        </div>
+
+        <div class="slider__item d-flex" data-background="{% static 'assets/img/assets/slider/home_7.png' %}">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-6 col-lg-6 col-md-5 col-5"></div>
+                    <div class="col-xl-6 col-lg-6 col-md-5 col-7">
+                        <div class="slider__content ceo_content">
+
+                            <h2 class="title " data-animation-in="slideInRight" data-delay-in=".2"
+                                data-duration-in="1.5">
+                                <span class="text-green"><span class="quete_span"> "</span>Survival, Stability,<br>
+                                    Success & Significance </span><br> through Forex Trading "
+                            </h2>
+                            <ul class="list-wrap" data-animation-in="slideInLeft" data-delay-in=".6"
+                                data-duration-in="1.5">
+                                <li>
+                                    <h4 class="text_black fs-20 m-0">Ibnu Jala </h4>
+                                </li>
+                                <li class="text_black">Founder and CEO MorfinFX</li>
+
+                            </ul>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endcomment %}
+
+
+    </div>
+</section>
+
+<!-- slider-area-end -->
+<div id="stats">
+    <iframe
+        src="https://s.tradingview.com/embed-widget/ticker-tape/?locale=in#%7B%22symbols%22%3A%5B%7B%22proName%22%3A%22FOREXCOM%3ASPXUSD%22%2C%22title%22%3A%22S%26P%20500%22%7D%2C%7B%22proName%22%3A%22FOREXCOM%3ANSXUSD%22%2C%22title%22%3A%22US%20100%22%7D%2C%7B%22proName%22%3A%22FX_IDC%3AEURUSD%22%2C%22title%22%3A%22EUR%2FUSD%22%7D%2C%7B%22proName%22%3A%22BITSTAMP%3ABTCUSD%22%2C%22title%22%3A%22Bitcoin%22%7D%2C%7B%22description%22%3A%22ether%22%2C%22proName%22%3A%22CRYPTOCAP%3AETH%22%7D%5D%2C%22showSymbolLogo%22%3Atrue%2C%22colorTheme%22%3A%22dark%22%2C%22isTransparent%22%3Atrue%2C%22displayMode%22%3A%22adaptive%22%2C%22width%22%3A%22100%25%22%2C%22height%22%3A44%2C%22utm_source%22%3A%22morfinfx.com%22%2C%22utm_medium%22%3A%22widget%22%2C%22utm_campaign%22%3A%22ticker-tape%22%2C%22page-uri%22%3A%22morfinfx.com%2F%22%7D"
+        frameborder="0"></iframe>
+</div>
+
+{% include 'web/includes/get_started.html' %}
+
+<!-- registered countries -->
+<section class="section_padding_md wow fadeInRight" data-wow-duration="5s">
+    <div class="section__title text-center mb-30">
+        <h2 class="title tg-svg">Our Global Clients </h2>
+        <p>Strong & growing client base across the world</p>
+    </div>
+    <div class="text-center" id="chartdiv"></div>
+</section>
+<!-- registered countries end-->
+
+<!-- Award Area -->
+<section class="award  section_padding_md pattern_bg" id="award">
+    <div class="container">
+        <div class="section__title text-center wow fadeInDown" data-wow-duration="2s">
+            <h2 class="title">Awards & Recognitions </h2>
+            <p>Elevating Excellence Everywhere</p>
+        </div>
+        <div class="row justify-content-center row-cols-2 row-cols-md-3 pt-30">
+            {% for award in awards %}
+            <div class="col-sm-6 col-12 wow fadeInLeft" data-wow-duration="2s">
+                <div class="categories__item imge_hover_zoom_in">
+                    <div class="text-center">
+                        <img src="{{award.image.url}}"
+                            style="width:200px;height:200px;object-fit: contain;" alt="">
+                    </div>
+                    <h4 class="award-title">{{award.title}}</h4>
+                    <span class="courses">{{award.award_name}}</span>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+
+</section>
+<!-- Award Area-end -->
+
+<section class="stories-area section_padding_md">
+    <div class="container">
+
+        <div class="banner-head">
+            <div class="head text_black">Morfin Stories</div>
+            <p>Explore our Narratives</p>
+        </div>
+
+        <div class="row justify-content-center mab">
+            <div class="col-xl-12">
+                <div class="testimonial-active">
+                    {% for instance in instances %}
+                    <div class="testimonial__item">
+                        <div class="testimonial__quote">
+                            <img src="{{instance.photo.url}}" style="border-radius:50%" alt="icon">
+                        </div>
+
+                        <p><span>“</span> {{instance.content}} <span>“</span></p>
+                        <div class="testimonial__avatar">
+                            <h4 class="name">{{instance.name}}</h4>
+                            <span class="designation">{{instance.city}}</span>
+                        </div>
+                    </div>
+                    {% endfor%}
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+{% endblock %}
+
+
+{% block js_plugins %}
+{% include 'web/includes/map_script.html' %}
+{% endblock %}
+
+{% block javascript %}
+<script>
+    // Array containing data for counting animations
+    const data = [
+        {
+            startNumber: 850,
+            endNumber: 868,
+            text: "Trade Accounts Opened"
+        },
+        {
+            startNumber: 226,
+            endNumber: 236,
+            text: "K $ Deposits"
+        },
+        {
+            startNumber: 146,
+            endNumber: 156,
+            text: "K $ Withdrawals"
+        }
+    ];
+
+    // Function to count from startNumber to endNumber and update the element text
+    function runCounter(startNumber, endNumber, elementId, text) {
+        let currentNumber = startNumber;
+        const element = document.getElementById(elementId);
+        const interval = setInterval(() => {
+            element.textContent = currentNumber;
+            currentNumber++;
+            if (currentNumber > endNumber) {
+                clearInterval(interval);
+            }
+        }, 10); // Adjust the interval duration as needed
+    }
+
+    // Loop over the data array infinitely
+    function loopDataInfinite() {
+        let currentIndex = 0;
+        setInterval(() => {
+            const currentItem = data[currentIndex];
+            runCounter(currentItem.startNumber, currentItem.endNumber, "counter_1");
+            runCounter(currentItem.startNumber, currentItem.endNumber, "counter_2");
+            document.getElementById("counter_text").textContent = currentItem.text;
+            currentIndex = (currentIndex + 1) % data.length;
+        }, 2000); // Change data every 3 seconds, adjust as needed
+    }
+
+    // Start the initial counting and infinite data loop
+    loopDataInfinite();
+
+</script>
+{% endblock %}

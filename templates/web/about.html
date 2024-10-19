@@ -1,0 +1,414 @@
+{% extends 'web/base.html' %}
+{% load static %}
+{% block content %}
+
+
+<section class="slider-area">
+    <div class="slider__active">
+
+        <div class="slider__item d-flex" data-background="{% static 'assets/img/assets/slider/about_1.png' %}"
+            style="background-position: top center;">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-6 col-lg-8">
+                        <div class="slider__content">
+                            <h2 class=" title" data-animation-in="slideInLeft" data-delay-in=".1" data-duration-in="1">
+                                <span class="position-relative text-green">
+                                    Dedicated Team of
+                                </span><br>
+                                Passionate Professionals
+                            </h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="slider__item d-flex" data-background="{% static 'assets/img/assets/slider/about_2.png' %}"
+            style="background-position: center;">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-6 col-lg-6 col-md-6 col-6"></div>
+                    <div class="col-xl-6 col-lg-6 col-md-6 col-6">
+                        <div class="slider__content pl-30 ceo_content">
+
+                            <h2 class="title " data-animation-in="slideInRight" data-delay-in=".2"
+                                data-duration-in="1.5">
+                                <span class="text-green">
+                                    Welcome To </span><br> Financial
+                                Freedom Future
+                            </h2>
+                            <ul class="list-wrap" data-animation-in="slideInLeft" data-delay-in=".6"
+                                data-duration-in="1.5">
+                                <li>
+                                    <h4 class="text_black fs-20 m-0" data-animation-in="slideInLeft" data-delay-in=".6"
+                                        data-duration-in="1.5">Ibnu Jala </h4>
+                                </li>
+                                <li class="text_black">
+                                    <p data-animation-in="slideInLeft" data-delay-in=".6" data-duration-in="1.5">
+                                        Founder and CEO MorfinFX</p>
+                                </li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="slider__item d-flex" data-background="{% static 'assets/img/assets/slider/about_3.png' %}"
+            style="background-position: center;">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-6 col-lg-4 col-md-6 col-12">
+                        <div class="slider__content">
+                            <h2 class="title">Our <span class="text-green">Global</span> Clients</h2>
+                            <p class="sub_title">Strong & growing client <br> base across the world</p>
+                        </div>
+                    </div>
+                    <div class="col-xl-6 col-lg-8 col-md-6 col-0"></div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+<!-- slider-area-end -->
+
+<!-- stand-area -->
+<section class="stand-area section_padding_md pattern_bg pb-0">
+
+    <div class="section__title text-center mb-30">
+        <h2 class="title tg-svg">We Stand With</h2>
+    </div>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-6 col-xl-6 wow fadeInLeft" data-wow-delay="0.1s"
+                style="visibility: visible; -webkit-animation-delay: 0.1s; -moz-animation-delay: 0.1s; animation-delay: 0.1s;">
+                <div class="categories__item stand_item">
+                    <a href="javascript:void(0);" class="shadow">
+                        <div class="d-flex justify-content-start align-items-center">
+                            <i> <img src="{% static 'assets/img/assets/sheild.gif' %}" width="80% " alt=""></i>
+                            <h4>Trust & Transparency</h4>
+                        </div>
+                        <span class="courses pt-10 text-start">
+                            Transparency is something we strive for both internally
+                            and outside. Active two-way communication with peers is enabled through transparency, which
+                            allows for the exchange of ideas and viewpoints, as well as the development of mutual
+                            respect and
+                            trust.
+                        </span>
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-6 col-xl-6 wow fadeInLeft" data-wow-delay="0.1s"
+                style="visibility: visible; -webkit-animation-delay: 0.1s; -moz-animation-delay: 0.1s; animation-delay: 0.1s;">
+                <div class="categories__item stand_item">
+                    <a href="javascript:void(0);" class="shadow">
+                        <div class="d-flex justify-content-start align-items-center">
+                            <i> <img src="{% static 'assets/img/assets/agility.gif' %}" width="80%" alt=""></i>
+                            <h4>Agility</h4>
+                        </div>
+                        <span class="courses pt-10 text-start">In the face of evolving industry trends, business
+                            conditions, and customer needs, our personnel are adaptive and thrive in their positions.
+                            The confidence to move forward is derived from previous experiences as well as newly
+                            acquired talents.
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-lg-6 col-xl-6 wow fadeInRight" data-wow-delay="0.1s"
+                style="visibility: visible; -webkit-animation-delay: 0.1s; -moz-animation-delay: 0.1s; animation-delay: 0.1s;">
+                <div class="categories__item stand_item border h-100 bg-white">
+                    <a href="javascript:void(0);" class="shadow-none">
+                        <i> <img src="{% static 'assets/img/assets/mission.gif'%}" width="80% " alt=""></i>
+                        <h2>Mission</h2>
+                        <span class="courses">
+                            To foster a prosperous community by educating the masses about cultivating rational and
+                            successful habits in the stock market. We are dedicated to supporting our Morfin Consortium
+                            members in their journey from success to significance, while cultivating a culture of
+                            profound learning that empowers our employees' holistic development and facilitates wealth
+                            creation.
+                        </span>
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-6 col-xl-6 wow fadeInRight" data-wow-delay="0.1s"
+                style="visibility: visible; -webkit-animation-delay: 0.1s; -moz-animation-delay: 0.1s; animation-delay: 0.1s;">
+                <div class="categories__item stand_item border h-100 bg-white">
+                    <a href="javascript:void(0);" class="shadow-none">
+                        <i> <img src="{% static 'assets/img/assets/vision.gif'%}" width="80% " alt=""></i>
+                        <h2>Vision</h2>
+                        <span class="courses">
+                            To cultivate a positive transformation that transcends national, cultural, and creed
+                            boundaries, while empowering diverse populations to lead lives that are peaceful, enriching,
+                            and characterized by happiness and well-being. Together, we envision a world where barriers
+                            dissolve, and the potential for collective growth knows no limits.
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- stand-area-end-->
+
+<!-- why choose -->
+<section class="stand-area section_padding_md pattern_bg">
+
+    <div class="section__title text-center mb-20">
+        <h2 class="title tg-svg">Why Morfin ?</h2>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <p class="text-center">
+                    Experience trading like never before by choosing Morfin FX as your ultimate broker destination.
+                    Renowned for its reliability and credibility, Morfin FX provides avant-garde technology, a
+                    competitive trading landscape, top-notch security measures, an
+                    extensive range of educational resources and support, diverse account options, seamless
+                    transactions, and a premier social trading platform. Highlighting Morfin FX's unwavering commitment
+                    to excellence and trader triumph, your decision to align with us guarantees a trading environment
+                    characterized by security, transparency, and steadfast support.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- why choose end-->
+
+<!-- founder message area -->
+<section class="liquidity section_padding_md wow fadeInDown " data-wow-duration="2s">
+    <div class="container">
+        <div class="section__title text-center mb-30">
+            <h2 class="title tg-svg">Message From Founder</h2>
+            <figure>
+                <figcaption class="fw-bold text-green">Ibnu Jala - Founder & CEO</figcaption>
+            </figure>
+        </div>
+        <div class="content">
+            <div class="row">
+                <div class="col-xl-4 col-lg-4  text-center position-relative">
+                    <a class="popup-youtube" href="https://www.youtube.com/watch?v=CqD4JDgCUY8">
+                        <figure>
+                            <img src="{% static 'assets/img/assets/faq_01.jpg' %}" alt="" class="brdr">
+                        </figure>
+
+                        <span class=" position-absolute" style="left: 50%; transform: translate(-50%, 0);top: 40%;">
+                            <svg width="58" height="58" viewBox="0 0 58 58" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="29" cy="29" r="29" fill="white" />
+                                <path
+                                    d="M36.5 28.634C37.1667 29.0189 37.1667 29.9811 36.5 30.366L25.25 36.8612C24.5833 37.2461 23.75 36.765 23.75 35.9952L23.75 23.0048C23.75 22.235 24.5833 21.7539 25.25 22.1388L36.5 28.634Z"
+                                    fill="#378400" />
+                            </svg>
+                        </span>
+                    </a>
+                </div>
+                <div class="col-xl-8 col-lg-8 founder_content">
+                    <p class="mb-2">
+                        At Morfin Fx, our drive stems from a profound aspiration to assist budding traders and
+                        entrepreneurs. Through our ingenious forex trading initiatives, we equip individuals of diverse
+                        expertise levels with the tools they need for profitable forex trading ventures, tailored to
+                        their investment capacities. Our cutting-edge technology platforms and expert guidance set the
+                        stage for success.
+                    </p>
+                    <p class="mb-2">
+                        Our mission is unequivocal: to empower people across the globe to attain financial triumph.
+                        Building on our extensive proficiency in trading, investing, and research in neuroscience, we
+                        extend unparalleled mentorship and guidance to those striving to shape their financial
+                        destinies.
+                    </p>
+                    <p class="mb-2">
+                        Via personalized mentorship, we tap into each individual's true potential, reshaping their
+                        financial prospects and unveiling a realm of possibilities.
+                    </p>
+                </div>
+                <div class="col-12">
+                    <p class="mb-2">
+                        Our impact knows no bounds; we inspire and embolden people from all walks of life worldwide. Our
+                        belief is that financial empowerment should be within everyone's reach, and our influence
+                        continues to expand, touching lives far and wide.
+                    </p>
+                    <p class="mb-2">
+                        Our mission extends beyond just monetary gains. We champion holistic growth, nurturing personal
+                        development and satisfaction. Our wisdom and experience stand as beacons for those aiming to
+                        excel in every facet of their lives.
+                    </p>
+                    <p class="mb-2">
+                        Embark with us on the journey to financial empowerment. Allow the passion, vision, and
+                        mentorship ethos of Morfin Fx to steer you towards realizing your aspirations and rewriting your
+                        financial narrative. United, we can unlock your latent potential and guide your passage towards
+                        enduring financial accomplishment.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- founder message end -->
+
+<!-- team area -->
+<section id="team" class="team section_padding_md pattern_bg">
+    <div class="container">
+
+        <div class="section__title text-center mb-20">
+            <h2 class="title tg-svg"> Our Dedicated Team</h2>
+            <p>Growing & Glowing Together Towards Bigger, Better & Brighter Financial Freedom Future </p>
+        </div>
+
+        <div class="content">
+            <div class="team_container">
+
+                {% for team in teams %}
+                <div class="popover__wrapper imge_hover_zoom_in team_card">
+                    <img class="popover__title" src="{{team.photo.url}}" alt="">
+                    <div class="popover__content">
+                        <h6>{{team.name}}</h6>
+                        <p class="popover__message">{{team.designation}}</p>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+
+</section>
+<!-- team area end-->
+{% comment %}
+<section class="section_padding_md">
+    <div class="section__title text-center mb-20">
+        <h2 class="title tg-svg">Regulated & Registered Countries</h2>
+        <p>Trusted Global Compliance</p>
+    </div>
+    <div class="container">
+        <img src="{% static 'assets/img/assets/main/regulated_contries.svg' %}?v=1.0" alt="">
+    </div>
+</section>
+
+<!-- liquidity area -->
+<section class="liquidity section_padding_md bg-light-green">
+    <div class="container">
+        <div class="section__title text-center mb-20">
+            <h2 class="title tg-svg">Liquidity Providers</h2>
+            <p>Elevating Your Trading Potential with Premium Liquidity Solution </p>
+        </div>
+        <div class="content pt-30">
+            <div class="row">
+                <div class="col-xl-3 col-lg-3 col-md-4 col-6">
+                    <div class="imge_hover_zoom_in client_card">
+                        <img src="{% static 'assets/img/assets/liquidityproviders/Bankofchina.png' %}"
+                            alt="liquidity Providers">
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-3 col-md-4 col-6">
+                    <div class="imge_hover_zoom_in client_card">
+                        <img src="{% static 'assets/img/assets/liquidityproviders/Bhfbank.png' %}"
+                            alt="liquidity Providers">
+                    </div>
+                </div>
+
+                <div class="col-xl-3 col-lg-3 col-md-4 col-6">
+                    <div class="imge_hover_zoom_in client_card">
+                        <img src="{% static 'assets/img/assets/liquidityproviders/DBS.png' %}"
+                            alt="liquidity Providers">
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-3 col-md-4 col-6">
+                    <div class="imge_hover_zoom_in client_card">
+                        <img src="{% static 'assets/img/assets/liquidityproviders/Dzbank.png' %}"
+                            alt="liquidity Providers">
+                    </div>
+                </div>
+
+                <div class="col-xl-3 col-lg-3 col-md-4 col-6">
+                    <div class="imge_hover_zoom_in client_card">
+                        <img src="{% static 'assets/img/assets/liquidityproviders/HSBC.png' %}"
+                            alt="liquidity Providers">
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-3 col-md-4 col-6">
+                    <div class="imge_hover_zoom_in client_card">
+                        <img src="{% static 'assets/img/assets/liquidityproviders/Mufg.png' %}"
+                            alt="liquidity Providers">
+                    </div>
+                </div>
+
+                <div class="col-xl-3 col-lg-3 col-md-4 col-6">
+                    <div class="imge_hover_zoom_in client_card">
+                        <img src="{% static 'assets/img/assets/liquidityproviders/Saxobank.png' %}"
+                            alt="liquidity Providers">
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-3 col-md-4 col-6">
+                    <div class="imge_hover_zoom_in client_card">
+                        <img src="{% static 'assets/img/assets/liquidityproviders/TheroyalbankofScotland.png' %}"
+                            alt="liquidity Providers">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- liquidity area end-->
+{% endcomment %}
+
+
+<section class="liquidity section_padding_md">
+    <div class="container">
+        <div class="content">
+            <div class="row">
+                <div class="section__title  col-lg-6 col-xl-6 wow fadeInLeft" data-wow-delay="0.5s"
+                    style="visibility: visible; -webkit-animation-delay: 0.1s; -moz-animation-delay: 0.1s; animation-delay: 0.1s;padding-right: 13%;">
+                    <h2 class="title tg-svg">Payment methods</h2>
+                    <p class="content_text">Seamless Transactions, Your Way: Choose Your Preferred Payment Method</p>
+                </div>
+                <div class="col-lg-6 col-xl-6 mt-20 wow fadeInRight" data-wow-delay="0.5s"
+                    style="visibility: visible; -webkit-animation-delay: 0.1s; -moz-animation-delay: 0.1s; animation-delay: 0.1s;">
+                    <div class="d-flex mb-20  justify-content-around" style="margin-left:10%; margin-right:10%">
+                        <div class="payment_img imge_hover_zoom_in">
+                            <img src="{% static 'assets/img/assets/payment_logo/Bitcoin.png' %} " alt="">
+                        </div>
+                        <div class="payment_img imge_hover_zoom_in">
+                            <img src="{% static 'assets/img/assets/payment_logo/Cryptocurrency.png' %}" alt="">
+                        </div>
+                        <div class="payment_img imge_hover_zoom_in">
+                            <img src="{% static 'assets/img/assets/payment_logo/Fiattransfer.png' %}" alt="">
+                        </div>
+
+                    </div>
+                    <div class="d-flex mb-20  justify-content-around">
+                        <div class="payment_img imge_hover_zoom_in">
+                            <img src="{% static 'assets/img/assets/payment_logo/Multipassaccount.png' %}" alt="">
+                        </div>
+                        <div class="payment_img imge_hover_zoom_in">
+                            <img src="{% static 'assets/img/assets/payment_logo/Nec.png' %}" alt="">
+                        </div>
+                        <div class="payment_img imge_hover_zoom_in">
+                            <img src="{% static 'assets/img/assets/payment_logo/Paypal.png' %}" alt="">
+                        </div>
+                        <div class="payment_img imge_hover_zoom_in">
+                            <img src="{% static 'assets/img/assets/payment_logo/Skrill.png' %}" alt="">
+                        </div>
+                    </div>
+                    <div class="d-flex mb-20  justify-content-around" style="margin-left:10%; margin-right:10%">
+                        <div class="payment_img imge_hover_zoom_in">
+                            <img src="{% static 'assets/img/assets/payment_logo/Stablecoins.png' %}" alt="">
+                        </div>
+                        <div class="payment_img imge_hover_zoom_in">
+                            <img src="{% static 'assets/img/assets/payment_logo/Tether.png' %}" alt="">
+                        </div>
+                        <div class="payment_img imge_hover_zoom_in">
+                            <img src="{% static 'assets/img/assets/payment_logo/tron.png' %}" alt="">
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

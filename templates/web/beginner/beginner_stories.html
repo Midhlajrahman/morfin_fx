@@ -1,0 +1,56 @@
+{% extends 'web/base.html' %}
+{% load static %}
+{% block content %}
+<!-- stories area -->
+<section class="stories-area section-py-15-120">
+    <div class="container">
+        <div class="breadcrumb" class="fs-14">
+            <a href="{% url 'web:index' %}">Home / </a>
+            <a href="{% url 'web:regular' %}">Beginner /</a>
+            <span class="text-green">Morfin Stories</span>
+        </div>
+
+        <div class="banner-head">
+            <div class="head text-black">Morfin Stories</div>
+            <p>Explore our Narratives</p>
+        </div>
+
+        <div class="row justify-content-center mab">
+            <div class="col-xl-12">
+                <div class="testimonial-active">
+                    {% for instance in instances %}
+                    <div class="testimonial__item">
+                        <div class="testimonial__quote">
+                            <img src="{{instance.photo.url}}" style="border-radius:50%" alt="icon">
+                        </div>
+
+                        <p><span>“</span> {{instance.content}} <span>“</span></p>
+                        <div class="testimonial__avatar">
+                            <h4 class="name">{{instance.name}}</h4>
+                            <span class="designation">{{instance.city}}</span>
+                        </div>
+                    </div>
+                    {% endfor%}
+                </div>
+
+                <div class="text-center">
+                    <div class="add_item">
+                        <a href="{% url 'web:share_beginner_testimonial' %}">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M13 5C13 4.44772 12.5523 4 12 4C11.4477 4 11 4.44772 11 5V11H5C4.44772 11 4 11.4477 4 12C4 12.5523 4.44772 13 5 13H11V19C11 19.5523 11.4477 20 12 20C12.5523 20 13 19.5523 13 19V13H19C19.5523 13 20 12.5523 20 12C20 11.4477 19.5523 11 19 11H13V5ZM13 11H11V13H13V11Z"
+                                    fill="black" />
+                                <path d="M13 11H11V13H13V11Z" fill="black" />
+                            </svg>
+                            <span class="text_black">Share your stories to earn trade bonus </span>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- stories area end-->
+{% endblock content %}

@@ -1,0 +1,36 @@
+{% extends 'web/base.html' %}
+{% load static %}
+{% block content %}
+<section class="mt5-web pattern_bg-bottom section_padding_xl">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-6 col-lg-6">
+                <div class="section__title text-center mb-20">
+                    <h2 class="title tg-svg">MT5 Web</h2>
+                </div>
+                <div class="content__image">
+                    <img src="{% static 'assets/img/assets/mt5/mt5_web.png' %}" alt="" style="width: auto;
+                    height: auto;">
+                </div>
+            </div>
+            <div class="col-xl-6 col-lg-6 mb-50">
+                <div class="content pt-100 pb-10">
+                    <h5 class="text_black">MetaTrader 5 Platform for PC</h5>
+                    <p>
+                        Developed in 2000 by MetaQuotes Software Corporation, the MetaTrader5 trading platform quickly
+                        became one of the most popular trading platforms globally. The MT5 platform is dynamic and user-
+                        friendly, providing traders with a vast range of features and tools.
+                    </p>
+                </div>
+                <a href="https://webtrading.morfinfx.com/" class="d-inline-block text-center mt-3" target="_blank">
+                    <div class="web_btn">
+                        <img src="{% static 'assets/img/assets/mt5/Group.svg' %}" alt="web" style="height: 16px;"
+                            class="me-2">
+                        <p class="text_black">Try web platform features</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock content %}

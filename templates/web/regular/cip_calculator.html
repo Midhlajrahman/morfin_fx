@@ -1,0 +1,155 @@
+{% extends 'web/base.html' %}
+{% load static %}
+{% block content %}
+<!-- updates area -->
+<section class="updates-area section-py-15-120">
+    <div class="container">
+        <div class="breadcrumb" class="fs-14">
+            <a href="{% url 'web:index' %}">Home / </a>
+            <a href="{% url 'web:regular' %}"> Regular / </a>
+            <span class="text-green">CIP Calculator</span>
+        </div>
+
+        <div class="banner-head">
+            <div class="head">CIP Calculator</div>
+            <p>Estimate Potential Earnings</p>
+        </div>
+
+        <div class="row mt-5">
+            <div class="col-md-2">
+                <div class="thumb">
+                    <img src="{% static 'assets/img/assets/main/Albert_Einstein_Head.jpg' %}" alt=""
+                        style="max-height: 255px;">
+                </div>
+            </div>
+            <div class="col-md-10">
+                <blockquote class="m-0">
+                    Compounding is the eighth wonder of the world. <br>
+                    He who understands it, earns it … <br>
+                    he who doesn’t … pays it. <br>
+                    <strong> - Albert Einstein</strong>
+                </blockquote>
+            </div>
+        </div>
+
+        <div class="row mt-5">
+            <div class="col-md-4">
+                <form id="calculator-form">
+                    <div class="mb-3">
+                        <label for="currency" class="form-label">Currency:</label>
+                        <select class="form-select" id="currency" required>
+                            <option value="$">$ USD</option>
+                            <option value="₹">₹ INR</option>
+                            <option value="AED">د.إ AED</option>
+                            <option value="€">€ EUR</option>
+                            <option value="£">£ GBP</option>
+                            <!-- Add more currencies as needed -->
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="principal" class="form-label">Principal Amount:</label>
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text currency-prefix">$</span>
+                            </div>
+                            <input type="number" class="form-control" id="principal" required value="5000">
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="rate" class="form-label">Profit Rate:</label>
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">%</span>
+                            </div>
+                            <input type="number" class="form-control" id="rate" required value="10">
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="years" class="form-label">Number of Years:</label>
+                        <div class="input-group mb-3">
+
+                            <select class="form-select" id="years" required>
+                                <option value="1">1 Year</option>
+                                <option value="2">2 Years</option>
+                                <option value="3">3 Years</option>
+                                <option value="4">4 Years</option>
+                                <option value="6">6 Years</option>
+                                <option value="7">7 Years</option>
+                                <option value="8">8 Years</option>
+                                <option value="9">9 Years</option>
+                                <option value="10">10 Years</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Calculate</button>
+                </form>
+            </div>
+            <div class="col-md-6">
+                <div class="result mt-3" id="result"></div>
+
+            </div>
+        </div>
+
+    </div>
+</section>
+<!-- updates area end-->
+{% endblock content %}
+
+{% block javascript %}
+<script>
+    $(document).ready(function () {
+        let selectedCurrency = $('#currency').val();
+
+        // Update input-group-text on currency change
+        $('#currency').change(function () {
+            selectedCurrency = $(this).val();
+            updatePrincipalInputPrefix();
+        });
+
+        function updatePrincipalInputPrefix() {
+            $('.input-group-text.currency-prefix').text(selectedCurrency);
+        }
+
+        $('#calculator-form').submit(function (e) {
+            e.preventDefault();
+            const principal = parseFloat($('#principal').val());
+            const rate = parseFloat($('#rate').val()) / 100;
+            const years = parseInt($('#years').val());
+            const currency = $('#currency').val(); // Get the selected currency
+
+            const compoundAmount = principal * Math.pow(1 + rate, years);
+            const profitEarned = compoundAmount - principal;
+            const allTimeRoR = ((compoundAmount - principal) / principal) * 100;
+
+            const formattedCompoundAmount = compoundAmount.toFixed(2);
+            const formattedProfitEarned = profitEarned.toFixed(2);
+            const formattedPrincipal = principal.toFixed(2);
+            const formattedAllTimeRoR = allTimeRoR.toFixed(2);
+
+            $('#result').html(`
+            <h2>Projection for ${years} Years</h2>
+            <div class="result_row row">
+                <div class="col-md-6">
+                    <p>Future investment value: <span>${currency} ${formattedCompoundAmount}</span></p>
+                </div>
+                <div class="col-md-6">
+                    <p>Total profit earned: <span>${currency} ${formattedProfitEarned}</span></p>
+                </div>
+                <div class="col-md-6">
+                    <p>Initial balance: <span>${currency} ${formattedPrincipal}</span></p>
+                </div>
+                <div class="col-md-6">
+                    <p>Profit rate (yearly): <span>${(rate * 100).toFixed(2)}%</span></p>
+                </div>
+                <div class="col-md-6">
+                    <p>All-time rate of Return (RoR): <span>${formattedAllTimeRoR}%</span></p>
+                </div>
+            </div>
+        `);
+        });
+    });
+
+
+</script>
+{% endblock %}

@@ -1,0 +1,75 @@
+{% extends 'web/base.html' %}
+{% load static %}
+
+
+{% block content %}
+
+<section class="learn-area section-py-15-120">
+    <div class="container">
+        <div class="breadcrumb">
+            <a href="/">Home / </a>
+            <span class="text-green">Upcoming Events</span>
+        </div>
+
+        <div class="banner-head mb-60">
+            <div class="head">Upcoming Events</div>
+            <p>Embrace Tomorrow's Happenings </p>
+        </div>
+
+        {% for instance in instances %}
+        <div class="faq-wrap career-wrap mb-20 border">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="faq-img brdr mb-2">
+                        <img src="{{instance.photo.url}}" alt="">
+                    </div>
+                </div>
+                <div class="col-md-8">
+                    <div class="top-head">
+                        <h4>{{instance.title}}</h4>
+                    </div>
+
+                    <div class="content">
+                        <p>{{instance.description}}</p>
+                    </div>
+
+                    <hr>
+
+                    <div class="row card-end">
+
+                        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 item mb-0">
+                            <div class="d-flex justify-contrnt-between">
+                                <img src="/static/assets/img/assets/career/location.svg" alt="">
+                                <p>Location</p>
+                            </div>
+                            <span>{{instance.venue}}</span>
+                        </div>
+
+                        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 item mb-0">
+                            <div class="d-flex justify-contrnt-between">
+                                <img src="/static/assets/img/assets/career/date.svg" alt="">
+                                <p>Date</p>
+                            </div>
+                            <span>{{instance.date}}</span>
+                        </div>
+
+                        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 item mb-0">
+                            <div class="d-flex justify-contrnt-between">
+                                <img src="/static/assets/img/assets/career/time.svg" alt="">
+                                <p>Time</p>
+                            </div>
+                            <span>{{instance.time}}</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+        {% endfor %}
+
+    </div>
+
+</section>
+
+{% endblock %}

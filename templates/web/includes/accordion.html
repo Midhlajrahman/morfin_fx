@@ -1,0 +1,96 @@
+<div class="accordion" id="accordionExample">
+    {% for instance in instances %}
+    {% if forloop.first %}
+    <div class="accordion-item">
+        <h2 class="accordion-header">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapse{{forloop.counter}}" aria-expanded="true"
+                aria-controls="collapse{{forloop.counter}}">
+                {% if instance.order %} {{instance.order}} . {% endif %}
+                {{instance.title}}
+            </button>
+        </h2>
+        <div id="collapse{{forloop.counter}}" class="accordion-collapse collapse show"
+            data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+                {% if instance.photo %}
+                <div class="row">
+                    <div class="col-lg-6 col-xl-6 position-relative">
+                        {% if instance.video_url %}
+                        <a class="popup-youtube" href="{{instance.video_url}}">
+                            <img src="{{instance.photo.url}}" alt="">
+                            <span class="position-absolute" style="left: 50%; transform: translate(-50%, 0);top: 40%;">
+                                <svg width="58" height="58" viewBox="0 0 58 58" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="29" cy="29" r="29" fill="white" />
+                                    <path
+                                        d="M36.5 28.634C37.1667 29.0189 37.1667 29.9811 36.5 30.366L25.25 36.8612C24.5833 37.2461 23.75 36.765 23.75 35.9952L23.75 23.0048C23.75 22.235 24.5833 21.7539 25.25 22.1388L36.5 28.634Z"
+                                        fill="#378400" />
+                                </svg>
+                            </span>
+                        </a>
+                        {% else %}
+                        <a class="" href="{{instance.photo.url}}">
+                            <img src="{{instance.photo.url}}" alt="">
+                        </a>
+                        {% endif %}
+                    </div>
+                    <div class="col-lg-6 col-xl-6">
+                        <p>{{instance.content}} </p>
+                    </div>
+                </div>
+                {% else %}
+                <div class="content">
+                    <p>{{instance.content|linebreaksbr}}</p>
+                </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+    {% else %}
+    <div class="accordion-item">
+        <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapse{{forloop.counter}}" aria-expanded="false"
+                aria-controls="collapse{{forloop.counter}}">
+                {% if instance.order %} {{instance.order}} . {% endif %}
+                {{instance.title}}
+            </button>
+        </h2>
+        <div id="collapse{{forloop.counter}}" class="accordion-collapse collapse " data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+                {% if instance.photo %}
+                <div class="row">
+                    <div class="col-lg-6 col-xl-6 position-relative">
+                        {% if instance.video_url %}
+                        <a class="popup-youtube" href="{{instance.video_url}}">
+                            <img src="{{instance.photo.url}}" alt="">
+                            <span class="position-absolute" style="left: 50%; transform: translate(-50%, 0);top: 40%;">
+                                <svg width="58" height="58" viewBox="0 0 58 58" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="29" cy="29" r="29" fill="white" />
+                                    <path
+                                        d="M36.5 28.634C37.1667 29.0189 37.1667 29.9811 36.5 30.366L25.25 36.8612C24.5833 37.2461 23.75 36.765 23.75 35.9952L23.75 23.0048C23.75 22.235 24.5833 21.7539 25.25 22.1388L36.5 28.634Z"
+                                        fill="#378400" />
+                                </svg>
+                            </span>
+                        </a>
+                        {% else %}
+                        <a class="" href="{{instance.photo.url}}">
+                            <img src="{{instance.photo.url}}" alt="">
+                        </a>
+                        {% endif %}
+                    </div>
+                    <div class="col-lg-6 col-xl-6">
+                        <p>{{instance.content}} </p>
+                    </div>
+                </div>
+                {% else %}
+                <p>{{instance.content}} </p>
+                {% endif%}
+            </div>
+        </div>
+    </div>
+    {% endif %}
+    {% endfor %}
+</div>

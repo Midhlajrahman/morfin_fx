@@ -1,0 +1,128 @@
+{% extends 'web/base.html' %}
+{% load static %}
+{% block content %}
+<!-- contact area -->
+
+<section class="contact-area section_padding_md pattern_bg">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="contact-info-wrap">
+                    <div class="content mb-5">
+                        <h2 class="title">Keep In Touch With Us</h2>
+                        <p>
+                            Stay Connected to us for Latest Updates and News
+                        </p>
+                    </div>
+
+                    <div class="contact-info-wrap">
+                        <ul class="list-wrap">
+                            <li>
+                                <div class="icon">
+                                    <i class="flaticon-pin-1"></i>
+                                </div>
+                                <div class="content">
+                                    <h6>Registered Address and Registration Number</h6>
+                                    <!-- <p class="mb-2">MORFIN FX LLC, P.B. 1257 Bonovo Road <br>
+                                        Fomboni, Comoros, KM 1539 LLC 2021
+                                    </p> -->
+                                    <p>
+                                        Morfin FX LLC, Suite 305 <br>
+                                        Griffith Corporate Centre, Beachmont <br>
+                                        Kingstown, St. Vincent and the Grenadines <br>
+                                        Licence No: 1539LLC2021
+                                    </p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="icon">
+                                    <i class="flaticon-pin-1"></i>
+                                </div>
+                                <div class="content">
+                                    <h6>Physical Marketing office address</h6>
+                                    <p> #201, Latifia Tower, Trade Center First <br>
+                                        Sheikh Zayed Road Dubai- UAE
+                                    </p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="icon">
+                                    <i class="flaticon-phone-call"></i>
+                                </div>
+                                <div class="content">
+                                    <h6>Phone</h6>
+                                    <a href="tel:+97143386699">+971 4 338 6699</a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="icon">
+                                    <i class="flaticon-conversation"></i>
+                                </div>
+                                <div class="content">
+                                    <h6>Whatsapp</h6>
+                                    <a href="https://wa.me/+971586259739">+971 5862 59739 </a>
+                                </div>
+                            </li>
+                            <li class="pb-30">
+                                <div class="icon">
+                                    <i class="flaticon-email"></i>
+                                </div>
+                                <div class="content">
+                                    <h6>Mail</h6>
+                                    <a href="mailto:support@morfinfx.com">support@morfinfx.com</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="contact-form-wrap border p-5 shadow">
+                    <h4 class="title">Don’t Hesitate to reach out</h4>
+                    <p class="pb-20">Just fill in the contact form here and we’ll be sure to reply as fast as possible
+                    </p>
+                    <form action="" method="POST" class="form ajax reload">
+                        {% csrf_token %}
+                        <div class="row">
+                            <div class="col-md-6 mb-2">
+                                <div class="form-grp">
+                                    <label for="">Name</label>
+                                    {{form.name}}
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-2">
+                                <div class="form-grp">
+                                    <label for="">Email</label>
+                                    {{form.email}}
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-2">
+                                <div class="form-grp">
+                                    <label for="">Phone</label>
+                                    {{form.phone}}
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-2">
+                                <div class="form-grp">
+                                    <label for="">Subject</label>
+                                    {{form.subject}}
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-grp">
+                            <label for="">Message</label>
+                            {{form.message}}
+                        </div>
+                        <div class="text-center">
+                            <button type="submit" class="btn btn-primary w-100">Send Message</button>
+                        </div>
+                    </form>
+                    <p class=" mb-0"></p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+<!-- contact area end-->
+{% endblock content %}

@@ -1,0 +1,210 @@
+{% extends 'web/base.html' %}
+{% load static %}
+{% block content %}
+<!-- beginner area -->
+<div class="breadcrumb">
+    <div class="container">
+        <a href="{% url 'web:index' %}">Home / </a>
+        <span class="text-green">Beginner</span>
+    </div>
+</div>
+
+
+<section class="beginner-area section_padding_lg" data-background="{% static 'assets/img/assets/home_pattern.png' %}">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-5 col-xl-5">
+                <div class="fact__item d-flex justify-content-between" style="background: #EBECFF;">
+                    <div class="fact__content" style="padding: 25px;">
+                        <p>I am a</p>
+                        <h3>Beginner</h3>
+                    </div>
+                    <div class="fact__img">
+                        <img src="{% static 'assets/img/gif/beginner.webp' %}" alt="img">
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-7 col-xl-7 right-content">
+                <h6>Welcome to the mighty world of financial market </h6>
+                <p>
+                    Step into the dynamic realm of the financial market, where opportunities abound and fortunes are
+                    shaped. Join us in exploring the exciting journey of trading, where every decision you make opens
+                    doors to a world of potential growth and success.
+                </p>
+            </div>
+        </div>
+
+        <div class="row pt-40">
+
+            <div class="col-xl-4 col-lg-4">
+                <a href="{% url 'web:learn' %}">
+                    <div class="item_card">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="left d-flex align-items-center">
+                                <div class="me-3">
+                                    <i class="circle">
+                                        <img src="{% static 'assets/img/assets/Beginner/learn.svg' %}" alt="shield">
+                                    </i>
+                                </div>
+                                <div>
+                                    <h6>Learn</h6>
+                                    <p>Unlock Your Potential</p>
+                                </div>
+                            </div>
+                            <div>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
+                                    viewBox="0 0 20 20">
+                                    <path stroke="#000" stroke-linecap="round" stroke-linejoin="round"
+                                        stroke-width="1.5" d="M7.083 4.167 12.916 10l-5.833 5.834" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="col-xl-4 col-lg-4">
+                <a href="{% url 'web:faq' %}">
+                    <div class="item_card">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="left d-flex align-items-center">
+
+                                <div class="me-3">
+                                    <i class="circle">
+                                        <img src="{% static 'assets/img/assets/Beginner/faq.svg' %}" alt="shield">
+                                    </i>
+                                </div>
+                                <div>
+                                    <h6>FAQ</h6>
+                                    <p>Answers Await You</p>
+                                </div>
+                            </div>
+                            <div>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
+                                    viewBox="0 0 20 20">
+                                    <path stroke="#000" stroke-linecap="round" stroke-linejoin="round"
+                                        stroke-width="1.5" d="M7.083 4.167 12.916 10l-5.833 5.834" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="col-xl-4 col-lg-4">
+                <a href="{% url 'web:beginner_stories' %}">
+                    <div class="item_card">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="left d-flex align-items-center">
+
+                                <div class="me-3">
+                                    <i class="circle">
+                                        <img src="{% static 'assets/img/assets/Regular/stories.svg' %}" alt="shield">
+                                    </i>
+                                </div>
+                                <div>
+                                    <h6>Testimonials</h6>
+                                    <p>Our Story Unveiled</p>
+                                </div>
+                            </div>
+                            <div>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
+                                    viewBox="0 0 20 20">
+                                    <path stroke="#000" stroke-linecap="round" stroke-linejoin="round"
+                                        stroke-width="1.5" d="M7.083 4.167 12.916 10l-5.833 5.834" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="col-xl-4 col-lg-4">
+                <a href="https://my.morfinfx.com/en/register" target="_blank">
+                    <div class="item_card">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="left d-flex align-items-center">
+
+                                <div class="me-3">
+                                    <i class="circle">
+                                        <img src="{% static 'assets/img/assets/Beginner/account.svg' %}" alt="shield">
+                                    </i>
+                                </div>
+                                <div>
+                                    <h6>Open an account</h6>
+                                    <p> Join Us Today</p>
+                                </div>
+                            </div>
+                            <div>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
+                                    viewBox="0 0 20 20">
+                                    <path stroke="#000" stroke-linecap="round" stroke-linejoin="round"
+                                        stroke-width="1.5" d="M7.083 4.167 12.916 10l-5.833 5.834" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="col-xl-4 col-lg-4">
+                <a href="https://my.morfinfx.com/en/register" target="_blank">
+                    <div class="item_card">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="left d-flex align-items-center">
+
+                                <div class="me-3">
+                                    <i class="circle">
+                                        <img src="{% static 'assets/img/assets/Beginner/demo.svg' %}" alt="shield">
+                                    </i>
+                                </div>
+                                <div>
+                                    <h6>Open Demo account</h6>
+                                    <p>Try Before Trading</p>
+                                </div>
+                            </div>
+                            <div>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
+                                    viewBox="0 0 20 20">
+                                    <path stroke="#000" stroke-linecap="round" stroke-linejoin="round"
+                                        stroke-width="1.5" d="M7.083 4.167 12.916 10l-5.833 5.834" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="col-xl-4 col-lg-4">
+                <a href="{% url 'web:download_app' %}">
+                    <div class="item_card">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="left d-flex align-items-center">
+
+                                <div class="me-3">
+                                    <i class="circle">
+                                        <img src="{% static 'assets/img/assets/Beginner/download.svg' %}" alt="shield">
+                                    </i>
+                                </div>
+                                <div>
+                                    <h6>Download App</h6>
+                                    <p>Get It Now</p>
+                                </div>
+                            </div>
+                            <div>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
+                                    viewBox="0 0 20 20">
+                                    <path stroke="#000" stroke-linecap="round" stroke-linejoin="round"
+                                        stroke-width="1.5" d="M7.083 4.167 12.916 10l-5.833 5.834" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+        </div>
+    </div>
+</section>
+<!-- beginner area end-->
+{% endblock content %}

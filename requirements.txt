@@ -1,0 +1,9 @@
+Django
+django-registration-redux
+psycopg2-binary
+python-decouple
+Pillow
+django-admin-interface
+django-import-export
+django-extensions
+django-ckeditor-5

@@ -1,0 +1,72 @@
+{% extends 'web/base.html' %}
+{% load static %}
+{% block content %}
+<!-- pdf-area -->
+
+<section class=" pdf-section section_padding_xl">
+    <div class="container">
+        <div class="section__title text-center mb-20">
+            <h2 class="title tg-svg">Partner Manual</h2>
+            <p>Your guide to expertise</p>
+        </div>
+    </div>
+    <div class="pb-50 pt-20">
+        <div class="container">
+            <div class="d-flex align-items-center justify-content-center flex-wrap">
+
+                <button class="btn border me-2 mb-2" id="pdfRenderer">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
+                        <path
+                            d="M11.5391 12.7886L11.5391 26.1219C11.5391 26.8123 12.0987 27.3719 12.7891 27.3719H16.9557C17.6461 27.3719 18.2057 27.9316 18.2057 28.6219C18.2057 29.3123 17.6461 29.8719 16.9557 29.8719H12.7891C10.718 29.8719 9.03906 28.193 9.03906 26.1219V12.7886C9.03906 10.7175 10.718 9.03857 12.7891 9.03857H26.1224C28.1935 9.03857 29.8724 10.7175 29.8724 12.7886V16.9552C29.8724 17.6456 29.3127 18.2052 28.6224 18.2052C27.932 18.2052 27.3724 17.6456 27.3724 16.9552V12.7886C27.3724 12.0982 26.8127 11.5386 26.1224 11.5386L12.7891 11.5386C12.0987 11.5386 11.5391 12.0982 11.5391 12.7886Z"
+                            fill="black" />
+                        <path
+                            d="M19.8861 18.2817C19.429 18.1141 18.9161 18.2271 18.5719 18.5714C18.2276 18.9157 18.1146 19.4285 18.2822 19.8856L22.8655 32.3856C23.0322 32.8402 23.4465 33.1577 23.9288 33.2004C24.4112 33.2431 24.8748 33.0034 25.1188 32.5851L27.8697 27.8693L32.5856 25.1183C33.0039 24.8743 33.2436 24.4107 33.2009 23.9284C33.1582 23.446 32.8407 23.0317 32.3861 22.865L19.8861 18.2817Z"
+                            fill="black" />
+                    </svg> Click here to preview
+                </button>
+
+                <a href="{% static 'assets/files/beginners-guide.pdf' %}" download class="btn border me-2 mb-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
+                        <path d="M20 24.1667L20 11.25" stroke="black" stroke-width="2.5" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                        <path d="M28.75 28.75L11.25 28.75" stroke="black" stroke-width="2.5" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                        <path d="M25 19.1665L20 24.1665L15 19.1665" stroke="black" stroke-width="2.5"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>Click here to download
+                </a>
+
+            </div>
+
+            <div id="adobe-dc-view" class="mt-4"></div>
+
+            <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+            <script type="text/javascript">
+                document.addEventListener("adobe_dc_view_sdk.ready", function () {
+                    document.querySelector("#pdfRenderer").addEventListener("click", function () {
+                        document.getElementById("adobe-dc-view").style.height = "90vh";
+                        var adobeDCView = new AdobeDC.View({ clientId: "9d5d070c89d944449fe1a61d4b78c112", divId: "adobe-dc-view" });
+                        adobeDCView.previewFile({
+                            content: { location: { url: "{% static 'assets/files/beginners-guide.pdf' %}" } },
+                            metaData: { fileName: "Manual PDF" }
+                        }, {
+                            defaultViewMode: "SIZED_CONTAINER", showAnnotationTools: false, showDownloadPDF: false,
+                            showPrintPDF: false
+                        });
+                    });
+                });
+            </script>
+
+        </div>
+    </div>
+    <div class="pb-50">
+        <div style="position:relative;padding-top:0;width:100%;height:800px;"><iframe
+                style="position:absolute;border:none;width:100%;height:100%;left:0;top:0;"
+                src="https://online.fliphtml5.com/cpbqx/ljiv/" seamless="seamless" scrolling="no" frameborder="0"
+                allowtransparency="true" allowfullscreen="true">
+            </iframe>
+        </div>
+    </div>
+</section>
+<!-- pdf-area-end -->
+{% endblock content %}

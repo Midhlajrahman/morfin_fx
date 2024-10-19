@@ -1,0 +1,29 @@
+{% extends 'web/base.html' %}
+{% load static %}
+{% block content %}
+<!-- updates area -->
+<section class="updates-area section-py-15-120">
+    <div class="container">
+        <div class="breadcrumb" class="fs-14">
+            <a href="{% url 'web:index' %}">Home / </a>
+            <a href="{% url 'web:regular' %}">Regular / </a>
+            <span class="text-green">Updates</span>
+        </div>
+
+        <div class="banner-head">
+            <div class="head">Updates in the Forex world </div>
+            <p>IB News Stream</p>
+        </div>
+        {% if instances %}
+        <div class="row justify-content-center pt-30">
+            <div class="col-xl-12">
+                <div class="faq-wrap update-wrap">
+                    {% include 'web/includes/accordion.html' %}
+                </div>
+            </div>
+        </div>
+        {% endif %}
+    </div>
+</section>
+<!-- updates area end-->
+{% endblock content %}

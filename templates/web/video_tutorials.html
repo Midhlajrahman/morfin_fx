@@ -1,0 +1,62 @@
+{% extends 'web/base.html' %}
+{% load static %}
+
+
+{% block content %}
+
+<section class="learn-area section-py-15-120">
+    <div class="container">
+        <div class="breadcrumb">
+            <a href="/">Home / </a>
+            <span class="text-green">Video Tutorials</span>
+        </div>
+
+        <div class="row justify-content-center mt-4">
+            <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 shine__animate-item">
+                <a href="{% url 'web:learn' %}">
+                    <div class="fact__item d-flex justify-content-between" style="background: #EBECFF;">
+                        <div class="fact__content">
+                            <p>I am a</p>
+                            <h3>Beginner</h3>
+                            <i class="fa fa-arrow-right"></i>
+                        </div>
+                        <div class="fact__img">
+                            <img src="{% static 'assets/img/gif/beginner.webp' %}" alt="img">
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 shine__animate-item">
+                <a href="{% url 'web:upskill' %}">
+                    <div class="fact__item d-flex justify-content-between" style="background: #E9FAE6;">
+                        <div class="fact__content">
+                            <p>I am a</p>
+                            <h3>Regular</h3>
+                            <i class="fa fa-arrow-right"></i>
+                        </div>
+                        <div class="fact__img">
+                            <img src="{% static 'assets/img/gif/regular.gif' %}" alt="img">
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 shine__animate-item">
+                <a href="{% url 'web:grow_with_us' %}">
+                    <div class="fact__item d-flex justify-content-between" style="background: #FFF7E8;">
+                        <div class="fact__content">
+                            <p>I am a</p>
+                            <h3>Partner</h3>
+                            <i class="fa fa-arrow-right"></i>
+                        </div>
+                        <div class="fact__img">
+                            <img src="{% static 'assets/img/gif/partner.gif' %}" alt="img">
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+{% endblock %}

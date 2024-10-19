@@ -1,0 +1,205 @@
+{% extends 'web/base.html' %}
+{% load static %}
+{% block content %}
+
+<div class="breadcrumb">
+    <div class="container">
+        <a href="{% url 'web:index' %}">Home / </a>
+        <span class="text-green">Regular</span>
+    </div>
+</div>
+
+<!-- regular area -->
+<section class="regular-area section_padding_lg" data-background="{% static 'assets/img/assets/home_pattern.png' %}">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-5 col-xl-5">
+                <div class="fact__item d-flex justify-content-between" style="background: #E9FAE6;">
+                    <div class="fact__content" style="padding: 25px;">
+                        <p>I am a</p>
+                        <h3>Regular</h3>
+                    </div>
+                    <div class="fact__img">
+                        <img src="{% static 'assets/img/gif/regular.gif' %}" alt="img">
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-7 col-xl-7 right-content">
+                <h6>Best wishes for your consistent growth with Morfin FX </h6>
+                <p class="pt-10">
+                    Commence on a journey of unwavering progress with Morfin FX. Our heartfelt best wishes accompany you
+                    as you stride towards consistent growth. With Morfin FX by your side, the path to success becomes an
+                    exciting adventure
+                </p>
+            </div>
+        </div>
+        <div class="row pt-40">
+
+            <div class="col-xl-4 col-lg-4">
+                <a href="{% url 'web:upskill' %}">
+                    <div class="item_card">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="left d-flex align-items-center">
+                                <div class="me-3">
+                                    <i class="circle">
+                                        <img src="{% static 'assets/img/assets/Regular/upskill.svg' %}" alt="shield">
+                                    </i>
+                                </div>
+                                <div>
+                                    <h6>Upskill</h6>
+                                    <p>Elevate Your Knowledge</p>
+                                </div>
+                            </div>
+                            <div>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
+                                    viewBox="0 0 20 20">
+                                    <path stroke="#000" stroke-linecap="round" stroke-linejoin="round"
+                                        stroke-width="1.5" d="M7.083 4.167 12.916 10l-5.833 5.834" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="col-xl-4 col-lg-4">
+                <a href="https://my.morfinfx.com/en/login">
+                    <div class="item_card">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="left d-flex align-items-center">
+                                <div class="me-3">
+                                    <i class="circle">
+                                        <img src="{% static 'assets/img/assets/Regular/helpdesk.svg' %}" alt="shield">
+                                    </i>
+                                </div>
+                                <div>
+                                    <h6>Help desk</h6>
+                                    <p>Expert Assistance Available</p>
+                                </div>
+                            </div>
+                            <div>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
+                                    viewBox="0 0 20 20">
+                                    <path stroke="#000" stroke-linecap="round" stroke-linejoin="round"
+                                        stroke-width="1.5" d="M7.083 4.167 12.916 10l-5.833 5.834" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="col-xl-4 col-lg-4">
+                <a href="https://my.morfinfx.com/en/login">
+                    <div class="item_card">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="left d-flex align-items-center">
+                                <div class="me-3">
+                                    <i class="circle">
+                                        <img src="{% static 'assets/img/assets/Regular/checkbonus.svg' %}" alt="shield">
+                                    </i>
+                                </div>
+                                <div>
+                                    <h6>Check your bonus</h6>
+                                    <p>Rewards Awaits You</p>
+                                </div>
+                            </div>
+                            <div>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
+                                    viewBox="0 0 20 20">
+                                    <path stroke="#000" stroke-linecap="round" stroke-linejoin="round"
+                                        stroke-width="1.5" d="M7.083 4.167 12.916 10l-5.833 5.834" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="col-xl-4 col-lg-4">
+                <a href="{% url 'web:updates' %}">
+                    <div class="item_card">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="left d-flex align-items-center">
+                                <div class="me-3">
+                                    <i class="circle">
+                                        <img src="{% static 'assets/img/assets/Regular/updates.svg' %}" alt="shield">
+                                    </i>
+                                </div>
+                                <div>
+                                    <h6>Updates</h6>
+                                    <p> Latest News Feed</p>
+                                </div>
+                            </div>
+                            <div>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
+                                    viewBox="0 0 20 20">
+                                    <path stroke="#000" stroke-linecap="round" stroke-linejoin="round"
+                                        stroke-width="1.5" d="M7.083 4.167 12.916 10l-5.833 5.834" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="col-xl-4 col-lg-4">
+                <a href="{% url 'web:stories'%}">
+                    <div class="item_card">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="left d-flex align-items-center">
+                                <div class="me-3">
+                                    <i class="circle">
+                                        <img src="{% static 'assets/img/assets/Regular/stories.svg' %}" alt="shield">
+                                    </i>
+                                </div>
+                                <div>
+                                    <h6>Stories</h6>
+                                    <p>Explore Our Narratives</p>
+                                </div>
+                            </div>
+                            <div>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
+                                    viewBox="0 0 20 20">
+                                    <path stroke="#000" stroke-linecap="round" stroke-linejoin="round"
+                                        stroke-width="1.5" d="M7.083 4.167 12.916 10l-5.833 5.834" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="col-xl-4 col-lg-4">
+                <a href="{% url 'web:cip_calculator' %}">
+                    <div class="item_card">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="left d-flex align-items-center">
+                                <div class="me-3">
+                                    <i class="circle">
+                                        <img src="{% static 'assets/img/assets/Regular/cpicalculator.svg' %}"
+                                            alt="shield">
+                                    </i>
+                                </div>
+                                <div>
+                                    <h6>CIP Calculator</h6>
+                                    <p>Estimate Potential Earnings</p>
+                                </div>
+                            </div>
+                            <div>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
+                                    viewBox="0 0 20 20">
+                                    <path stroke="#000" stroke-linecap="round" stroke-linejoin="round"
+                                        stroke-width="1.5" d="M7.083 4.167 12.916 10l-5.833 5.834" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+        </div>
+    </div>
+</section>
+<!-- regular area end-->
+{% endblock content %}

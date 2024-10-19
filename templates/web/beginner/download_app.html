@@ -1,0 +1,48 @@
+{% extends 'web/base.html' %}
+{% load static %}
+{% block content %}
+<!-- download area -->
+<section class="download-area section-py-15-120">
+    <div class="container">
+        <div class="breadcrumb" class="fs-14">
+            <a href="{% url 'web:index' %}">Home / </a>
+            <a href="{% url 'web:beginner' %}">Beginner / </a>
+            <a href="{% url 'web:stories' %}">Stories / </a>
+            <span class="text-green">Share Story</span>
+            <span class="text-green">Download App</span>
+        </div>
+
+        <div class="section__title text-center pt-40 mb-10">
+            <h2 class="title tg-svg">Download app compatible with your device</h2>
+        </div>
+
+        <div class="d-flex justify-content-center pt-30">
+            <div class="app_card">
+                <a href="https://download.mql5.com/cdn/mobile/mt5/ios?server=MorfinFX-MetaTrader5">
+                    <img src="{% static 'assets/img/assets/mt5/Group 36936.svg' %}" alt="Apple iOS">
+                    <p>Apple iOS</p>
+                </a>
+            </div>
+            <div class="app_card">
+                <a href="{% static 'assets/files/morfinfx5setup.exe' %}" download>
+                    <img src="{% static 'assets/img/assets/mt5/Group 36937.svg' %}" alt="Mac OS">
+                    <p>Mac OS</p>
+                </a>
+            </div>
+            <div class="app_card">
+                <a href="{% static 'assets/files/morfinfx5setup.exe' %}" download>
+                    <img src="{% static 'assets/img/assets/mt5/Group 36939.svg' %}" alt="Windows">
+                    <p>Windows</p>
+                </a>
+            </div>
+            <div class="app_card">
+                <a href="https://download.mql5.com/cdn/mobile/mt5/android?server=MorfinFX-MetaTrader5">
+                    <img src="{% static 'assets/img/assets/mt5/Group 36937 (1).svg' %}" alt="Android">
+                    <p>Android</p>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- download area end-->
+{% endblock content %}

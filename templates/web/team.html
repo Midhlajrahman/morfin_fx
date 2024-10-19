@@ -1,0 +1,35 @@
+{% extends 'web/base.html' %}
+{% load static %}
+
+
+{% block content %}
+
+<section class="learn-area section-py-15-120">
+    <div class="container">
+        <div class="breadcrumb">
+            <a href="/">Home / </a>
+            <span class="text-green">Team</span>
+        </div>
+
+        <div class="banner-head">
+            <div class="head">Our Dedicated Team</div>
+            <p>Growing & Glowing Together Towards Bigger, Better & Brighter Financial Freedom Future</p>
+        </div>
+
+        <div class="team_container">
+
+            {% for team in teams %}
+            <div class="popover__wrapper imge_hover_zoom_in team_card">
+                <img class="popover__title" src="{{team.photo.url}}" alt="">
+                <div class="popover__content">
+                    <h6>{{team.name}}</h6>
+                    <p class="popover__message">{{team.designation}}</p>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+
+    </div>
+</section>
+
+{% endblock %}

@@ -1,0 +1,338 @@
+{% load static %}
+<script src="{% static 'assets/js/amcharts/index.js' %}"></script>
+<script src="{% static 'assets/js/amcharts/map.js' %}"></script>
+<script src="{% static 'assets/js/amcharts/worldLow.js' %}"></script>
+<script src="{% static 'assets/js/amcharts/Animated.js' %}"></script>
+
+<script>
+    am5.ready(function () {
+
+        var root = am5.Root.new("chartdiv");
+        root.setThemes([
+            am5themes_Animated.new(root)
+        ]);
+
+        var chart = root.container.children.push(am5map.MapChart.new(root, {
+            panX: "rotateX",
+            panY: "rotateY",
+            projection: am5map.geoOrthographic(),
+            paddingBottom: 20,
+            paddingTop: 20,
+            paddingLeft: 20,
+            paddingRight: 20
+        }));
+
+        chart.animate({
+            key: "rotationX",
+            from: 360,
+            to: 0,
+            duration: 30000,
+            loops: Infinity
+        });
+
+
+        // Disable zooming on mouse scroll
+        chart.events.on("zoom", function () {
+            return false;
+        });
+
+        // Create series for background fill
+        var backgroundSeries = chart.series.push(
+            am5map.MapPolygonSeries.new(root, {})
+        );
+
+        backgroundSeries.mapPolygons.template.setAll({
+            fill: "#EAF5E2",
+            fillOpacity: 0.1,
+            strokeOpacity: 0
+        });
+
+        backgroundSeries.data.push({
+            geometry:
+                am5map.getGeoRectangle(90, 180, -90, -180)
+        });
+
+        // Create main polygon series for countries
+        let polygonSeries = chart.series.push(
+            am5map.MapPolygonSeries.new(root, {
+                geoJSON: am5geodata_worldLow,
+                exclude: ["AQ"]
+            })
+        );
+
+        polygonSeries.mapPolygons.template.setAll({
+            fill: "#3784004f",
+            fillOpacity: 0.15,
+            strokeWidth: 0.5,
+            stroke: "#EAF5E2"
+        });
+
+        // Create line series for trajectory lines
+        let lineSeries = chart.series.push(am5map.MapLineSeries.new(root, {}));
+        lineSeries.mapLines.template.setAll({
+            stroke: root.interfaceColors.get("alternativeBackground"),
+            strokeOpacity: 0.3
+        });
+
+        // Create point series for markers
+        let pointSeries = chart.series.push(am5map.MapPointSeries.new(root, {}));
+        let colorset = am5.ColorSet.new(root, {});
+
+        pointSeries.bullets.push(function () {
+            let container = am5.Container.new(root, {
+                tooltipText: "{title}",
+                cursorOverStyle: "pointer"
+            });
+
+
+            let circle = container.children.push(
+                am5.Circle.new(root, {
+                    radius: 4,
+                    tooltipY: 0,
+                    fill: am5.color("#378400"),
+                    strokeOpacity: 0
+                })
+            );
+            let circle2 = container.children.push(
+                am5.Circle.new(root, {
+                    radius: 4,
+                    tooltipY: 0,
+                    fill: am5.color("#378400"),
+                    strokeOpacity: 0,
+                    tooltipText: "{title}"
+                })
+            );
+            circle.animate({
+                key: "scale",
+                from: 1,
+                to: 5,
+                duration: 600,
+                easing: am5.ease.out(am5.ease.cubic),
+                loops: Infinity
+            });
+            circle.animate({
+                key: "opacity",
+                from: 1,
+                to: 0.1,
+                duration: 600,
+                easing: am5.ease.out(am5.ease.cubic),
+                loops: Infinity
+            });
+
+            return am5.Bullet.new(root, {
+                sprite: container
+            });
+        });
+
+        let cities = [
+            {
+                title: "Saudi Arabia",
+                longitude: 45.0792,
+                latitude: 23.8859,
+
+            },
+            {
+                title: "India",
+                latitude: 20.5937,
+                longitude: 78.9629,
+
+            },
+            {
+                title: "qatar",
+                longitude: 51.1839,
+                latitude: 25.3548,
+
+            },
+            {
+                title: "Oman",
+                longitude: 55.9754,
+                latitude: 21.4735,
+
+            },
+            {
+                title: "UAE",
+                longitude: 53.8478,
+                latitude: 23.4241,
+
+            },
+            {
+                title: "Bahrain",
+                longitude: 50.5577,
+                latitude: 26.0667,
+
+            },
+            {
+                title: "Iran",
+                longitude: 53.6880,
+                latitude: 32.4279,
+
+            },
+            {
+                title: "Jordan",
+                longitude: 36.2384,
+                latitude: 30.5852,
+
+            },
+            {
+                title: "Turkey",
+                longitude: 35.24333,
+                latitude: 38.9637,
+
+            },
+            {
+                title: "Kuwait",
+                longitude: 47.4818,
+                latitude: 29.3117,
+
+            },
+            {
+                title: "Azerbaijan",
+                longitude: 47.5769,
+                latitude: 40.1431,
+
+            },
+            {
+                title: "Georgia",
+                latitude: 42.3154,
+                longitude: 43.3569,
+
+            },
+            {
+                title: "Germany",
+                longitude: 10.4515,
+                latitude: 51.1657,
+
+            },
+            {
+                title: "UK",
+                longitude: -3.4360,
+                latitude: 55.3781,
+
+            },
+
+            {
+                title: "Morocco",
+                longitude: 7.0926,
+                latitude: 31.7917,
+
+            },
+            {
+                title: "Brazil",
+                longitude: -51.9253,
+                latitude: -14.2350,
+
+            },
+            {
+                title: "Mauritius",
+                longitude: 57.751242,
+                latitude: -20.350925,
+
+            },
+            {
+                title: "Comoros",
+                longitude: 43.3333,
+                latitude: -11.6455,
+
+            },
+            {
+                title: "Mexico",
+                latitude: 23.6345,
+                longitude: -102.5528,
+
+            },
+            {
+                title: "USA",
+                latitude: 37.0902,
+                longitude: -95.7129,
+            },
+            {
+                title: "Bahamas",
+                longitude: -77.3963,
+                latitude: 25.0343,
+
+            },
+            {
+                title: "Saint Vincent and the Grenadines",
+                longitude: -61.2872,
+                latitude: 12.9843,
+
+            },
+            {
+                title: "Russia",
+                longitude: 105.3188,
+                latitude: 61.5240,
+
+            },
+            {
+                title: "China",
+                longitude: 104.1954,
+                latitude: 35.8617,
+
+            },
+            {
+                title: "Hong Kong ",
+                longitude: 114.1694,
+                latitude: 22.3193,
+
+            },
+            {
+                title: "Vietnam",
+                longitude: 108.2772,
+                latitude: 14.0583,
+
+            },
+            {
+                title: "Thailand",
+                longitude: 100.9925,
+                latitude: 15.8700,
+
+            },
+            {
+                title: "Malaysia",
+                longitude: 101.9758,
+                latitude: 4.2105,
+
+            },
+            {
+                title: "Singapore",
+                longitude: 103.8198,
+                latitude: 1.3521,
+
+            },
+            {
+                title: "Indonesia",
+                longitude: 113.9213,
+                latitude: 0.7893,
+
+            },
+            {
+                title: "Vanuatu",
+                latitude: 166.9592,
+                longitude: -15.3767,
+
+            },
+            {
+                title: "Cyprus",
+                longitude: 33.4299,
+                latitude: 35.1264,
+
+            }
+        ];
+
+        for (var i = 0; i < cities.length; i++) {
+            let city = cities[i];
+            addCity(city.longitude, city.latitude, city.title);
+        }
+
+        function addCity(longitude, latitude, title) {
+            pointSeries.data.push({
+                geometry: { type: "Point", coordinates: [longitude, latitude] },
+                title: title
+            });
+        }
+
+        // Make stuff animate on load
+        chart.appear(1000, 100);
+
+    });
+</script>

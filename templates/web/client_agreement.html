@@ -1,0 +1,1189 @@
+{% extends 'web/base.html' %} {% load static %} {% block content %}
+<!-- policy area -->
+
+<section class="policy-area section_padding_md">
+    <div class="container text-justify">
+        <p>
+            <span style="font-size: large;"><strong>Client Agreement</strong></span>
+        </p>
+        <p>
+            <span style="font-size: medium;"><strong>1. Introduction:</strong></span>
+        </p>
+        <p>
+            This Client Agreement ("Agreement") is entered into by and between MORFIN FX LLC (hereinafter referred to as the "Company") and the Client, which may be a legal entity or a natural person (or persons) who has completed the
+            Application Form (hereinafter referred to as the "Client"). The Company is authorized and regulated by ST. VINCENT AND THE GRENADINES and holds License number 1539LLC2021.
+        </p>
+        <p>The registered office of the Company is located at SUITE NO &ndash; 305, GRIFFITH CORPORATE CENTRE, BEACH MOUNT, KINGSTON, ST. VINCENT AND THE GRENADINES.</p>
+        <p>This Agreement outlines the terms under which the Company will engage with the Client regarding Contracts for Difference (CFDs) based on specific underlying assets.</p>
+        <p>The Agreement governs CFD trading activities between the Client and the Company.</p>
+        <p>
+            <span style="font-size: medium;"><strong>2. Interpretation Of Terms</strong></span>
+        </p>
+        <p>The provided text defines certain terms used in an agreement. Here's the interpretation of these terms:</p>
+        <p>
+            <strong>Access Data</strong> refers to one or more user identification codes, digital certificates (if any), authentication codes, or any other information used on any device that allows the Client to access the Client Terminal.
+            This information may include a username, password, or the Client Account number. The term "Access Data" also encompasses any other information necessary for the Client to provide instructions, place orders, or make requests.
+        </p>
+        <p><strong>Account Type </strong>signifies the different types of accounts made available to the Client by the Company. These account types include the Classic Account, the Copy Trading Account, and/or the ECN/STP Account.</p>
+        <p>
+            <strong>Affiliate</strong> shall mean, to the Company, any entity that directly or indirectly controls or is controlled by the Company, or any entity directly or indirectly under common control with the Company; and "control"
+            means the power to direct or the authority to manage the affairs of the Company or any entity.
+        </p>
+        <p>
+            <strong>Agreement </strong>shall mean this Client Agreement and any amendments related to this agreement from time to time. This CFDs Client Agreement shall include, without limitation, the Complaint Handling Procedures, the
+            Withdrawal &amp; Refund Policy, Summary Order Execution Policy, Risk Warning, Conflict of Interest Policy, Privacy Notice, Website Terms and Conditions, Third-Party Disclosure Policy, and any other document published on the
+            Company's Website under the title 'Legal Documents,' which shall all be incorporated by reference and amended from time to time.
+        </p>
+        <p><strong>Applicable Rate </strong>refers to the interest rate used for specific purposes based on the currency of the Client Account. The Applicable Rate is defined as follows:</p>
+        <p>(a) If the Currency of the Client Account is US dollars, the Applicable Rate is the Federal Funds rate.</p>
+        <p>(b) If the Currency of the Client Account is Great British pounds, the Applicable Rate is the Bank of England Official Bank Rate.</p>
+        <p>(c) If the Currency of the Client Account is euros, the Applicable Rate is the European Central Bank (repo) Interest Rate.</p>
+        <p>
+            <strong>Application Form </strong>refers to the form or questionnaire completed by the Client, whether online, in hard copy, via email, or by any other means, to apply for the Company's services. The Application Form is used to
+            collect various information, including the Client's identification, due diligence, and categorization by the Applicable Regulations, under this Agreement.
+        </p>
+        <p><strong>Ask </strong>refers to the higher price in a Quote, and it represents the price at which the Client has the option to buy.</p>
+        <p>
+            <strong>Balance</strong> represents the total financial outcome on the Client Account at any given time, which takes into account the results of the most recent completed transaction as well as any deposit or withdrawal
+            operations.
+        </p>
+        <p><strong>Base Currency </strong>refers to the first currency in a Currency Pair, against which the Client either buys or sells the Quote Currency.</p>
+        <p><strong>Bid </strong>denotes the lower price in a Quote, and it's the price at which the Client has the option to sell.</p>
+        <p>
+            <strong>Client Account</strong> signifies a unique, personalized registration system that includes the Client's name, all Completed Transactions, Open Positions, Orders, and deposit/withdrawal transactions within the Online
+            Trading System, depending on the Account Type.
+        </p>
+        <p>
+            <strong>Client Categorization</strong> is the classification assigned by the Company to a Client based on information provided by the Client, and it aligns with the Applicable Regulations. Client classification typically falls
+            into one of the following categories: Retail Client, Professional Client, or an Eligible Counterparty.
+        </p>
+        <p>
+            <strong>Client Terminal</strong> represents the meta trader program version 5 or a later version, as well as any trading platforms (including web and mobile traders) used by the Client to access real-time financial market
+            information, perform technical analysis, conduct transactions, place/modify/delete orders, and receive notices from the Company, while also keeping records of transactions.
+        </p>
+        <p><strong>Company Bank Account </strong>is any bank account maintained by the Company to receive funds from the Client. This bank account may be located in a jurisdiction different from where the Company is regulated.</p>
+        <p><strong>Completed Transaction</strong> refers to a pair of counter deals of the same size. It involves opening a position, such as buying, and then closing the position, such as selling, or vice versa.</p>
+        <p><strong>Contract for Difference</strong> or <strong>CFD</strong> represents a contract that derives its value from the variations in the price of an Underlying Asset.</p>
+        <p>
+            <strong>Contract Specifications</strong> are the key trading terms for CFDs, including aspects like the spread, swaps, lot size, initial margin, hedged margin, etc. These specifications are determined by the Company and may
+            change over time.
+        </p>
+        <p><strong>Currency of the Client Account</strong> is the currency selected by the Client when opening the Client Account or converted into at the Client's discretion after the account is opened.</p>
+        <p>
+            <strong>Currency Pair</strong> refers to the object of a Transaction based on changes in the value of one currency in comparison to another. A Currency Pair is made up of two currencies: the Quote Currency and the Base Currency.
+            It shows how much of the Quote currency is needed to purchase one unit of the Base Currency.
+        </p>
+        <p><strong>Delivery</strong> signifies the physical acquisition of any traded CFD by the Client at a specific delivery point worldwide. In CFD trading, most transactions do not involve physical delivery.</p>
+        <p>
+            <strong>Equity</strong> is calculated as the sum of the Balance, Floating Profit, and Floating Loss. It provides an overview of the financial state of the Client Account, taking into account completed transactions and the
+            unrealized profit or loss.
+        </p>
+        <p><strong>Error Quote (Spike)</strong> refers to a specific type of error in a quoted price that exhibits the following characteristics:</p>
+        <ul>
+            <li>
+                <p>A significant Price Gap is a substantial difference between the quoted price and the previous price.</p>
+            </li>
+            <li>
+                <p>In a short period, the price experiences a rapid rebound with another Price Gap, indicating a quick and significant change in price.</p>
+            </li>
+            <li>
+                <p>Before the appearance of this error quote, there were no rapid price movements in the market.</p>
+            </li>
+        </ul>
+        <ul>
+            <li>
+                <p>
+                    Before and immediately after the appearance of this error quote, no significant macroeconomic indicators and/or corporate reports were released. This suggests that external events or economic data were not responsible
+                    for the sudden and unusual price movement.
+                </p>
+            </li>
+        </ul>
+        <p>
+            <strong>Ex-Dividend Date</strong> refers to the first date on which the price quoted on the relevant market is indicated to be an ex-dividend price for a specific security. This date typically signifies that the buyer of the
+            security is not entitled to receive the upcoming dividend payment.
+        </p>
+        <p>
+            <strong>Expert Advisor</strong> is a mechanical online trading system designed to automate trading activities on an electronic trading platform. It can be programmed to provide the Client with trading alerts and can also
+            autonomously manage trading operations. This includes sending orders directly to the Company's Online Trading System and automatically adjusting stop loss, trailing stops, and take profit levels.
+        </p>
+        <p><strong>Floating Profit/Loss</strong> represents the current profit or loss on Open Positions, calculated at the current Quotes. This calculation includes any applicable commissions or fees.</p>
+        <p><strong>Free Margin</strong> is the amount of funds available on the Client Account that can be used to open a new position. It is calculated as the Equity minus the Necessary Margin.</p>
+        <p><strong>Hedged Margin</strong> is the margin required by the Company to open and maintain Matched Positions. The specific requirements for the Hedged Margin for each CFD can be found in the Contract Specifications.</p>
+        <p><strong>Indicative Quote</strong> is a Quote at which the Company has the discretion not to accept any Instructions or execute any Orders. It's an indicative price that may not be guaranteed for execution.</p>
+        <p><strong>Initial Margin</strong> refers to the initial margin required by the Company to open a position. The specific details for the Initial Margin for each CFD can be found in the Contract Specifications.</p>
+        <p><strong>Instruction</strong> means any directive from the Client to the Company, such as instructing the opening or closing of a position or placing/modifying/deleting an Order.</p>
+        <p><strong>Instrument</strong> is used to refer to the Contract for Difference (CFD) itself. It's the financial instrument being traded.</p>
+        <p>
+            <strong>Leverage</strong> is a ratio that relates to the Transaction Size and Initial Margin. For example, a 1:400 ratio means that to open a position, the Initial Margin required is four hundred times less than the Transaction
+            Size. Leverage allows traders to control a larger position with a relatively smaller amount of capital.
+        </p>
+        <p><strong>Long Position</strong> is a buy position that increases in value when market prices rise. In the context of Currency Pairs, it involves buying the Base Currency against the Quote Currency.</p>
+        <p><strong>Lot</strong> is a unit of measurement used to specify the transaction amount for each Underlying Asset in a CFD.</p>
+        <p><strong>Lot Size</strong> is the number of underlying assets in one Lot, and it is defined in the Contract Specifications.</p>
+        <p><strong>Margin</strong> represents the necessary guarantee funds required to maintain Open Positions. The specific margin requirements are outlined in the contract specifications for each Underlying Asset in a CFD.</p>
+        <p>
+            <strong>Margin Call</strong> occurs when the Company notifies the Client to deposit additional Margin. This notification is made when the Client does not have sufficient Margin to either open new positions or maintain existing
+            ones.
+        </p>
+        <p><strong>Margin Level</strong> is the percentage ratio of Equity to Necessary Margin, calculated as (Equity / Necessary Margin) x 100%. It indicates the Client's account health and its ability to support current positions.</p>
+        <p>
+            <strong>Margin Trading</strong> refers to Leverage trading, where the Client can execute Transactions with less funds on their Client Account compared to the Transaction Size. This allows traders to control larger positions with
+            relatively less capital.
+        </p>
+        <p>
+            <strong>Matched Positions</strong> are Long and Short Positions of the same Transaction Size opened on the Client Account for the same CFD. This can involve both buying and selling positions of the same asset in an equal amount.
+        </p>
+        <p>
+            <strong>Member Area</strong> is an electronic area accessible through the Company's website or Online Trading System. Clients can use the Member Area to manage their Client Accounts and carry out various transactions, such as
+            fund withdrawals, opening sub-accounts, and transferring money between their Client Accounts. It may also be referred to as "Client Portal."
+        </p>
+        <p><strong>Necessary Margin</strong> refers to the margin amount required by the Company to maintain Open Positions. The specific margin requirements for each CFD are detailed in the Contract Specifications.</p>
+        <p><strong>Normal Market Size</strong> varies depending on the type of instrument:</p>
+        <p>* For Currency Pairs, it represent the maximum number of units of the Base Currency that the Company can execute in Market Execution mode. These details are specified in the Contract Specifications for each Instrument.</p>
+        <p>* For Precious Metals, signifies the maximum number of troy ounces that can be executed by the Company in Instant Market Execution mode.</p>
+        <p>
+            <strong>Online Trading System</strong> encompasses all the software and hardware used by the Company, including computer devices, databases, telecommunication hardware, trading platforms, and technical facilities. This system
+            provides real-time Quotes and enables the Client to access market information in real-time, conduct technical analysis, execute Transactions, place/modify/delete/execute Orders, receive notifications from the Company, and
+            maintain records of Transactions. The Online Trading System consists of the Server and the Client Terminal.
+        </p>
+        <p><strong>Open Position</strong> is either a Long Position or a Short Position that has not yet resulted in a Completed Transaction. It represents an active position in the market.</p>
+        <p><strong>Order</strong> is an instruction provided by the Client to the Company, indicating to either open or close a position when the market price reaches a specified level.</p>
+        <p><strong>Order Level</strong> is the price specified in the Order, which, when reached, triggers the execution of the order.</p>
+        <p><strong>Parties</strong> refer to the parties involved in this Agreement, namely, the Company and the Client.</p>
+        <p>
+            <strong>Pip Hunting</strong> refers to a situation in which the Client opens a position and quickly closes it within a very short time, often when there is only a profit of one pip. This practice is characterized by rapid
+            trading for small profit margins.
+        </p>
+        <p><strong>Price Gap</strong> can be one of the following scenarios:</p>
+        <p>* The current Quote Bid is higher than the Ask price of the previous Quote.</p>
+        <p>* The current Quote Ask is lower than the Bid price of the previous Quote.</p>
+        <p>Price gaps represent discontinuities or disparities between bid and ask prices.</p>
+        <p><strong>Professional Client</strong> is a client who qualifies as a "Professional Client" under the regulations and guidelines that apply to their trading activities.</p>
+        <p><strong>Quote</strong> is information regarding the current price of a specific underlying asset, typically provided in the form of Bid and Ask prices.</p>
+        <p><strong>Quote Currency</strong> is the second currency in a Currency Pair. It can be bought or sold by the Client in exchange for the Base Currency.</p>
+        <p><strong>Quote Base</strong> refers to the information stored on the Server related to Quotes.</p>
+        <p><strong>Quotes Flow</strong> is the continuous stream of Quotes in the Online Trading System for each specific financial instrument.</p>
+        <p><strong>Relevant Amount</strong> is any free Equity in the Client Account that is not being used for margin requirements.</p>
+        <p><strong>Request </strong>is a request made by the Client to the Company to obtain a Quote. This request does not impose an obligation to execute a Transaction.</p>
+        <p>
+            <strong>Scalping</strong> is a trading strategy where the Client opens multiple positions simultaneously and quickly closes them, often within less than five minutes. This strategy may involve buying at the Bid price and selling
+            at the Ask price to profit from the Bid/Ask spread.
+        </p>
+        <p>
+            <strong>Server </strong>refers to the MetaTrader program version 5 or a later version, along with any trading platforms, including web and mobile versions. This program is used to execute the Client's Orders, Instructions, or
+            Requests and provide real-time trading information. It serves as the platform for the interaction between the Client and the Company.
+        </p>
+        <p><strong>Services</strong> encompass the various services provided by the Company to the Client, as outlined in clause 8 of the agreement. These services could include a range of financial services and support.</p>
+        <p><strong>Service Provider</strong> is a firm that offers goods or services to the Company, which are essential for the Company's business operations.</p>
+        <p>
+            <strong>Short Position</strong> represents a sell position that increases in value when market prices decline. In the context of Currency Pairs, it involves selling the Base Currency against the Quote Currency. It is essentially
+            the opposite of a Long Position.
+        </p>
+        <p>
+            <strong>Slippage</strong> refers to the difference between the expected price of a trade and the actual price at which the trade is executed. Slippage often occurs during periods of higher market volatility, making it
+            challenging to execute an order at a specific price. This is particularly relevant when market orders are used or when large orders are executed, and there isn't enough market interest at the desired price level to maintain the
+            expected trade price.
+        </p>
+        <p>
+            <strong>Spread</strong> is the difference between the Ask price and the Bid price of an Underlying Asset in a CFD at the same moment. It represents the cost or the profit that traders encounter when entering or exiting a trade.
+        </p>
+        <p><strong>Swap</strong> or <strong>Rollover </strong>pertains to the interest amount added to or deducted from holding a position open overnight. This interest adjustment is often associated with financing costs or benefits.</p>
+        <p>
+            <strong>Trailing Stop</strong> is a stop-loss order set at a percentage level below the market price for a long position. The trailing stop price automatically adjusts as the market price fluctuates. For a sell trailing stop
+            order, the stop price remains fixed below the market price, and it is adjusted upwards as the market price rises. However, if the market price falls, the stop loss price does not change, and a market order is executed when the
+            stop price is reached.
+        </p>
+        <p><strong>Transaction</strong> refers to any contract or trade involving a Contract for Difference (CFD) that is executed by the Client or on behalf of the Client under the terms of this Agreement.</p>
+        <p><strong>Transaction Size</strong> is calculated by multiplying the Lot Size by the number of Lots involved in the CFD.</p>
+        <p><strong>Underlying Asset </strong>is the financial instrument on which a CFD is based. It could be a Currency (Foreign Exchange), Equity Indices, Metal, Futures, Commodities, or Shares.</p>
+        <p><strong>Underlying Market</strong> is the market where the Underlying Asset of a CFD is actively traded.</p>
+        <p><strong>Website</strong> is the online domain accessible via the internet at http://www.morfinfx.com.</p>
+        <p><strong>Written Notice</strong> holds the meaning as defined in clause 27, typically referring to a formal written communication.</p>
+        <p>The following principles apply:</p>
+        <p>* Words in the singular form also include the plural form, and vice versa.</p>
+        <p>* Gender-specific terms such as masculine or feminine should be understood to include the opposite gender as well.</p>
+        <p>* References to "persons" include corporations, partnerships, other unincorporated entities, and all other legal entities, and vice versa.</p>
+        <p>* Clause headings are provided for ease of reference.</p>
+        <p>
+            * Any reference to an act, regulation, or law includes that act, regulation, or law as modified, supplemented, consolidated, or re-enacted from time to time. It also encompasses any associated guidance, directives, statutory
+            instruments, orders, and any statutory provision that re-enacts the referred statutory provision.
+        </p>
+        <p>
+            <span style="font-size: medium;"><strong>3. Commencement And Account Activation</strong></span>
+        </p>
+        <p>
+            <strong>* Binding Nature of the Agreement:</strong> This Agreement is legally binding and applies to the Company, its successors, and assigns, as well as the Client's heirs, executors, administrators, legatees, successors, and
+            personal representatives. It ensures that the obligations and terms of the Agreement extend to relevant parties and their successors or representatives.
+        </p>
+        <p>
+            <strong>* Effective Date and Account Activation:</strong> The Agreement becomes effective when the Company sends a notice to the Client confirming the opening of the Client's Account and when the Client makes the first funding
+            of the Account. In essence, the Agreement takes effect when the Client's account is officially established and funded.
+        </p>
+        <p>
+            <strong>* Minimum Initial Deposit:</strong> Depending on the Client's account type, there is a requirement for a minimum initial deposit. The Client is not allowed to commence trading if the initial deposit falls below this
+            minimum. However, the Company has the discretionary right (but not the obligation) to change the Client's account type, enabling the Client to start trading even if the initial deposit is less than the minimum. This allows for
+            flexibility in account management.
+        </p>
+        <p>
+            <strong>* Client Acceptance:</strong> The Company is not legally obligated and, due to applicable regulations, may be unable to accept the Client as a customer until specific documentation, properly and filled out by the Client,
+            is received. In addition, the Company must complete all internal checks. This clause ensures compliance with regulatory requirements and internal procedures before accepting the Client.
+        </p>
+        <p>
+            <span style="font-size: medium;"><strong>4. Client Categorization</strong></span>
+        </p>
+        <p>
+            <strong>* Client Categorization Levels:</strong> The Client acknowledges that different categories of Clients (Retail Clients, Professional Clients, and Eligible Counterparties) receive varying levels of regulatory protection.
+            Retail Clients are granted the highest level of protection, while Professional Clients and Eligible Counterparties are assumed to possess more experience, knowledge, and risk assessment capabilities, thus receiving a lower level
+            of protection.
+        </p>
+        <p>
+            <strong>* Categorization Method:</strong> The Company will classify the Client as a Retail Client, Professional Client, or Eligible Counterparty based on how the Client completes the Application Form and under the method of
+            categorization as explained in the section titled "Client Categorization." By accepting this Agreement, the Client consents to the application of this categorization method.
+        </p>
+        <p>
+            <strong>* Accuracy of Information:</strong> The Client acknowledges that the Company will rely on the accuracy, completeness, and correctness of the information provided by the Client in the Application Form when categorizing
+            and interacting with the Client. The Client holds the responsibility to promptly inform the Company in writing if there are any changes to this information.
+        </p>
+        <p>
+            <strong>* Review and Potential Recategorization:</strong> Subject to applicable regulations, the Company retains the right to review the Client's categorization and make changes to the Client's categorization if it deems it
+            necessary (following applicable laws).
+        </p>
+        <p>
+            <span style="font-size: medium;"><strong>5. Capacity</strong></span>
+        </p>
+        <p>
+            <strong>* Client's Capacity:</strong> The Client acts as a principal and not as an agent, representative, trustee, or custodian on behalf of another party. This means that all obligations and responsibilities outlined in this
+            Agreement are solely directed towards the Client, and the Client must fulfil these obligations concerning the Company.
+        </p>
+        <p>
+            <strong>* Client Acting on Behalf of Another: </strong>The Client may represent or act on behalf of someone else only with the explicit written consent of the Company. To do so, the Client must provide all the necessary
+            documents as required by the Company for this specific purpose. This clause emphasizes that representing others requires formal approval and documentation.
+        </p>
+        <p><strong>* Company's Role in Transactions:</strong> In the context of any Transaction, the Company may function in two different capacities:</p>
+        <p>i) As a principal on its account, where it acts as the execution venue for the Transaction.</p>
+        <p>ii) As an agent, in which case another third party serves as the execution venue for the Transaction.</p>
+        <p>
+            <span style="font-size: medium;"><strong>6. Third Party</strong></span>
+        </p>
+        <p>
+            <strong>* Client's Right to Authorize Third Parties:</strong> The Client has the right to authorize a third party to provide Instructions, Requests, and Orders to the Company regarding any Transaction, proposed Transaction, or
+            other matters related to this Agreement. This authorization may also include the ability to vary the terms of the Agreement or terminate it. However, this right is subject to the condition that the Client must inform the Company
+            in writing about the exercise of this right.
+        </p>
+        <p>
+            <strong>* Company's Right to Seek Specifications:</strong> The Company is granted the right, although not obligated, to request specific details or specifications regarding third-party authorization. This allows the Company to
+            better understand and process the authorization.
+        </p>
+        <p>
+            <strong>* Additional Authorizations:</strong> The authorization granted to a third party is in addition to any other authorizations already specified in this Agreement or any other agreement between the Client and the Company.
+        </p>
+        <p>
+            <strong>* Continuation of Authorization:</strong> Unless the Company receives and acknowledges a written notification from the Client indicating the termination, revocation, or amendment of the instructions given to the third
+            party, through courier service or via email, the Company will continue to accept Requests, Instructions, Orders, and other communications from the authorized third party. The Client agrees that such communications are valid and
+            binding.
+        </p>
+        <p>
+            <strong>* Notice Period for Termination:</strong> To terminate the authorization to a third party, as established in clause 6.1, the written notification for termination must be received and acknowledged by the Company with at
+            least a 5-day notice before the specified termination date.
+        </p>
+        <p>
+            <strong>* Responsibility in Case of Client's Death or Mental Incapacity:</strong> In the unfortunate event of the Client's death or mental incapacity, the Company holds no responsibility or liability regarding the actions,
+            omissions, or potential fraud of the authorized third party mentioned in clause 6.1. The Company will continue to accept and recognize Requests, Instructions, Orders, and other communications from this third party as valid until
+            the Company receives actual notice of the Client's death or mental incapacity. This clause underscores the importance of timely notification in such circumstances.
+        </p>
+        <p>
+            <strong>* Effect on Client's Obligations:</strong> Any revocation or amendment of the third-party authorization does not relieve the Client from any obligations or liabilities arising from or concerning Transactions or their
+            accounts under the Agreement.
+        </p>
+        <p>
+            <span style="font-size: medium;"><strong>7. Personal Data &amp; Confidentiality</strong></span>
+        </p>
+        <p><strong>7.1 </strong></p>
+        <p>
+            <strong>*</strong> The Company recognizes that the Client's personal information is a valuable, unique asset that is the exclusive property of the Client. The Company is obligated not to use this information to benefit or
+            further the interests of any individuals or entities other than the Client. This provision underscores the Company's responsibility to maintain the confidentiality and privacy of the Client's data and not to exploit it for any
+            other purposes.
+        </p>
+        <p><strong>7.2 </strong></p>
+        <p>
+            <strong>* Protection of Client Information: </strong>The Company is committed to safeguarding the Client's rights concerning the privacy, confidentiality, and anonymity of the information provided to the Company. All data shared
+            will be processed fairly and legally for specified and legitimate purposes.
+        </p>
+        <p>
+            <strong>* Communication and Use of Information:</strong> The Company and its affiliates may use the Client's information to inform them about other products, services, and offers, including those from third parties. Various
+            communication methods, such as postal mail, facsimile, and electronic means, may be used for this purpose.
+        </p>
+        <p>
+            <strong>* Data Collection:</strong> The Company may collect client information directly from the Client, such as through the Application Form or the Website, or from third-party sources like credit reference agencies and fraud
+            prevention agencies.
+        </p>
+        <p>
+            <strong>* Confidentiality of Client Information: </strong>Client information held by the Company is considered confidential and will only be used in connection with providing services. Information that is already public or known
+            to the Company without a duty of confidentiality is not considered confidential.
+        </p>
+        <p>
+            <strong>* Disclosure of Client Information:</strong> The Company has the right to disclose client information, recordings, and confidential documents without prior notice to the Client in various circumstances, including legal
+            requirements, regulatory requests, fraud prevention, and compliance with legal obligations.
+        </p>
+        <p>
+            <strong>* Rights and Obligations:</strong> The Client has the right to request a copy of the data held by the Company. The Client's consent to the transmittal of their data outside specific regions is obtained by entering into
+            the Agreement.
+        </p>
+        <p>
+            <strong>* Recording of Communications:</strong> Telephone conversations between the Client and the Company may be recorded, with these recordings being the sole property of the Company. The Client consents to the recording of
+            such conversations.
+        </p>
+        <p>
+            <strong>* Direct Contact by the Company:</strong> The Client accepts that the Company may directly contact them through various means like telephone, fax, email, or other methods for administrative and communication purposes
+            related to the Agreement.
+        </p>
+        <p>
+            <span style="font-size: medium;"><strong>8. Services</strong></span>
+        </p>
+        <ul>
+            <li>
+                <p>
+                    <strong>Services Offered:</strong> The Company, at its discretion, may offer services including receiving and transmitting orders or instructions for execution, providing underlying assets, and any other services as
+                    detailed in the Agreement. The Company is not obligated to monitor or advise the Client on transactions, make margin calls, or close out positions unless agreed otherwise.
+                </p>
+            </li>
+        </ul>
+        <ul>
+            <li>
+                <p><strong>Physical Delivery:</strong> The Client understands that there is no physical delivery of the underlying assets in a CFD.</p>
+            </li>
+        </ul>
+        <ul>
+            <li>
+                <p>
+                    <strong>Right to Delay or Reserve Orders:</strong> The Company reserves the right to delay confirmation of orders or transactions for the Client's account. It may also reserve, not execute, or reject orders or
+                    transactions, at its discretion.
+                </p>
+            </li>
+        </ul>
+        <ul>
+            <li>
+                <p><strong>Withdrawal of Services:</strong> The Company can withdraw services temporarily or permanently at its discretion without prior notice.</p>
+            </li>
+        </ul>
+        <ul>
+            <li>
+                <p>
+                    <strong>No Investment Advice:</strong> The Company will not provide the Client with investment advice or legal, tax, or other advice related to transactions. The Client is responsible for their own decisions and should
+                    seek independent advice if necessary.
+                </p>
+            </li>
+        </ul>
+        <ul>
+            <li>
+                <p>
+                    <strong>Expert Advisors and Trailing Stop:</strong> The Company may provide Expert Advisor (EA) and Trailing Stop facilities to the Client. These should not be used for scalping or pip hunting. Excessive usage,
+                    especially during news events, is discouraged, and the Company has the right to ban High-Frequency Trading (HFT) activities.
+                </p>
+            </li>
+        </ul>
+
+        <ul>
+            <li>
+                <p>
+                    <strong>Pre-Approval Requirement for Use of Expert Advisors (EAs) and Automated Trading Bots:</strong> Clients must obtain pre-approval from the Company for the use of Expert Advisors (EAs) and automated trading bots. This pre-approval process ensures that all automated trading activities comply with the Company's policies and risk management protocols.
+
+                    If the system detects trades executed without such pre-approval, the Company will not be liable for any resulting profits or losses, including any capital funds that may be affected. This means that any financial outcomes from unauthorized automated trading will be solely the client's responsibility.
+                    
+                    Furthermore, the Company reserves the right to deduct the amount owed by the client as volume charges in the market. This includes any commissions or fees that arise from the unauthorized use of automated trading systems. By enforcing this policy, the Company aims to maintain a secure and orderly trading environment, protecting both its interests and those of its clients.
+                    
+                    Clients are urged to comply with this pre-approval requirement to avoid potential financial liabilities and ensure that their trading activities are conducted within the Company's regulatory framework.
+                </p>
+            </li>
+        </ul>
+
+        <ul>
+            <li>
+                <p>
+                    <strong>Third-Party Software and Services:</strong> The Company is not liable for losses or expenses incurred due to acts, omissions, or negligence of third parties or third-party software, including expert advisors,
+                    signal providers, and more.
+                </p>
+            </li>
+        </ul>
+        <ul>
+            <li>
+                <p>
+                    <strong>Market Information and Recommendations:</strong> The Company may provide information, recommendations, news, and market commentary to the Client. However, the Client acknowledges that the accuracy, completeness,
+                    or timeliness of such information is not guaranteed. These recommendations are not considered investment advice.
+                </p>
+            </li>
+        </ul>
+        <ul>
+            <li>
+                <p>
+                    <strong>Applicability of Regulatory Protections:</strong> The Company is not obligated to assess the suitability of financial instruments for the Client. The Client must provide accurate information about their knowledge
+                    and experience. Without such information, the Company cannot determine the appropriateness of services or products.
+                </p>
+            </li>
+        </ul>
+        <ul>
+            <li>
+                <p><strong>Use of Clearing Members and Floor Brokers:</strong> The Company is authorized to employ clearing members and floor brokers as the Client's agents for various aspects of transactions.</p>
+            </li>
+        </ul>
+        <p><strong>9. CFDs&rsquo; General Trading Procedures And Orders</strong></p>
+        <p>* <strong>Market Watch and Price Quotes:</strong></p>
+        <p>. The Company strives to provide accurate market watch and prices obtained from major banks/liquidity providers/exchanges.</p>
+        <p>. In case of closure or failure of price providers, the Company will provide quotes it believes to be the current Bid and Ask prices.</p>
+        <p>. The Company does not guarantee that its prices are the best available in the market.</p>
+        <p><strong>* Order Placement:</strong></p>
+        <p>. The Client can place orders via the Company's Online Trading System using their account login and password.</p>
+        <p>. The Company may adjust prices, cancel transactions, delay price confirmation, and restrict access to streaming quotes at its discretion.</p>
+        <p>. The Company has the right to retrieve historic trading profits gained through the abuse of prices and terminate the client relationship.</p>
+        <p><strong>* Order Execution:</strong></p>
+        <p>. The Company can execute client orders without further inquiry, and such orders are binding.</p>
+        <p>. The Company does not check or consider the client's assumptions about the effect of a trade on existing or overall positions.</p>
+        <p>. The client is responsible for monitoring their positions.</p>
+        <p><strong>* Margin and Orders Breach:</strong></p>
+        <p>. If an order places the client in breach of the agreement, the Company may fulfil the order partially or completely.</p>
+        <p>. The client remains liable for the settlement of any breached transactions.</p>
+        <p><strong>* Trading Hours:</strong></p>
+        <p>Orders can be placed, executed, changed, or removed within the specified trading hours.</p>
+        <p><strong>* Execution Outside Normal Hours:</strong></p>
+        <p>The Company may execute client orders outside normal trading hours in certain cases.</p>
+        <p><strong>* Validity of Orders:</strong></p>
+        <p>. Orders are valid according to the specified type and time.</p>
+        <p>. The Company may delete pending orders if the account equity reaches zero.</p>
+        <p><strong>* Execution of Open Spot Positions:</strong></p>
+        <p>. Open spot positions are rolled over to the next business day at the close of business in the underlying market.</p>
+        <p>. Open forward positions are not rolled over at the expiry of the relevant period.</p>
+        <p><strong>Rollover:</strong></p>
+        <p>. Futures-OTC contracts are not rolled over automatically, and the Company does not accept rollover requests from the client.</p>
+        <p>. Clients can close and reopen positions on the next nearby future OTC contract before the last trading day for each contract.</p>
+        <p><strong>* Contract Specifications:</strong></p>
+        <p>Contract specifications, including margin and contract size, are available on the website and may change based on market conditions.</p>
+        <p><strong>* Leverage:</strong></p>
+        <p>. Leverage rates range from 1:100 to 1:400 depending on the type of CFD and account type.</p>
+        <p>. The default leverage rate is set at 1:400 at the opening of the client account.</p>
+        <p>. Clients can request to change the leverage of their account.</p>
+        <p><strong>* Risk Disclosure &amp; Swap Rates:</strong></p>
+        <p>. High leverage may lead to larger gains and higher risks.</p>
+        <p>. The level of swap rates may vary and can change without prior notice.</p>
+        <p><strong>* Spread:</strong></p>
+        <p><strong>Market Volatility and Spread Widening Policy
+        </strong></p>
+        <p>we strive to provide our clients with reliable access to the foreign exchange markets through our connections to reputable Liquidity Providers (LPs). It is important to note that the forex market is inherently volatile, and prices can fluctuate rapidly, leading to sudden and significant movements in currency pairs.</p>
+        <p><strong> Market Volatility:</strong>
+            The prices displayed on our trading platforms are sourced directly from our LPs and represent valid market prices at the time of display. However, due to the dynamic nature of the forex market, these prices may some time highly differ from those offered by other brokers or general market data providers. This variance can occur due to differences in liquidity, market conditions, and the specific LP feeds utilized.</p>
+        <p><strong>Spread Widening:
+        </strong>During times of market volatility or reduced liquidity, spreads (the difference between the bid and ask prices) may widen. This widening can happen swiftly and is a normal occurrence in forex trading. Please be aware that while we make every effort to keep spreads competitive and consistent, they may fluctuate based on market conditions and LP liquidity.
+    </p>
+    <p><strong>Our Commitment:
+    </strong>As your trusted forex broker, we are committed to transparency and ensuring that you have access to accurate market information. Our prices are derived from reliable LP sources, and we continually monitor and adjust our systems to provide you with the best possible trading experience.
+</p>
+<p><strong>Limitation of Liability:
+</strong>It's important to understand that acts solely as an intermediary between clients and LPs, We do not control market prices or their fluctuations. Therefore, we cannot be held responsible for losses incurred due to rapid market movements, spread widening, or discrepancies in prices compared to other brokers or platforms.
+</p>
+<p><strong>Client Responsibilities:</strong>
+    While we provide robust trading tools and resources, it is essential for clients to conduct their own research and manage their trading strategies accordingly. We encourage all clients to utilize risk management techniques such as stop-loss orders and to stay informed about market conditions that may impact their trading decisions.</p>
+    <p>By using our services, you acknowledge and accept the inherent risks associated with forex trading, including but not limited to market volatility and spread fluctuations.</p>
+        <p>. Spreads are specified by the Company in the contract specifications.</p>
+        <p>. The Company may change spreads without prior notice.</p>
+
+        <p><strong>* Hedging:</strong></p>
+        <p>. Hedging, which allows opening positions in the opposite direction of existing positions, is allowed.</p>
+        <p>. Hedging through corresponding Future OTC contracts is not allowed for swap-free accounts.</p>
+        <p><strong>* Quotes and Market Execution:</strong></p>
+        <p>. Quotes provided by the Company are indicative.</p>
+        <p>. Market execution means that the Company gives the client the available market price when buying or selling a CFD.</p>
+        <p>. Scalping and Pip-Hunting are not allowed for Classic and Copy Trading accounts, and the Company has the right to reject such transactions.</p>
+        <p><strong>* Slippage:</strong></p>
+        <p>. Slippage can occur when limit orders or stop losses are executed at a worse rate than expected.</p>
+        <p>. Slippage is more likely during highly volatile market conditions.</p>
+        <p>. The Company does not apply slippage under normal market conditions.</p>
+        <p><strong>* Trading Hours and Server Maintenance:</strong></p>
+        <p>. Clients can execute trades from Monday at 00:05 until Friday at 23:30 (Mauritius Time).</p>
+        <p>. Server maintenance occurs nightly from 23:58 to 00:02 EET, during which trading is halted.</p>
+        <p>
+            <span style="font-size: medium;"><strong>10. Margin Requirements</strong></span>
+        </p>
+        <p><strong>* Initial Margin and Hedged Margin:</strong></p>
+        <p>. The client is required to provide and maintain the Initial Margin and/or Hedged Margin as determined by the Company based on the Contract Specifications for each type of CFD.</p>
+        <p>. Margin requirements are subject to the Company's sole discretion.</p>
+        <p><strong>* Understanding Margin:</strong></p>
+        <p>It is the client's responsibility to understand how margin works in the context of trading.</p>
+        <p><strong>* Amendment of Margin Requirements:</strong></p>
+        <p>. The Company has the right to change margin requirements for each CFD without prior written notice.</p>
+        <p>. Such changes may apply to both new and existing/open positions.</p>
+        <p><strong>* Margin Calls:</strong></p>
+        <p>The Company does not have an obligation to make margin calls for the client.</p>
+        <p><strong>* Equity vs. Necessary Margin:</strong></p>
+        <p>. If, at any time, the client's Equity falls below 20% of the Necessary Margin, the Company has the right to close any or all of the client's open positions without their consent or prior written notice.</p>
+        <p>. Sums not denominated in the account's currency will be treated as if they were in the account's currency using the relevant exchange rate.</p>
+        <p><strong>* Client Notification Responsibility:</strong></p>
+        <p>The client is responsible for promptly notifying the Company if they believe they will be unable to meet a margin payment.</p>
+        <p><strong>* Additional Payments and Margin:</strong></p>
+        <p>. Depending on the nature of the transaction, the client may be required to make further payments in the form of a margin.</p>
+        <p>. Market price movements can affect the amount of margin required.</p>
+        <p>. The client agrees to pay the Company the required margin as demanded, based on market rules and Company discretion, to protect against potential losses.</p>
+        <p><strong>* Margin Calls and Account Stop-Out:</strong></p>
+        <p>. Accounts on margin calls need to be cautious about equity, as the account will be stopped out by closing all open positions if the equity falls to 20% of the margin level.</p>
+        <p>. Pending orders for the stopped-out account will be deleted, and any resulting deficit will be the client's responsibility.</p>
+        <p><strong>* Breach of Margin Requirements:</strong></p>
+        <p>If the client breaches the margin requirement as specified in clause 10.9, the Company has the right to partially or close the client's open positions to restore the account above the required percentage.</p>
+        <p><strong>* Margin Transfer:</strong></p>
+        <p>Margin can be transferred to the Company via bank wire transfer or any of the applicable deposit methods.</p>
+        <p><strong>* Security Interest:</strong></p>
+        <p>The client undertakes not to create any security interest, assign, or transfer any of the margin transferred to the Company.</p>
+        <p>
+            <span style="font-size: medium;"><strong>11. Swap</strong></span>
+        </p>
+        <p><strong>* Islamic (Swap-Free) Accounts:</strong></p>
+        <p>. The Company offers Islamic (swap-free) accounts to comply with Islamic Shariah law.</p>
+        <p>. These accounts are advantageous for traders who hold positions for multiple days and wish to avoid swaps or overnight fees.</p>
+        <p><strong>* Converting Account Type:</strong></p>
+        <p>. Clients have the option to convert their Client Account from a regular account to a swap-free account or vice versa.</p>
+        <p>. To make this conversion, the client must notify the Company.</p>
+        <p><strong>* No Swap Charges:</strong></p>
+        <p>. In a swap-free account, no swap or rollover charges are applied to trading positions.</p>
+        <p>. This means that the client's account is free from interest or swap charges and has zero up-front commissions without additional trade charges.</p>
+        <p><strong>* Applicability of Agreement Provisions:</strong></p>
+        <p>All provisions of the Agreement apply to clients with swap-free accounts unless explicitly stated otherwise in the text.</p>
+        <p><strong>* Market Abuse and Misuse of Swap-Free Advantage:</strong></p>
+        <p>. The client is warned against market abuse and misuse of the swap-free advantage, such as holding floating positions for extended periods to gain profits.</p>
+        <p>. In cases of such misuse, the client may be charged with backdated swaps on all positions executed in their trading account from the date of account opening, and they must close the floating positions.</p>
+        <p><strong>* Forbidden Practices:</strong></p>
+        <p>. Hedging a currency pair by using corresponding Future CFD and/or hedging positions on a swap-based account against positions on a swap-free account is forbidden.</p>
+        <p>. Such practices represent attempts to take advantage of the swap-free facility and gain profits from swaps. One direction of this kind of hedge must be closed.</p>
+        <p>
+            <span style="font-size: medium;"><strong>12. Confirmations</strong></span>
+        </p>
+        <p><strong>* Confirmation Methods:</strong></p>
+        <p>Information about order status, client account status, and trade confirmations will be provided to the client through the Online Trading System, such as MT5, and the client portal in the Morfin FX CRM system.</p>
+        <p><strong>* Providing Email Address:</strong></p>
+        <p>The client is required to provide the Company with an email address for communication purposes.</p>
+        <p><strong>* Notification of Changes:</strong></p>
+        <p>. It is the client's responsibility to inform the Company of any changes to their email address or other relevant personal information.</p>
+        <p>. The client should also report if they do not receive a confirmation or if they believe any confirmations are incorrect before settlement.</p>
+        <p><strong>* Review and Notification:</strong></p>
+        <p>. If the client believes that a confirmation is inconsistent or if they don't receive a confirmation despite making a transaction, they should contact the Company.</p>
+        <p>. Trade confirmations are considered conclusive and binding unless the client notifies the Company in writing to the contrary within two (2) business days following the receipt of the trade confirmation.</p>
+        <p><strong>* Correction of Errors:</strong></p>
+        <p>. In the event of any errors or omissions, the Company retains the right to correct such errors, whether they result in profit or loss.</p>
+        <p>. The Parties agree that such errors will be corrected in the client's account.</p>
+        <p><strong>* Online Access:</strong></p>
+        <p>
+            The Company will provide the client with online access to their client account via the Online Trading System, allowing them to access information necessary for managing their account and complying with FSC (Financial Services
+            Commission) rules regarding client reporting.
+        </p>
+        <p>
+            <span style="font-size: medium;"><strong>13. Decline Of Client&rsquo;s Orders, Requests And Instructions</strong></span>
+        </p>
+        <p><strong>* Refusal of Orders or Requests:</strong></p>
+        <p>The Company reserves the right, at its discretion and without providing notice or explanation to the client, to refuse the transmission or execution of any order, request, or instruction.</p>
+        <p><strong>* Reasons for Refusal:</strong></p>
+        <p>. The Company may refuse to execute orders or requests in various situations, including but not limited to the following:</p>
+        <p>. The order or request precedes the first quote in the Online Trading System on the market.</p>
+        <p>. Abnormal market conditions.</p>
+        <p>. The client has made an unreasonable number of requests.</p>
+        <p>. Insufficient free margin.</p>
+        <p>. Market conditions make it impossible to execute the order.</p>
+        <p>. Termination of the agreement.</p>
+        <p>. Suspected money laundering, terrorist financing, or criminal activities.</p>
+        <p>. Legal claims or requirements.</p>
+        <p>. Questionable legality of the order.</p>
+        <p>. An indicative quote.</p>
+        <p>. Disrupted internet connection or communications.</p>
+        <p>. Error quotes or spikes in quotes.</p>
+        <p>. Transaction size below the minimum specified for a particular CFD.</p>
+        <p>. Force majeure events.</p>
+        <p>. Event of default by the client.</p>
+        <p>. Order manipulation or insider trading.</p>
+        <p>. Lack of available cleared funds in the client's account to cover charges.</p>
+        <p>. Orders with missing or unclear details.</p>
+        <p>. Client identity verification doubts.</p>
+        <p>. Doubts about the order's genuineness.</p>
+        <p>. Corporate events related to the instrument.</p>
+        <p><strong>* No Claim for Damages:</strong></p>
+        <p>The client is not entitled to claim damages, specific performance, or compensation from the Company in cases where orders or requests are declined.</p>
+        <p>
+            <span style="font-size: medium;"><strong>14. Miscellaneous</strong></span>
+        </p>
+        <p><strong>* Suspension of Client Account:</strong></p>
+        <p>The Company has the discretion to suspend the Client Account at any time, with or without providing a reason and without the need for written notice or court order.</p>
+        <p><strong>* Release of Liability:</strong></p>
+        <p>The Company may, at its discretion, release, compound, compromise, waive, or postpone any liability of the Client under the Agreement. This will not affect the Company's rights regarding any other liabilities.</p>
+        <p><strong>* Cumulative Rights and Remedies:</strong></p>
+        <p>All rights and remedies provided to the Company under the Agreement are cumulative and not exclusive of any other rights or remedies available to the Company.</p>
+        <p><strong>* Deletion of Error Quotes:</strong></p>
+        <p>The Company has the right to delete Error Quotes (Spikes) from the Server's Quotes Base and any orders executed based on such quotes.</p>
+        <p><strong>* Liabilities of Joint Clients:</strong></p>
+        <p>If the Client comprises two or more persons, the liabilities and obligations under the Agreement are joint and several. Any notice or order given to one of the persons forming the Client is considered as given to all of them.</p>
+        <p><strong>* Death or Incapacity of Client:</strong></p>
+        <p>
+            In the event of the death or mental incapacity of one of the persons forming the Client, the survivor(s) will have control over the funds held by the Company, and any obligations and liabilities will be owed by the survivor(s).
+        </p>
+        <p><strong>* Client Account Administration:</strong></p>
+        <p>The Client may administer their Account via the Member Area provided by the Company.</p>
+        <p><strong>* Change of Account Number:</strong></p>
+        <p>The Company has the right to change the account number assigned to any Client Account without affecting the continuity and legal effect of the Agreement.</p>
+        <p><strong>* Reactivation of Client Account:</strong></p>
+        <p>If a Client Account is closed and then reactivated, it will continue to be covered by this Agreement unless the Company has terminated the Agreement and a new agreement has been established.</p>
+        <p><strong>* Assignment of Rights and Obligations:</strong></p>
+        <p>The Client shall not assign, charge, or transfer their rights or obligations under this Agreement without the Company's prior written consent.</p>
+        <p><strong>* Dormant and Closed Accounts:</strong></p>
+        <p>
+            Accounts that have no trading activity and remain non-operational for six (6) months are considered Dormant accounts. After twelve (12) months of dormancy, such accounts are considered Closed. Both Dormant and Closed accounts
+            will be frozen immediately.
+        </p>
+        <p><strong>* Reactivation of Dormant or Closed Accounts:</strong></p>
+        <p>The Client can reactivate a Dormant or Closed account by following the Know Your Customer (KYC) procedures and funding the account, in addition to conducting at least one trade.</p>
+        <p><strong>* Application to Additional Client Accounts:</strong></p>
+        <p>This Agreement applies to any additional Client Accounts opened in the Client's name with the Company, except where a new Client agreement is specifically established for a particular account.</p>
+        <p>
+            <span style="font-size: medium;"><strong>15. Regulatory Provisions</strong></span>
+        </p>
+        <p><strong>* Compliance with Market Rules and Laws:</strong></p>
+        <p>The Company is authorized to take any action it deems necessary to ensure compliance with relevant market rules, practices, and all applicable laws while providing services to the Client.</p>
+        <p><strong>* Disclosure to Regulatory Bodies:</strong></p>
+        <p>The Company has the authority to disclose information concerning the Client, their transactions, and accounts to regulatory bodies and other entities as required by regulatory authorities.</p>
+        <p><strong>* Company's Liability:</strong></p>
+        <p>The Company will not be liable to the Client for any actions it or its agents take to comply with market rules, practices, or laws.</p>
+        <p><strong>* Client's Obligations:</strong></p>
+        <p>The failure of the Company or its agents to comply with market rules or laws will not release the Client from any obligations under the Agreement, nor create rights in favour of the Client against the Company.</p>
+        <p><strong>* Changes in Regulatory Requirements:</strong></p>
+        <p>
+            If any term of this Agreement is inconsistent with a requirement set by a regulatory authority or the law, and such a requirement is introduced after the creation of this Agreement, the Company will update the terms and
+            conditions of this Agreement to comply with the new regulatory requirement or law. These changes will automatically apply to the relationship between the Company and the Client.
+        </p>
+        <p><strong>* References to Laws and Regulations:</strong></p>
+        <p>Any reference to laws, statutes, regulations, or enactments includes references to any modifications, re-enactments, or regulations made under such laws, statutes, or regulations.</p>
+        <p><strong>* Client Record Keeping:</strong></p>
+        <p>Under Applicable Regulations, the Company will retain Client records for at least five years after the termination of the Client's relationship with the Company.</p>
+        <p>
+            <span style="font-size: medium;"><strong>16. Applicable And Governing Law</strong></span>
+        </p>
+        <p><strong>* Governing Law:</strong></p>
+        <p>
+            The Agreement and all Transactions entered into with the Client are governed by and construed under the laws. This means that the laws and regulations of
+            the Republic of [Country's Name] apply to the Agreement and any related transactions.
+        </p>
+        <p><strong>* Dispute Resolution:</strong></p>
+        <p>. In the event of a dispute arising out of or in connection with the Agreement, the Parties agree to follow the dispute resolution process outlined below:</p>
+        <p>. Settlement Attempt: The Parties will initially attempt to settle the dispute using the procedures described in the Complaint Handling Procedures. This is the first step in resolving any issues or disagreements.</p>
+        <p>
+            . Alternative Resolution: If no settlement is reached through the Complaint Handling Procedures, either party has the option to refer the dispute for further resolution. The specific details of this alternative resolution
+            process are further outlined in Paragraph 16.3. This could involve additional steps or actions to address the dispute.
+        </p>
+        <p><strong>Arbitration</strong></p>
+        <p><strong>* Arbitration as the Dispute Resolution Mechanism:</strong></p>
+        <p>
+            Any dispute arising out of or in connection with this Agreement will be resolved through arbitration. The arbitration will be conducted under the rules of the SVG International Arbitration Centre (as amended), which are
+            incorporated by reference into this Agreement. This means that the rules and procedures of the SVG International Arbitration Centre will apply to the arbitration process.
+        </p>
+        <p><strong>* Arbitration Venue and Jurisdiction:</strong></p>
+        <p>. Both Parties agree to the following regarding arbitration:</p>
+        <p>. The SVG International Arbitration Centre has exclusive jurisdiction to determine the arbitration proceedings.</p>
+        <p>. They submit to the jurisdiction of the SVG International Arbitration Centre.</p>
+        <p>. They waive any objection to the arbitration proceedings taking place in any other venue and agree not to claim that the chosen arbitration centre does not have jurisdiction.</p>
+        <p><strong>* Arbitration Details:</strong></p>
+        <p>. The number of arbitrators will be determined.</p>
+        <p>. The seat or legal place of arbitration will be specified.</p>
+        <p>. The language in which the arbitration will be conducted will be determined.</p>
+        <p><strong>* Waiver of Jurisdictional Challenges:</strong></p>
+        <p>Both Parties irrevocably waive any jurisdictional challenges to the fullest extent permitted by applicable law. This means they will not raise objections related to jurisdiction during the arbitration proceedings.</p>
+        <p><strong>* The doctrine of Separability:</strong></p>
+        <p>The doctrine of separability applies to paragraph 3. This doctrine means that the validity of the arbitration agreement is considered separately from the overall validity of the Agreement.</p>
+        <p><strong>* Time Limit for Bringing Actions:</strong></p>
+        <p>The Client is bound by a time limit for bringing actions related to transactions under the Agreement. The Client must initiate any such action within three months from the day the cause of action arose.</p>
+        <p>
+            <span style="font-size: medium;"><strong>17. Severability</strong></span>
+        </p>
+        <p><strong>* Severability Clause:</strong></p>
+        <p>
+            If any part of the Agreement is found to be unenforceable, illegal, or in violation of any market rule, regulation, or law of any regulatory authority, a court of competent jurisdiction will have the authority to make this
+            determination.
+        </p>
+        <p><strong>* Consequences of Severability:</strong></p>
+        <p>If any part of the Agreement is deemed unenforceable or in violation, that specific part will be considered as if it had never been included in the Agreement.</p>
+        <p><strong>* Effect on the Remaining Provisions:</strong></p>
+        <p>The remaining provisions of the Agreement will continue to be legally valid and enforceable, and they will be interpreted and enforced as if the problematic provision had never been part of the Agreement.</p>
+        <p><strong>* Jurisdiction-Specific Considerations:</strong></p>
+        <p>
+            The provision also highlights that the legality, validity, or enforceability of the Agreement, or the specific provision in question, may be assessed according to the laws and regulations of different jurisdictions, and any such
+            assessments will not affect the rest of the Agreement.
+        </p>
+        <p>
+            <span style="font-size: medium;"><strong>18. Non-Exercise Of Rights</strong></span>
+        </p>
+        <p>
+            The clause states that the Company's failure to pursue legal action for violations of the Agreement or to demand strict adherence to its terms, or the Company's failure to utilize any of its rights or remedies provided under
+            this Agreement, does not imply or constitute a waiver of those rights.
+        </p>
+        <p>
+            <span style="font-size: medium;"><strong>19. Assignment</strong></span>
+        </p>
+        <p><strong>* Assignment by the Company:</strong></p>
+        <p>The Company reserves the right to transfer, assign, or novate any of its rights, benefits, or obligations under this Agreement. However, the Company is required to notify the Client when such an assignment occurs.</p>
+        <p><strong>* Client's Assignment:</strong></p>
+        <p>The Client is not permitted to transfer, assign, charge, novate, or otherwise transfer their rights or obligations under the Agreement without obtaining prior written consent from the Company.</p>
+        <p>
+            <span style="font-size: medium;"><strong>20. Adjustments</strong></span>
+        </p>
+        <p><strong>* Adjustments Due to Corporate Events:</strong></p>
+        <p>
+            If a security becomes subject to a potential adjustment due to a Corporate Event (e.g., stock split, merger), the Company has the authority to determine the appropriate adjustment to be made. These adjustments can affect the
+            size, value, and number of related transactions or the level and size of any order.
+        </p>
+        <p><strong>* Purpose of Adjustments:</strong></p>
+        <p>The adjustments are made to account for the economic effects necessary to maintain the rights and obligations of the parties involved in the transaction, similar to the state before the Corporate Event occurred.</p>
+        <p><strong>* Authority to Transfer Funds:</strong></p>
+        <p>
+            The Company is authorized, without prior notice to the Client, to transfer excess funds, securities, commodity futures contracts, commodity options, or other property held in the Client's accounts. These transfers may be made
+            between the Client's accounts held by the Company or any exchange member through which the Company clears the Client's transactions. These transfers should comply with relevant governmental and exchange rules and regulations.
+        </p>
+        <p><strong>* Company's Discretion:</strong></p>
+        <p>The actions taken by the Company regarding adjustments are at its absolute discretion, and they are conclusive and binding upon the Client. The Company will inform the Client of these actions as soon as reasonably possible.</p>
+        <p>
+            <span style="font-size: medium;"><strong>21. Netting And Set-Off</strong></span>
+        </p>
+        <p><strong>* Conversion of Amounts:</strong> The Company converts the amounts payable by the Client into the Currency of the Client Account at the relevant exchange rate for spot dealings in the foreign exchange market.</p>
+        <p>
+            <strong>* Mutual Obligations Set-Off:</strong> If the aggregate amount payable by the Client is equal to the aggregate amount payable by the Company, the mutual obligations to make payment is automatically set off and cancelled.
+            In other words, if the Client owes the same amount to the Company as the Company owes to the Client, there is no need for an actual payment.
+        </p>
+        <p><strong>*Excess Payment:</strong> If one party owes more to the other party, the party with the larger aggregate amount shall pay the excess to the other party, and all obligations to make payment are automatically satisfied.</p>
+        <p><strong>*Combining Client Accounts:</strong> The Company has the right to combine all or any Client Accounts opened in the Client's name and consolidate the balances in such accounts for set-off.</p>
+        <p>
+            <strong>*Security Interest and General Lien:</strong> All Financial Instruments, funds, securities, and other property in the Client's account(s) or held elsewhere by the Company are subject to a security interest and general
+            lien in favour of the Company. This is to secure any indebtedness owed by the Client, including any arising from guarantees or joint responsibilities for transactions.
+        </p>
+        <p>
+            <strong>*Pledging and Hypothecation: </strong>The Client grants the Company the right to pledge, repledge, hypothecate, or invest securities or other property held by the Company for the Client's account. These securities or
+            property may be used separately or with the property of other clients, including for transactions with clearinghouses.
+        </p>
+        <p><strong>*Interest Income and Benefit:</strong> The Company is not obligated to pay interest income or benefits derived from the Client's property and funds or deliver the same securities or other property held by the Company.</p>
+        <p>
+            <span style="font-size: medium;"><strong>22. Currency</strong></span>
+        </p>
+        <p>
+            <strong>* Company's Authority: </strong>The Company has the authority to carry out currency conversions as it deems necessary or desirable without prior notice to the Client. These conversions may be performed to fulfil the
+            Company's obligations, exercise its rights under the Agreement, complete specific Transactions or Orders, or for any other legitimate purpose.
+        </p>
+        <p>
+            <strong>* Exchange Rates:</strong> When the Company performs currency conversions, it will use reasonable exchange rates selected by the Company, taking into account the prevailing market conditions and other relevant factors.
+        </p>
+        <p>
+            <strong>* Client's Responsibility:</strong> The Client is responsible for bearing all foreign currency exchange risk that may arise from any Transaction or the exercise of the Company's rights under the Agreement. This means
+            that the Client may experience gains or losses due to fluctuations in foreign exchange rates.
+        </p>
+        <p>
+            <span style="font-size: medium;"><strong>23. Commissions, Charges And Other Costs</strong></span>
+        </p>
+        <p>
+            <strong>* Payment of Costs:</strong> The provision of services is subject to the payment of various costs, fees, commissions, charges, taxes, and other expenses (referred to as "Costs"). The Client is responsible for paying all
+            such Costs.
+        </p>
+        <p>
+            <strong>* Fees and Commissions: </strong>The Company may pay or receive fees, commissions, or other non-monetary benefits from third parties as permissible under applicable laws. The Company will provide information on these
+            benefits to the Client upon request, to the extent required by law.
+        </p>
+        <p>
+            <strong>* Taxes:</strong> Details of any taxes that the Company is required to pay on the Client's behalf will be provided on Confirmations issued to the Client. The Client may also be liable for other taxes that are not
+            collected by the Company, and the Client should seek independent advice if there is any doubt about potential tax liabilities.
+        </p>
+        <p>
+            <strong>* Tax Responsibility:</strong> The Client is solely responsible for making all necessary filings, tax returns, and reports related to any Transactions and for paying all taxes arising from or related to these
+            Transactions. This includes transfer taxes, value-added taxes, and other applicable taxes.
+        </p>
+        <p><strong>* Stamp Expenses:</strong> The Client is responsible for paying all stamp expenses related to the Agreement and any documentation required for executing the transactions under this Agreement.</p>
+        <p><strong>* Variation of Charges: </strong>The Company has the authority to change its charges without prior consultation or consent from the Client.</p>
+        <p>
+            <strong>* Payment Obligation:</strong> The Client must pay the Company any amount owed on time, in freely transferable, cleared, and available same-day funds, in the specified currency and to the designated accounts. The Client
+            cannot make any offset, counterclaim, deduction, or withholding to settle obligations owed to the Company.
+        </p>
+        <p><strong>* Detachment of Equity:</strong> The Company has the right to detach and acquire any equity owned by the Client when such equity is generated by a credit granted by the Company to the Client.</p>
+        <p>
+            <span style="font-size: medium;"><strong>24. Deposits And Withdrawals</strong></span>
+        </p>
+        <p><strong>* Bank Wiring Instructions:</strong> The Client acknowledges that bank wiring instructions are provided by the Company along with account details and confirmation.</p>
+        <p><strong>* Third-Party Payments:</strong> The Company does not accept funds and payments for trading accounts from third parties. The depositor's name must match the name of the trading account holder.</p>
+        <p><strong>* Client Account Purpose:</strong> The Client Account is meant for trading purposes and is not a traditional bank account. Funds are held to maintain margins supporting the trading account and trading activities.</p>
+        <p>
+            <strong>* Refund of Funds:</strong> If funds are deposited or payments are made by any person who does not have a trading account with the Company, the full amount will be returned to the person through the same channel used for
+            the deposit, and refund fees may apply.
+        </p>
+        <p><strong>* Anti-Money Laundering:</strong> The Company complies with anti-money laundering laws and regulations. The Client's account activity is reviewed for suspicious transactions indicative of money laundering.</p>
+        <p><strong>* Deposit Methods:</strong> Clients can deposit funds through bank transfer, debit/credit card, Skrill, or other electronic money transfer methods acceptable to the Company. Cash deposits are not accepted.</p>
+        <p><strong>* Withdrawal Requests:</strong> The Company will process withdrawals according to the Withdrawal &amp; Refund Policy. Withdrawals will be made to the Client's bank account.</p>
+        <p><strong>* Withdrawals to Third Parties:</strong> The Company may choose not to process withdrawals to third parties or anonymous accounts.</p>
+        <p><strong>* First Deposit Refund: </strong>The full amount of the first deposit will be returned to the Client's original funding source when a withdrawal request is made.</p>
+        <p>
+            <strong>* Withdrawal Methods: </strong>When depositing a specific method (e.g., bank account, credit card, electronic wallet), the Client is obligated to withdraw the full amount of that deposit using the same method before
+            using another withdrawal method.
+        </p>
+        <p><strong>* Company's Right to Decline Withdrawals:</strong> The Company reserves the right to decline withdrawal requests and may request additional information if deemed necessary.</p>
+        <p><strong>* Payment Delays:</strong> Delays in deposit and withdrawal requests may occur due to verification processes by the Company, banks, card processors, or electronic wallet service providers.</p>
+        <p><strong>* Payment Charges:</strong> The Client is responsible for payment and transfer charges, including bank charges, for deposits and withdrawals. The Company will reflect these charges in the Client Account.</p>
+        <p><strong>* Service Fees:</strong> The Company may charge the Client for service fees, including deposit and withdrawal fees, as determined at its sole discretion.</p>
+        <p><strong>* Excess Obligations: </strong>If the Client owes an amount exceeding the Equity in the Client Account, they must pay the excess immediately.</p>
+        <p><strong>* Crediting Funds: </strong>Funds credited to the Client Account after a deposit will typically be processed within one to three business days. This may vary depending on the payment method.</p>
+        <p><strong>* Currency Conversion:</strong> Currency conversions will be performed by the bank, card processor, or electronic wallet service provider at the prevailing exchange rate of the day, with fees that might apply.</p>
+        <p><strong>* Fees for Wire Transfers:</strong> Wire transfers may be subject to fees imposed by banks, and these fees can vary from one transaction to another.</p>
+        <p><strong>* Credit Card Payments: </strong>Payments made by credit card must match the Client's name and are credited to the Client Account. Chargebacks are not permitted in most cases.</p>
+        <p>
+            <strong>* Visual Contact of Card:</strong> The Company advises the Client to allow the visual contact of specific card digits while covering the CVV numbers on the back of the card when submitting a copy of their card for
+            security reasons.
+        </p>
+        <p><strong>* High-Risk Regions: </strong>The Company may reject credit card payments from high-risk regions as recognized by applicable regulations and laws.</p>
+        <p><strong>* Non-Refundable Transactions:</strong> Credit card transactions (deposits) are non-refundable and irrevocable.</p>
+        <p><strong>* Chargeback Dispute: </strong>In the event of a dispute related to a chargeback, the Company may withhold the chargeback in a reserve until the dispute is resolved.</p>
+        <p><strong>* Liabilities:</strong> The Client is liable for all costs, legal expenses, and reasonable value of time spent by the Company in case of disputes or chargebacks.</p>
+        <p><strong>* Setoff:</strong> The Company may set off against the Balances for any obligations and liabilities of the Client.</p>
+        <p><strong>* Exceptions: </strong>The Company has the right to apply exceptions to the terms of this section as it sees necessary or appropriate, based on its sole discretion.</p>
+        <p>
+            <span style="font-size: medium;"><strong>25. Deposits And Withdrawals Fees</strong></span>
+        </p>
+        <p>
+            The Client acknowledges and confirms that the Company may, at its discretion and at any time and/or for whatsoever reason and/or without any prior notification to the Client and/or without the prior consent of the Client,
+            increase the amount of transfer fees which is demonstrated at the Company&rsquo;s Website-Trading &ndash; Deposit &amp; withdrawal page to any other amount the Company believes necessary.
+        </p>
+        <p>
+            <span style="font-size: medium;"><strong>26. Client Money</strong></span>
+        </p>
+        <p>* Client money will be segregated from the Company's own funds by applicable regulations. The Company will promptly place client money into a Segregated Client Account.</p>
+        <p>* The Client will not receive profits or interest earned on client money, except for profits gained through trading transactions.</p>
+        <p>* The Company may deposit client money in overnight deposits and is allowed to keep any interest earned.</p>
+        <p>* Client money and funds from other clients may be held in the same bank account (omnibus account).</p>
+        <p>
+            * Client money may be held with third parties such as intermediaries, banks, clearing houses, or OTC counterparties. The legal and regulatory regime applicable to these entities will be according to the rules and laws of
+            Mauritius and the EEA, and the Company will not be liable for any bankruptcy or insolvency of these third parties.
+        </p>
+        <p>* If the Company's bank account is frozen, the Company assumes no responsibility, and the client's funds will also be frozen.</p>
+        <p>* If there has been no activity in the client's account for at least six years, the Company may release the client's money balances from the Segregated Account.</p>
+        <p>* The Company has a general lien on all funds held on the client's behalf until the client's obligations are satisfied.</p>
+        <p>* The Company will perform daily reconciliations of records and client money with the Segregated Client Account. Transfers may be made to or from the Segregated Client Account as needed.</p>
+        <p>
+            * Client funds will not bear interest, and the Client waives the right to receive such interest. Any interest earned on client funds will be used to cover registration, general expenses, charges, fees, and interest related to
+            the administration and maintenance of the bank accounts.
+        </p>
+        <p>
+            <span style="font-size: medium;"><strong>27. Communications And Written Notices</strong></span>
+        </p>
+        <p>
+            * Any written communication from the client to the company must be in writing and can be sent via email, facsimile, post (if posted within Mauritius), airmail (if posted outside Mauritius), or through a commercial courier
+            service. It will be considered "Delivered" only when the company receives it.
+        </p>
+        <p>* The company may use various methods to communicate with the client, including online trading system internal messages, facsimile transmission, commercial courier, airmail, or email.</p>
+        <p>* The time at which communications are considered received varies depending on the method used:</p>
+        <p>For emails, within one hour after emailing.</p>
+        <p>For online trading systems internal mail, immediately after sending. For facsimile transmission, upon receipt of. For postal mail, seven calendar days after posting.</p>
+        <p>For commercial courier, on the date of signing upon receipt.</p>
+        <p>For airmail, eight business days after posting.</p>
+        <p>If posted on the company webpage, within one hour after it has been posted.</p>
+        <p>* The company will use the contact details provided by the client to communicate, and it is the client's responsibility to notify the company of any changes to their contact information.</p>
+        <p>* Communication sent to the client's designated address or phone number, as provided to the company, is considered personal delivery to the client.</p>
+        <p>* Faxed documents received by the company may be electronically scanned, and the scanned version will serve as conclusive evidence of the faxed communication.</p>
+        <p>
+            <span style="font-size: medium;"><strong>28. Complaints Handling Procedures</strong></span>
+        </p>
+        <p>
+            * Both parties (the client and the company) agree to follow the procedures outlined in the Complaint Handling Procedures as shown on the company's website. These procedures are binding and must be adhered to in case of any
+            dispute or complaint.
+        </p>
+        <p>* The procedures outlined in the Complaint Handling Procedures may be subject to amendments from time to time, so both parties need to be aware of and follow the most current version of these procedures.</p>
+        <p>
+            <span style="font-size: medium;"><strong>29. Language And Website</strong></span>
+        </p>
+        <p>* The company's official language is English. This means that English is the primary language for all official communications, disclosures, and information provided by the company.</p>
+        <p>* The client should always refer to the main website of the company for all information and disclosures about the company and its activities. The main website is the primary and authoritative source of information.</p>
+        <p>
+            * Any translations or information provided in languages other than English are for informational purposes only. They do not bind the company or have any legal effect. The company assumes no responsibility or liability regarding
+            the correctness of information provided in languages other than English.
+        </p>
+        <p>
+            <span style="font-size: medium;"><strong>30. Online Trading Systems, Mobile Trading Services And Safety</strong></span>
+        </p>
+        <p>
+            * The company provides access to online trading systems, allowing clients to transmit orders and transactions for their accounts via Internet browsers. Mobile trading services involve using software and communication links on
+            mobile devices to access client accounts.
+        </p>
+        <p>* Clients are provided with access codes to the online trading system and mobile trading service to give orders for transactions through compatible personal computers connected to the internet.</p>
+        <p>
+            * Clients must not engage in any actions that could allow irregular or unauthorized access or use of the online trading system or mobile trading service. The company reserves the right to terminate or limit access if such
+            actions are suspected.
+        </p>
+        <p>* Clients are responsible for the equipment necessary to access and use the online trading system and mobile trading service.</p>
+        <p>
+            * Clients are allowed to store, display, analyze, modify, reformat, and print information from the company's website or online trading system but cannot publish, transmit, or reproduce it for third parties without the company's
+            written consent.
+        </p>
+        <p>* Clients must not use the online trading system or mobile trading service in contravention of the agreement and must not use software or devices to access or obtain information in an automated manner.</p>
+        <p>* Clients shall not distribute or reverse engineer any software provided by the company, and they agree not to provide third-party training or use the service for third parties.</p>
+        <p>* Clients must keep their access data confidential and not disclose it to unauthorized individuals. They should not write down their access codes.</p>
+        <p>
+            * Clients must notify the company immediately if they suspect unauthorized access or the loss, theft, or unauthorized use of their access data. The company will take steps to prevent further use and issue replacement access
+            data.
+        </p>
+        <p>* Clients are responsible for monitoring account activities and should promptly notify the company of any discrepancies or issues.</p>
+        <p>* Clients should have alternative arrangements in place for order transmission and execution in case the online trading system or mobile trading service is unavailable.</p>
+        <p>* The company reserves the right to restrict access to its electronic systems as needed to protect client interests and its operations.</p>
+        <p>* Clients are liable for all orders given through their access data, and such orders will be considered as received by the company.</p>
+        <p>
+            * The company is not responsible if unauthorized third parties gain access to information transmitted between parties, including electronic addresses, communication, personal data, and access data over the Internet or other
+            communication facilities.
+        </p>
+        <p>
+            <span style="font-size: medium;"><strong>31. Electronic Signature</strong></span>
+        </p>
+        <p>* The client consents and agrees that the use of an electronic signature constitutes their signature and has legal effect. Electronic signatures will be admissible as evidence in legal proceedings in any country.</p>
+        <p>
+            * The client agrees that the effectiveness and admissibility of electronic signatures in legal proceedings are not denied solely because they are in electronic form. They are also not required to be based on a qualified
+            certificate issued by an accredited certification service provider or created by a secure signature creation device.
+        </p>
+        <p>* The client acknowledges that no third-party verification is necessary for the enforceability of their electronic signature between them and the company.</p>
+        <p>* The company, at its sole discretion, may accept documents signed and transmitted online as original documents, and these electronic signatures have the same binding effect as original signatures on paper documents.</p>
+        <p>* The client consents to receive information, agreements, or any other documents electronically, and electronically signed agreements are considered electronic contracts that have been freely entered into.</p>
+        <p>
+            <span style="font-size: medium;"><strong>32. Force Majeure</strong></span>
+        </p>
+        <p>
+            <strong>* Force Majeure Events: </strong>The agreement lists several events that can be considered Force Majeure Events, including government actions, war, terrorism, natural disasters, labour disputes, regulatory bans,
+            excessive market movements, financial services moratoriums, technical failures, and events not reasonably within the company's control.
+        </p>
+        <p>
+            <strong>* Company's Actions:</strong> In the event of a Force Majeure Event (as determined by the company's reasonable opinion), the company can take various actions without prior written notice. These actions may include
+            increasing margin requirements, closing out open positions at prices the company deems appropriate, modifying or suspending the application of agreement terms, and other actions it deems reasonably appropriate.
+        </p>
+        <p>
+            <strong>* Liability Limitation: </strong>The company will not be liable for any losses or damages resulting from a failure, interruption, or delay in fulfilling its obligations under the agreement due to a Force Majeure Event.
+        </p>
+        <p>
+            <span style="font-size: medium;"><strong>33. Time Of Essence</strong></span>
+        </p>
+        <p><strong>* Failure to Provide Margin: </strong>If the client fails to provide the required initial margin, hedged margin, or other amounts due under the agreement, it is considered an Event of Default.</p>
+        <p>
+            <strong>* Bankruptcy or Equivalent Actions:</strong> If the client, whether an individual, partner in a partnership, or a company, becomes subject to bankruptcy proceedings or similar actions, it constitutes an Event of Default.
+        </p>
+        <p><strong>* Untrue Representations: </strong>If any representation or warranty made by the client in the agreement becomes untrue, it is considered an Event of Default.</p>
+        <p><strong>* Inability to Pay Debts:</strong> If the client is unable to pay their debts when they fall due, it's considered an Event of Default.</p>
+        <p><strong>* Abusive Behavior: </strong>Behaving in an abusive or threatening manner towards the Company's staff constitutes an Event of Default.</p>
+        <p><strong>* Change of Location:</strong> If the client changes their physical location without notifying the Company, it is considered an Event of Default.</p>
+        <p><strong>* Legal Incapacity:</strong> If an individual client dies, is declared absent, or becomes of unsound mind, it constitutes an Event of Default.</p>
+        <p><strong>* Eligibility: </strong>If the Company reasonably determines that the client is no longer eligible to perform the activities in their account(s), it's an Event of Default.</p>
+        <p><strong>* Inadequate Collateral:</strong> If the property deposited as collateral is deemed inadequate by the Company, it's an Event of Default.</p>
+        <p><strong>* Breach of Agreement: </strong>Any breach of the terms of the agreement by the client is considered an Event of Default.</p>
+        <p><strong>* Regulatory Requirements:</strong> If an action required by a competent regulatory authority, body, or court is not followed, it's an Event of Default.</p>
+        <p><strong>* Material Violation:</strong> In cases of a material violation of legislative requirements in Mauritius or other countries, as determined in good faith by the Company, it's an Event of Default.</p>
+        <p><strong>* Money Laundering or Criminal Activities:</strong> If the Company suspects the client is engaged in money laundering, terrorist financing, or other criminal activities, it's an Event of Default.</p>
+        <p><strong>* Scalping or Pip-Hunting:</strong> If the client engages in scalping or pip-hunting activities (if not allowed by the Company), it constitutes an Event of Default.</p>
+        <p>When an Event of Default occurs, the Company may take various actions, including terminating the agreement, closing out open positions, debiting the client's accounts, combining client accounts, and more.</p>
+        <p>
+            Additionally, the agreement allows the Company to make changes to the leverage applied to client accounts, especially if the client's trading activities appear to exploit margin trading to increase potential returns while also
+            increasing risk.
+        </p>
+        <p>
+            Furthermore, the agreement acknowledges that errors can occur in quoted prices for financial instruments due to market circumstances or system malfunctions. In such cases, the client agrees that the Company has the right to
+            cancel, correct, or modify transactions based on manifestly incorrect prices or those reasonably known to be incorrect at the time.
+        </p>
+        <p>
+            <span style="font-size: medium;"><strong>35. Termination</strong></span>
+        </p>
+        <p><strong>* Termination by Either Party:</strong> Either the client or the company may terminate the agreement with immediate effect by providing written notice to the other party.</p>
+        <p>
+            <strong>* Effect of Termination:</strong> Termination of the agreement will not affect any obligations already incurred by either party concerning open positions, legal rights, or obligations arising under the agreement or any
+            transactions and deposit/withdrawal operations.
+        </p>
+        <p>
+            <strong>* Immediate Payment Obligations:</strong> Upon termination of the agreement, all amounts payable by the client to the company will become immediately due and payable. This includes outstanding fees, charges, commissions,
+            any dealing expenses related to termination, losses and expenses incurred in closing out transactions, charges and expenses due to termination, and any damages that arose during the arrangement or settlement of pending
+            transactions.
+        </p>
+        <p><strong>* Right to Keep Client Funds: </strong>The company reserves the right to keep the client's funds as necessary to close open positions and pay pending obligations under the agreement upon termination.</p>
+        <p>
+            <strong>* Account Closure and Actions:</strong> The company may combine client accounts, consolidate balances, close the client account, and take actions such as ceasing to grant access to the online trading system, closing the
+            client account, converting currency, suspending or freezing positions, and rejecting orders upon termination.
+        </p>
+        <p>
+            <strong>* Client Account Balance:</strong> If there is a balance in the client's favour upon termination, the company will pay the balance to the client after withholding appropriate amounts for future liabilities. The company
+            will provide a statement explaining how the balance was calculated and may instruct any nominee or custodian to also pay applicable amounts. The funds will be delivered according to the client's instructions, but the company has
+            the right to refuse the transfer of funds to a third party.
+        </p>
+        <p>
+            <span style="font-size: medium;"><strong>36. Business Introducer</strong></span>
+        </p>
+        <p><strong>* Company Not Responsible for Business Introducer:</strong> The client acknowledges that the company is not responsible for the conduct or representations of the Business Introducer or its associated parties.</p>
+        <p><strong>* Indemnity and Waiver:</strong> The client agrees to indemnify and hold the company harmless for any actions or omissions of the Business Introducer or its associated parties.</p>
+        <p><strong>* Separate Agreements:</strong> The client acknowledges that the company is not bound by any separate agreements entered into between the client and the Business Introducer.</p>
+        <p>
+            <strong>* Information Sharing: </strong>The client acknowledges that the company has the right to provide the Business Introducer with information related to the transactions of the client's account(s) as reasonably necessary to
+            facilitate the introduction.
+        </p>
+        <p>
+            <strong>* Additional Costs:</strong> The client acknowledges that the relationship with the Business Introducer may result in additional costs to the company, such as commission fees or charges paid to the Business Introducer.
+        </p>
+        <p>
+            <strong>* Access and Commission Rebates:</strong> The Business Introducer is granted "View Only" access to observe the activities of the client's account. The company may provide the Business Introducer with information about
+            the lots closed by the client to process any commission rebates due to the Business Introducer.
+        </p>
+        <p>
+            <strong>* Business Introducer's Role:</strong> The client acknowledges that the Business Introducer is not a representative of the company and is not authorized to provide guarantees or promises regarding the company or its
+            services.
+        </p>
+        <p>
+            <span style="font-size: medium;"><strong>37. Limitations Of Liability And Indemnity</strong></span>
+        </p>
+        <p>
+            <strong>* Information and Recommendations: </strong>The company provides information, recommendations, news, market commentary, or research to the client. The company will not be liable for any losses, costs, expenses, or
+            damages arising from inaccuracies or mistakes in this information, except in cases of fraud, willful default, or gross negligence.
+        </p>
+        <p>
+            <strong>* Exclusions of Liability:</strong> The company will not be held liable for various factors, including errors or failures in the operation of the online trading system, delays caused by the client, transactions made by
+            the client, force majeure events, third-party acts or omissions, unauthorized access to the client's information, delays in order transmission, currency risk, and other specified risks.
+        </p>
+        <p>
+            <strong>* Indemnification: </strong>If the company incurs any claims, damage, liability, costs, or expenses related to the execution of the agreement or provision of services, the client is responsible for indemnifying the
+            company.
+        </p>
+        <p>
+            <strong>* Consequential Losses: </strong>The company shall not be liable for any consequential, special, or indirect losses, damages, loss of profits, attorneys' fees, fines, penalties, or other costs and expenses incurred by
+            the client.
+        </p>
+        <p>
+            <strong>* Collection Costs:</strong> The client agrees to reimburse the company for any costs of collection incurred by the company in collecting sums owed by the client under the agreement and for any costs incurred in
+            defending against claims asserted by the client.
+        </p>
+        <p><strong>* Responsibility for Trading Operations:</strong> The client is responsible for trading operations using additional functions of the client's trading terminal, and the company bears no responsibility in this regard.</p>
+        <p>
+            <strong>* Stop Loss Orders:</strong> Placing a Stop Loss Order may not necessarily limit losses to the intended amounts, and the company bears no responsibility for market conditions that may affect the execution of such orders.
+        </p>
+        <p>
+            <span style="font-size: medium;"><strong>38. Representations And Warranties</strong></span>
+        </p>
+        <p><strong>* Accuracy of Information:</strong> The information provided by the client in the Application Form and at any time thereafter is true, accurate, and complete, and the documents provided are valid and genuine.</p>
+        <p><strong>* Updated Information:</strong> The client will promptly inform the company of any new information or changes to the information provided.</p>
+        <p><strong>* Understanding of the Agreement:</strong> The client has read and fully understood the terms of the Agreement, including the risks involved.</p>
+        <p><strong>* Duly Authorized:</strong> The client is duly authorized to enter into the Agreement, give instructions and requests, and perform obligations under the Agreement.</p>
+        <p><strong>* Principal Capacity: </strong>The client acts as a principal and not as an agent, representative, trustee, or custodian of another person.</p>
+        <p>
+            <strong>* Legal Capacity: </strong>The client (if an individual) is of legal age, of sound mind, and authorized to open accounts, and the client (if an entity) is validly existing and empowered to enter into the Agreement and
+            effectuate transactions as contemplated.
+        </p>
+        <p><strong>* Compliance with Laws:</strong> All actions performed under the Agreement will not violate any applicable laws, rules, or agreements by which the client is bound.</p>
+        <p>
+            <strong>* No Regulatory Restrictions:</strong> There are no restrictions, conditions, or restraints imposed by Central Banks or any governmental, regulatory, or supervisory bodies that could prevent or inhibit the client from
+            entering into or performing under the Agreement.
+        </p>
+        <p><strong>* Legal Proceedings:</strong> There are no pending legal proceedings that question the legality, validity, or enforceability of the Agreement, or the client's ability to perform obligations under the Agreement.</p>
+        <p><strong>* Legal Source of Funds: </strong>The client's funds are not the proceeds of illegal activities and are not intended for use in terrorist financing.</p>
+        <p><strong>* Market Restrictions:</strong> There are no restrictions on the markets or instruments in which transactions will be executed based on the client's nationality or other factors.</p>
+        <p><strong>* Financial Circumstances:</strong> The client has chosen the specific type of service and financial instrument based on a reasonable assessment of their overall financial circumstances.</p>
+        <p><strong>* Politically Exposed Person (PEP) Status:</strong> The client has declared if they are a Politically Exposed Person in the Application Form and will notify the company if they become a PEP during the Agreement.</p>
+        <p>
+            <span style="font-size: medium;"><strong>39. Conflicts Of Interest</strong></span>
+        </p>
+        <p><strong>* Company as Principal: </strong>When the Company is acting as a principal, it may act as the Client's counterparty in transactions, potentially creating a conflict of interest.</p>
+        <p><strong>* Trading CFDs: </strong>When the Company is trading CFDs as a principal, it may sell or buy CFDs from the Client and may have positions that are long or short in the same instruments.</p>
+        <p><strong>* Matching Client Transactions: </strong>The Company may match the Client's transactions with those of other clients, acting on behalf of multiple clients in the same transactions.</p>
+        <p><strong>* Providing Investment Services:</strong> The Company may provide investment advice and services to other clients, and the interests of these clients may conflict with or compete with the interests of the Client.</p>
+        <p><strong>* Taking Positions:</strong> The Company, its associates, and employees may take positions that are opposite to the Client's positions or may compete with the Client to acquire similar positions.</p>
+        <p>
+            <strong>* Offsetting Financial Instruments: </strong>The Company may enter into offsetting financial instruments for its own account with other counterparties, which can result in price differences offered to the Client compared
+            to those quoted to the Company by other parties. The Company is not obligated to disclose such price differences to the Client.
+        </p>
+        <p>
+            <span style="font-size: medium;"><strong>40. Client Acknowledgements Of Risk And Consent</strong></span>
+        </p>
+        <p><strong>* Trading in CFDs: </strong>The client acknowledges that trading in CFDs carries a high degree of risk and is not suitable for everyone. The client may incur significant losses and damages while trading in CFDs.</p>
+        <p>
+            <strong>* High Risk and Leverage: </strong>CFDs carry a high degree of risk, and the leverage available in CFD trading means that small deposits can lead to substantial losses. Small market movements can also result in
+            proportionately larger changes in the value of the client's investment. The client must be aware of the margining requirements.
+        </p>
+        <p>
+            <strong>* Futures Trading: </strong>Trading in futures involves leveraged transactions where a small market movement can lead to a total loss of the initial margin funds and any additional funds deposited to maintain open
+            positions. The client may be required to provide substantial additional funds on short notice to maintain open positions.
+        </p>
+        <p>
+            <strong>* Foreign Exchange Risks: </strong>Foreign exchange trading is highly volatile, and transactions in foreign currencies carry a substantial risk of loss. The client's risk exposure increases if transactions are
+            denominated in foreign currencies.
+        </p>
+        <p>
+            <strong>* Online Trading System Risks: </strong>Trading through an online trading system or mobile trading service carries risks related to system access, including restrictions, unavailability during peak demand, extreme market
+            volatility, or system upgrades.
+        </p>
+        <p>
+            <strong>* No Warranty:</strong> The company and its service providers do not warrant that access to the online trading system or mobile trading service will be uninterrupted or error-free. There is no warranty as to the results
+            or the accuracy, completeness, reliability, or content of information, services, or transactions provided through these services.
+        </p>
+        <p>
+            <strong>* Limitation of Liability: </strong>The company, its directors, officers, employees, and other parties involved in providing online services shall not be liable for any direct, indirect, special, or consequential damages
+            arising from the use of these services.
+        </p>
+        <p>
+            <strong>* Responsibility for Losses: </strong>The client acknowledges full responsibility for any loss or damage arising from the use of the online service and shall be liable for any inaccuracy, error, delay, or interruption in
+            data or information due to any cause, including force majeure.
+        </p>
+        <p>
+            <strong>* Inability to Use Services:</strong> The company is not liable for losses or costs incurred due to the client's inability to use the online service or mobile trading service for placing orders, receiving confirmations,
+            or accessing information.
+        </p>
+        <p><strong>* No Liability for Training:</strong> The company is not liable for any losses due to the failure to provide training, training materials, updates, or notice of changes to trading terms.</p>
+        <p><strong>* Jurisdiction and Local Laws:</strong> The client is responsible for ensuring that the use of the online service or mobile trading service does not breach any local laws or regulations.</p>
+        <p><strong>* Nature of CFD Trading: </strong>The client will not be entitled to delivery or ownership of the underlying asset in CFD trading, and no interest is due on the client's funds held by the company.</p>
+        <p><strong>* Over-the-counter (OTC) Trading:</strong> CFD trading is not conducted on a Regulated Market but is traded over the counter (OTC).</p>
+        <p>
+            <strong>* Information Provision: </strong>The client consents to receive information, including amendments to terms and conditions, costs, fees, agreements, policies, and information about the nature and risks of investments
+            through posting such information on the company's website.
+        </p>
+        <p>
+            <strong>* No Investment Advice: </strong>The client acknowledges that the company does not provide investment advice. Market information provided by the company does not constitute advice of any kind, and the client uses such
+            information at their own risk.
+        </p>
+        <p><strong>* Client's Sole Responsibility: </strong>All transactions and market fluctuations in the client's account are at the client's sole risk, and the client is solely liable under all circumstances.</p>
+        <p>
+            <strong>* Bankruptcy or Insolvency:</strong> The company is not liable for the loss of any margin deposits resulting from bankruptcy, insolvency, or similar situations of banks, clearing brokers, exchanges, or clearing
+            organizations.
+        </p>
+        <p>
+            <span style="font-size: medium;"><strong>42. Manifest Error</strong></span>
+        </p>
+        <p>
+            <strong>* Right to Void or Amend Transactions: </strong>The company reserves the right to void or amend, without the client's consent, any transaction that is determined to contain an obvious or palpable error, referred to as a
+            "Manifest Error." If the company chooses to amend the terms of such a transaction, the amended level will be set to what the company reasonably believes would have been fair at the time the transaction was entered into.
+        </p>
+        <p>
+            <strong>* Reasonable Determination of Manifest Error: </strong>The company will act reasonably in deciding whether an error qualifies as a Manifest Error. The determination may take into account factors such as the state of the
+            underlying market at the time of the error or the clarity of information sources or pronouncements used to set quoted prices.
+        </p>
+        <p>
+            <strong>* No Liability for Manifest Errors:</strong> Unless there is evidence of the company's fraud, willful default, or negligence, the company will not be liable for any losses, costs, claims, demands, or expenses arising
+            from a Manifest Error, including errors made by information sources or commentators relied upon by the company.
+        </p>
+        <p>
+            <strong>* Return of Monies:</strong> If a Manifest Error occurs, and the company exercises its rights under the agreement terms, and if the client has received any funds from the company in connection with the Manifest Error,
+            the client agrees to promptly return an equal sum to the company.
+        </p>
+        <p>
+            <span style="font-size: medium;"><strong>43. Amendment</strong></span>
+        </p>
+        <p>
+            <strong>* Client Acceptance of Amendments: </strong>The client acknowledges and agrees to be bound by any amendments or variations to the agreement that are made following the provisions of the agreement. The client further
+            agrees that their first transaction initiated following a change to the agreement's terms will constitute their acceptance of the change. The execution of such a transaction by the company is considered a good consideration for
+            the amendment.
+        </p>
+        <p>
+            <strong>* Notice of Amendments:</strong> The company has the right to amend the terms of the agreement at any time, but it must provide the client with at least two business days of written notice before such changes become
+            effective. However, it's noted that variations made to reflect changes in laws or regulations may take effect immediately.
+        </p>
+        <p>
+            <span style="font-size: medium;"><strong>44. Customer Acknowledgments And Signature</strong></span>
+        </p>
+        <p>
+            <strong>* Client's Consent:</strong> The client acknowledges their understanding of the CFD's Client Agreement, as interpreted in clause 2.1, and consents and agrees to all the terms and conditions of the agreement outlined
+            above.
+        </p>
+        <p>
+            <strong>* High Degree of Risk Acknowledgment:</strong> The client acknowledges that trading in CFD contracts involves a high degree of risk and is suitable only for individuals who can assume the risk of loss over their margin.
+        </p>
+        <p><strong>* Confirmation through Online Registration: </strong>By clicking "Submit" on the online registration form, the client confirms and agrees to the following:-</p>
+        <p>They have read, understood, acknowledged, and agreed to all the company's terms and conditions and this Agreement.</p>
+        <p>They confirm that they do not breach any regulation of their country of residence when trading in the forex market.</p>
+        <p><strong>* Electronic Signature: </strong>The client acknowledges that their electronic signature is considered a legal and official signature and has the same effect as a physical hardcopy signature.</p>
+    </div>
+</section>
+{% endblock content %}

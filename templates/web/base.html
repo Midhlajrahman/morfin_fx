@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{% load static %}
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Primary Meta Tags -->
+  <title> Morfin FX | Converging Trust & Transparency</title>
+  <meta name="title"
+    content=" Morfin FX | Converging Trust & Transparency" />
+  <meta name="description"
+    content="An international financial services company providing investment opportunities to institutional retailers and private clients." />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://morfinfx.com/" />
+  <meta property="og:title"
+    content=" Morfin FX | Converging Trust & Transparency" />
+  <meta property="og:description"
+    content="An international financial services company providing investment opportunities to institutional retailers and private clients." />
+  <meta property="og:image" content="https://morfinfx.com/static/assets/img/assets/preview.png" />
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:url" content="https://morfinfx.com/" />
+  <meta property="twitter:title"
+    content=" Morfin FX | Converging Trust & Transparency" />
+  <meta property="twitter:description"
+    content="An international financial services company providing investment opportunities to institutional retailers and private clients." />
+  <meta property="twitter:image" content="https://morfinfx.com/static/assets/img/assets/preview.png" />
+
+  <!-- Favicon -->
+  <link rel="apple-touch-icon" sizes="144x144" href="{% static 'assets/img/favicon/apple-touch-icon.png' %}">
+  <link rel="icon" type="image/png" sizes="32x32" href="{% static 'assets/img/favicon/favicon-32x32.png' %}">
+  <link rel="icon" type="image/png" sizes="16x16" href="{% static 'assets/img/favicon/favicon-16x16.png' %}">
+  <link rel="manifest" href="{% static 'assets/img/favicon/site.webmanifest' %}">
+  <link rel="mask-icon" href="{% static 'assets/img/favicon/safari-pinned-tab.svg' %}" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="theme-color" content="#ffffff">
+
+  <!-- CSS here -->
+  <link rel="stylesheet" href="{% static 'assets/css/bootstrap.min.css' %}?v=2.8">
+  <link rel="stylesheet" href="{% static 'assets/css/animate.min.css' %}?v=2.8">
+  <link rel="stylesheet" href="{% static 'assets/css/magnific-popup.css' %}?v=2.8">
+  <link rel="stylesheet" href="{% static 'assets/css/fontawesome-all.min.css' %}?v=2.8">
+  <link rel="stylesheet" href="{% static 'assets/css/flaticon-eduvalt.css' %}?v=2.8">
+  <link rel="stylesheet" href="{% static 'assets/css/default-icons.css' %}?v=2.8">
+  <link rel="stylesheet" href="{% static 'assets/css/select2.min.css' %}?v=2.8">
+  <link rel="stylesheet" href="{% static 'assets/css/odometer.css' %}?v=2.8">
+  <link rel="stylesheet" href="{% static 'assets/css/slick.css' %}?v=2.8">
+  <link rel="stylesheet" href="{% static 'assets/css/aos.css' %}?v=2.8">
+  <link rel="stylesheet" href="{% static 'assets/css/spacing.css' %}?v=2.8">
+  <link rel="stylesheet" href="{% static 'assets/css/tg-cursor.css' %}?v=2.8">
+  <link rel="stylesheet" href="{% static 'assets/css/main.css' %}?v=2.8">
+  <link rel="stylesheet" href="{% static 'assets/css/custom.css' %}?v=2.8.1">
+
+  <!-- Meta Pixel Code -->
+  <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1979403659120576');
+    fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=1979403659120576&ev=PageView&noscript=1"
+    />
+  </noscript>
+  <!-- End Meta Pixel Code -->
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QTLLQ35KQL"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-QTLLQ35KQL');
+</script>
+
+
+</head>
+
+<body class="dark_mode">
+  <!-- Preloader -->
+  <div id="preloader">
+    <div class="">
+      <div class="spinner">
+        <img src="{% static 'assets/img/preloader.svg' %}" alt="">
+      </div>
+      <small>Loading ...</small>
+    </div>
+  </div>
+
+  {% include 'web/includes/header.html' %}
+
+  <main class="main-area fix">
+    {% block content %}
+
+    {% endblock %}
+  </main>
+
+  {% include 'web/includes/footer.html' %}
+  {% include 'web/includes/whatsapp_widget.html' %}
+
+
+  <!-- JS here -->
+  <script src="{% static 'assets/js/vendor/jquery-3.6.0.min.js' %}?v=2.8"></script>
+  <script src="{% static 'assets/js/bootstrap.min.js' %}?v=2.8"></script>
+  <script src="{% static 'assets/js/isotope.pkgd.min.js' %}?v=2.8"></script>
+  <script src="{% static 'assets/js/imagesloaded.pkgd.min.js' %}?v=2.8"></script>
+  <script src="{% static 'assets/js/jquery.magnific-popup.min.js' %}?v=2.8"></script>
+  <script src="{% static 'assets/js/jquery.odometer.min.js' %}?v=2.8"></script>
+  <script src="{% static 'assets/js/jquery.appear.js' %}?v=2.8"></script>
+  <script src="{% static 'assets/js/tween-max.min.js' %}?v=2.8"></script>
+  <script src="{% static 'assets/js/select2.min.js' %}?v=2.8"></script>
+  <script src="{% static 'assets/js/slick.min.js' %}?v=2.8"></script>
+  <script src="{% static 'assets/js/slick-animation.min.js' %}?v=2.8"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9.15.3/dist/sweetalert2.all.min.js"></script>
+
+  {% block js_plugins %}{% endblock %}
+
+  <script src="{% static 'assets/js/wow.min.js' %}?v=2.8"></script>
+  <script src="{% static 'assets/js/aos.js' %}?v=2.8"></script>
+  <script src="{% static 'assets/js/main.js' %}?v=2.8"></script>
+
+  {% block javascript %}{% endblock%}
+
+  <script>
+    $(document).on("click", "#send-it", function () {
+      var a = document.getElementById("chat-input");
+      if ("" != a.value) {
+        var b = $("#get-number").text(),
+          c = document.getElementById("chat-input").value,
+          d = "https://web.whatsapp.com/send",
+          e = b,
+          f = "&text=" + c;
+        if (
+          /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+            navigator.userAgent
+          )
+        )
+          var d = "whatsapp://send";
+        var g = d + "?phone=" + e + f;
+        window.open(g, "_blank");
+      }
+    }),
+      $(document).on("click", ".informasi", function () {
+        (document.getElementById("get-number").innerHTML = $(this)
+          .children(".my-number")
+          .text()),
+          $(".start-chat,.get-new")
+            .addClass("show")
+            .removeClass("hide"),
+          $(".home-chat,.head-home")
+            .addClass("hide")
+            .removeClass("show"),
+          (document.getElementById("get-nama").innerHTML = $(this)
+            .children(".info-chat")
+            .children(".chat-nama")
+            .text()),
+          (document.getElementById("get-label").innerHTML = $(this)
+            .children(".info-chat")
+            .children(".chat-label")
+            .text());
+      }),
+      $(document).on("click", ".close-chat", function () {
+        $("#whatsapp-chat")
+          .addClass("hide")
+          .removeClass("show");
+      }),
+      $(document).on("click", ".blantershow-chat", function () {
+        $("#whatsapp-chat")
+          .addClass("show")
+          .removeClass("hide");
+      });
+
+  </script>
+
+</body>
+
+</html>
