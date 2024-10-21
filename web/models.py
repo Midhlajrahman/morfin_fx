@@ -272,6 +272,7 @@ class Blog(models.Model):
     content = CKEditor5Field(config_name="extends")
     created = models.DateTimeField(db_index=True, auto_now_add=True)
     is_active = models.BooleanField(default=False)
+    is_home_page = models.BooleanField("Show in Homepage", default=False)
 
     class Meta:
         verbose_name = _("Blog")
@@ -299,3 +300,21 @@ class Award(models.Model):
     def __str__(self):
         return self.award_name
     
+
+class Service(models.Model):
+    service_name = models.CharField(max_length=180,blank=True,null=True)
+    title = models.CharField(max_length=180)
+    slug = models.SlugField()
+    image = models.ImageField(upload_to="service_image")
+    description = CKEditor5Field(config_name="extends")
+    
+    def get_absolute_url(self):
+        return reverse("web:service_view", kwargs={"slug": self.slug})
+    
+    class Meta:
+        db_table = 'service'
+        verbose_name = 'Service'
+        verbose_name_plural = 'Services'
+    
+    def __str__(self):
+        return self.title

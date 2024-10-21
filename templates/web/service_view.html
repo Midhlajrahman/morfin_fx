@@ -1,0 +1,32 @@
+{% extends 'web/base.html' %}
+{% load static %}
+{% block content %}
+<section class="mt5-web pattern_bg-bottom section_padding_xl service_section_detail">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-6 col-lg-6">
+                <div class="section__title text-center mb-20">
+                    <h2 class="title tg-svg">{{service.service_name}}</h2>
+                </div>
+                <div class="content__image">
+                    <img src="{{service.image.url}}" alt="{{service.title}}" style="width: auto;
+                    height: auto;">
+                </div>
+            </div>
+            <div class="col-xl-6 col-lg-6 mb-50">
+                <div class="content pt-65 pb-10">
+                    <h5 class="text_black">{{service.title}}</h5>
+                    <p>{{service.description|safe}}</p>
+                </div>
+                <a href="https://wa.me/971586259739?text=Hello%20Morfin%20FX%2C%20I%20want%20to%20know%20more%20about%20*{{service.service_name}}*" class="d-inline-block text-center mt-3" target="_blank">
+                    <div class="web_btn">
+                        <img src="{% static 'assets/img/assets/mt5/Group.svg' %}" alt="web" style="height: 16px;"
+                            class="me-2">
+                        <p class="text_black">Know More</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock content %}

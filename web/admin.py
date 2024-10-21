@@ -18,7 +18,8 @@ from web.models import (
     Testimonial,
     UpcomingEvent,
     Update,
-    Award
+    Award,
+    Service
 )
 
 admin.site.unregister(Group)
@@ -143,3 +144,9 @@ class AwardAdmin(ImportExportActionModelAdmin):
     list_display = ("award_name",)
     search_fields = ("award_name",)
     
+
+@admin.register(Service)
+class ServiceAdmin(admin.ModelAdmin):
+    list_display = ("service_name",)
+    prepopulated_fields = {"slug": ("service_name",)}
+    search_fields = ("service_name",)

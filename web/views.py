@@ -19,7 +19,8 @@ from .models import (
     Testimonial,
     UpcomingEvent,
     Update,
-    Award
+    Award,
+    Service
 )
 
 
@@ -30,8 +31,9 @@ def whatsapp(request):
 
 def index(request):
     instances = Testimonial.objects.filter(is_home_page=True, is_active=True)
+    blogs = Blog.objects.filter(is_home_page=True, is_active=True)
     awards = Award.objects.filter(is_home=True)
-    context = {"is_index": True, "instances": instances, "awards":awards}
+    context = {"is_index": True, "instances": instances, "awards":awards, "blogs": blogs}
     return render(request, "web/index.html", context)
 
 
@@ -411,3 +413,9 @@ def blogs(request):
 def blog_view(request, slug):
     blog = get_object_or_404(Blog, slug=slug)
     return render(request, "web/blog_view.html", {"blog": blog})
+
+
+def service_view(request, slug):
+    service = get_object_or_404(Service, slug=slug)
+    context = {"service": service}
+    return render(request, "web/service_view.html", context)

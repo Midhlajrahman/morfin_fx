@@ -24,25 +24,33 @@
                                         </ul>
                                     </li>
                                     <li class="{% if is_plateform %} active{% endif %} menu-item-has-children"><a
+                                            href="#">Services</a>
+                                        <ul class="sub-menu">
+                                            {% for service in header_services %}
+                                            <li class="{% if is_mt5 %} active{% endif %}"><a href="{{service.get_absolute_url}}">{{service.service_name}}</a></li>
+                                            {% endfor %}
+                                        </ul>
+                                    </li> 
+                                    {% comment %} <li class="{% if is_plateform %} active{% endif %} menu-item-has-children"><a
                                             href="#">Platform</a>
                                         <ul class="sub-menu">
                                             <li class="{% if is_mt5 %} active{% endif %}"><a href="{% url 'web:mt5' %}">MT5</a></li>
                                             <li class="{% if is_mt5_web %} active{% endif %}"><a href="{% url 'web:mt5_web' %}">MT5 Web</a></li>
                                         </ul>
-                                    </li>
+                                    </li> {% endcomment %}
                                     <li class="{% if is_manual %} active{% endif %} menu-item-has-children"
                                         class="menu-item-has-children"><a href="#">Manual</a>
                                         <ul class="sub-menu">
                                             <li class="{% if is_faq %} active{% endif %}"><a href="{% url 'web:faq' %}">FAQ</a></li>
                                             <li class="{% if beginner_manual %} active{% endif %}"><a href="{% url 'web:beginner_manual' %}">Beginner Manual</a></li>
-                                            <li class="{% if regular_manual %} active{% endif %}"><a href="{% url 'web:regular_manual' %}">Regular Manual</a></li>
-                                            <li class="{% if partner_manual %} active{% endif %}"><a href="{% url 'web:partner_manual' %}">Partner Manual</a></li>
+                                            {% comment %} <li class="{% if regular_manual %} active{% endif %}"><a href="{% url 'web:regular_manual' %}">Regular Manual</a></li>
+                                            <li class="{% if partner_manual %} active{% endif %}"><a href="{% url 'web:partner_manual' %}">Partner Manual</a></li> {% endcomment %}
                                         </ul>
                                     </li>
                                     <li class="{% if is_career %}active{% endif %} menu-item-has-children"><a
                                             href="#">Career</a>
                                         <ul class="sub-menu">
-                                            <li class="{% if is_vacancies %} active{% endif %}"><a href="{% url 'web:vacancies' %}">Vacancies</a></li>
+                                            {% comment %} <li class="{% if is_vacancies %} active{% endif %}"><a href="{% url 'web:vacancies' %}">Vacancies</a></li> {% endcomment %}
                                             <li class="{% if is_upload_cv %} active{% endif %}"><a href="{% url 'web:upload_cv' %}"> Upload CV</a></li>
                                         </ul>
                                     </li>

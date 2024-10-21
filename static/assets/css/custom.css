@@ -169,3 +169,9 @@ body.dark_mode {
     margin-bottom: 10px;
     font-weight: 300;
 }
+
+.service_section_detail .content__image img{
+    object-fit: cover;
+    width: 100% !important;
+    height: 300px !important;
+}

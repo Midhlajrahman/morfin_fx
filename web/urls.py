@@ -72,4 +72,5 @@ urlpatterns = [
     ),
     path("blog/", views.blogs, name="blogs"),
     path("blog/<str:slug>/", views.blog_view, name="blog_view"),
+    path("service/<slug:slug>/", views.service_view, name="service_view"),
 ]
