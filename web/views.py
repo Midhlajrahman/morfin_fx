@@ -100,7 +100,7 @@ def contact(request):
                 f'Message: {data.message}\n'
             )
             from_email = "support@morfinfx.com"
-            recipient_list = ["pradeep@morfin.world", "midhlajrahman26@gmail.com"]
+            recipient_list = ["pradeep@morfin.world"]
             send_mail(subject, message, from_email, recipient_list, fail_silently=False)
             
             whatsapp_message = (
