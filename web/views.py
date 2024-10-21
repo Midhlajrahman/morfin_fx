@@ -1,5 +1,8 @@
 from django.http import JsonResponse
 from django.shortcuts import get_object_or_404, redirect, render
+from django.core.mail import send_mail
+import urllib.parse
+
 from web.models import FAQ, Team
 
 from .forms import (
@@ -82,31 +85,55 @@ def market_updates(request):
 
 
 def contact(request):
-    form = ContactForm(request.POST or None)
     if request.method == "POST":
+        form = ContactForm(request.POST)
         if form.is_valid():
-            form.save()
-            response_data = {
-                "status": True,
-                "title": "Successfully Submited",
-                "message": "Your message has been sent successfully.",
-            }
-
+            data = form.save(commit=False)
+            data.save()
+            
+            subject = "Contact Enquiry Information"
+            message = (
+                f'Name: {data.name} \n'
+                f'Email: {data.email}\n'
+                f'Phone: {data.phone}\n'
+                f'Subject: {data.subject}\n'
+                f'Message: {data.message}\n'
+            )
+            from_email = "support@morfinfx.com"
+            recipient_list = ["pradeep@morfin.world", "midhlajrahman26@gmail.com"]
+            send_mail(subject, message, from_email, recipient_list, fail_silently=False)
+            
+            whatsapp_message = (
+                f'Name: {data.name} \n'
+                f'Email: {data.email}\n'
+                f'Phone: {data.phone}\n'
+                f'Subject: {data.subject}\n'
+                f'Message: {data.message}\n'
+            )
+            whatsapp_api_url = "https://api.whatsapp.com/send"
+            phone_number = "+971545885502"
+            encoded_message = urllib.parse.quote(whatsapp_message)
+            whatsapp_url = f"{whatsapp_api_url}?phone={phone_number}&text={encoded_message}"
+            
+            return redirect(whatsapp_url)
         else:
-            print(form.errors)
+            error_messages = {field: form.errors[field][0] for field in form.errors}
+            print("Form Validation Error:", error_messages)  
             response_data = {
-                "status": False,
-                "message": str(form.errors),
-                "title": "Form validation error",
+                "status": "false",
+                "title": "Form Validation Error",
+                "message": error_messages,
             }
-        return JsonResponse(response_data)
-    context = {
-        "is_contact": True,
-        "title": "Contact",
-        "form": form,
-        "redirect": True,
-        "is_need_popup_box": True,
-    }
+            return JsonResponse(response_data)
+    else:
+        form = ContactForm()
+        context = {
+            "is_contact": True,
+            "title": "Contact",
+            "form": form,
+            "redirect": True,
+            "is_need_popup_box": True,
+        }
     return render(request, "web/contact.html", context)
 
 
