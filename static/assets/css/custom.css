@@ -130,7 +130,7 @@ body.dark_mode {
 }
 
 .dark_mode .testimonial-active .slick-arrow {
-    background: transparent;
+    background: #378400;
     color: #ffffff;
 
 }
