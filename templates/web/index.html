@@ -255,15 +255,17 @@
             <div class="col-xl-12">
                 <div class="row">
                     {% for instance in blogs %}
+                    <a href="{{ instance.get_absolute_url }}">
                     <div class="col-md-4 mb-3">
                         <div class="card" >
                             <img src="{{ instance.photo.url}}" class="card-img-top" alt="...">
                             <div class="card-body">
                                 <p class="card-text">{{ instance.author }}</p>
-                              <h5 class="card-title mt-3">{{ instance.title }}</h5>
+                              <h5 class="card-title mt-3 text-black">{{ instance.title }}</h5>
                             </div>
                           </div>
                     </div>
+                </a>
                     {% endfor %}
                 </div>
             </div>
@@ -291,13 +293,13 @@
             <h2 class="title">Awards & Recognitions </h2>
             <p>Elevating Excellence Everywhere</p>
         </div>
-        <div class="row justify-content-center row-cols-2 row-cols-md-3 pt-30">
+        <div class="awards-active pt-30">
             {% for award in awards %}
-            <div class="col-sm-6 col-12 wow fadeInLeft" data-wow-duration="2s">
+            <div class="award-slide wow fadeInLeft" data-wow-duration="2s">
                 <div class="categories__item imge_hover_zoom_in">
-                    <div class="text-center">
+                    <div class="text-center ">
                         <img src="{{award.image.url}}"
-                            style="width:200px;height:200px;object-fit: contain;" alt="">
+                             style="width:200px;height:200px;object-fit: contain;" alt="">
                     </div>
                     <h4 class="award-title">{{award.title}}</h4>
                     <span class="courses">{{award.award_name}}</span>
@@ -400,4 +402,6 @@
     loopDataInfinite();
 
 </script>
+
+
 {% endblock %}

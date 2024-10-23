@@ -290,7 +290,6 @@ class Award(models.Model):
     image = models.ImageField(upload_to="award")
     title = models.CharField(max_length=225)
     award_name = models.CharField(max_length=225)
-    is_home = models.BooleanField(default=False)
     
     class Meta:
         db_table = 'award'

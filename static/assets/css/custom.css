@@ -190,3 +190,18 @@ body.dark_mode {
 .point-area .item_card img{
     height: 30px !important;
 }
+
+.award-slide .image-container {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    height: 100%; 
+}
+
+.award-slide .categories__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center; 
+    height: 100%; 
+}

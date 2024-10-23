@@ -35,7 +35,7 @@ def whatsapp(request):
 def index(request):
     instances = Testimonial.objects.filter(is_home_page=True, is_active=True)
     blogs = Blog.objects.filter(is_home_page=True, is_active=True)
-    awards = Award.objects.filter(is_home=True)
+    awards = Award.objects.all()
     context = {"is_index": True, "instances": instances, "awards":awards, "blogs": blogs}
     return render(request, "web/index.html", context)
 
@@ -100,7 +100,7 @@ def contact(request):
                 f'Message: {data.message}\n'
             )
             from_email = "support@morfinfx.com"
-            recipient_list = ["pradeep@morfin.world"]
+            recipient_list = ["pradeep@morfin.world",]
             send_mail(subject, message, from_email, recipient_list, fail_silently=False)
             
             whatsapp_message = (
