@@ -205,3 +205,13 @@ body.dark_mode {
     align-items: center; 
     height: 100%; 
 }
+.point-area .item_card div h6 {
+    color: #000 !important;
+    font-weight: 500 !important;
+
+}
+.forex-section .forex-img img{
+    height: 450px;
+    margin-left: 50px;
+    margin-top: -40px;
+}

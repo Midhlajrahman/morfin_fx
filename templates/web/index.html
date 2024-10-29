@@ -40,7 +40,11 @@
         </div>
         {% endcomment %}
 
-        <div class="slider__item d-flex" data-background="{% static 'assets/img/assets/slider/home_3.webp' %}">
+        <div class="slider__item d-flex">
+            <video autoplay loop muted playsinline class="background-video">
+                <source src="{% static 'assets/img/assets/banner.mp4' %}" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
 
             <div class="container">
                 <div class="row">
@@ -150,94 +154,104 @@
         frameborder="0"></iframe>
 </div>
 
-<!-- points Area -->
-<section class="beginner-area point-area " >
+<!-- Forex trading -->
+<section class="stand-area section_padding_xl pattern_bg point-area forex-section">
+
     <div class="container">
-
-        <div class="row pt-40">
-
-            <div class="col-xl-3 col-lg-3">
-                <a>
-                    <div class="item_card">
-                        <div class="d-flex justify-content-between align-items-center">
-                            <div class="left d-flex align-items-center">
-                                <div class="me-3">
-                                    <i class="circle">
-                                        <img src="{% static 'assets/img/icons/deposit.png' %}" alt="Easy deposit & Quick withdrawal">
-                                    </i>
-                                </div>
-                                <div>
-                                    <h6>Easy deposit & Quick withdrawal</h6>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </a>
+        <div class="row">
+            <div class="col-4 forex-img">
+                <img src="{% static 'assets/img/assets/forex.webp' %}" alt="">
             </div>
+            <div class="col-8">
+                <div class="section__title  mb-20">
+                    <h2 class="title tg-svg">Forex Trading With Zero Commission</h2>
+                </div>
+                <p class="">
+                    Experience hassle-free and efficient trading with Morfin FX, where you can take advantage of a smooth, intuitive platform while paying zero commission. Trade with ease, knowing you’re saving on fees and maximizing your potential returns with every transaction. Morfin FX brings you the perfect blend of convenience and cost-effectiveness.
+                </p>
 
-            <div class="col-xl-3 col-lg-3">
-                <a>
-                    <div class="item_card">
-                        <div class="d-flex justify-content-between align-items-center">
-                            <div class="left d-flex align-items-center">
+                <div class="row pt-40">
 
-                                <div class="me-3">
-                                    <i class="circle">
-                                        <img src="{% static 'assets/img/icons/support.png' %}" alt="24x5 Technical support">
-                                    </i>
-                                </div>
-                                <div>
-                                    <h6>24x5 Technical support</h6>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-
-            <div class="col-xl-3 col-lg-3">
-                <a>
-                    <div class="item_card">
-                        <div class="d-flex justify-content-between align-items-center">
-                            <div class="left d-flex align-items-center">
-
-                                <div class="me-3">
-                                    <i class="circle">
-                                        <img src="{% static 'assets/img/icons/relationship.png' %}" alt="Personal relationship manager">
-                                    </i>
-                                </div>
-                                <div>
-                                    <h6>Personal relationship manager</h6>
+                    <div class="col-xl-6 col-lg-6">
+                        <a>
+                            <div class="item_card">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="left d-flex align-items-center">
+                                        <div class="me-3">
+                                            <i class="circle">
+                                                <img src="{% static 'assets/img/icons/deposit.png' %}" alt="Easy deposit & Quick withdrawal">
+                                            </i>
+                                        </div>
+                                        <div>
+                                            <h6>Easy deposit & Quick withdrawal</h6>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
+                        </a>
                     </div>
-                </a>
-            </div>
-
-            <div class="col-xl-3 col-lg-3">
-                <a>
-                    <div class="item_card">
-                        <div class="d-flex justify-content-between align-items-center">
-                            <div class="left d-flex align-items-center">
-
-                                <div class="me-3">
-                                    <i class="circle">
-                                        <img src="{% static 'assets/img/icons/guidance.png' %}" alt="Webinars & Guidance">
-                                    </i>
-                                </div>
-                                <div>
-                                    <h6>Webinars & Guidance</h6>
+        
+                    <div class="col-xl-6 col-lg-6">
+                        <a>
+                            <div class="item_card">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="left d-flex align-items-center">
+        
+                                        <div class="me-3">
+                                            <i class="circle">
+                                                <img src="{% static 'assets/img/icons/support.png' %}" alt="24x5 Technical support">
+                                            </i>
+                                        </div>
+                                        <div>
+                                            <h6>24x5 Technical support</h6>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
+                        </a>
                     </div>
-                </a>
+        
+                    <div class="col-xl-6 col-lg-6">
+                        <a>
+                            <div class="item_card">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="left d-flex align-items-center">
+        
+                                        <div class="me-3">
+                                            <i class="circle">
+                                                <img src="{% static 'assets/img/icons/relationship.png' %}" alt="Personal relationship manager">
+                                            </i>
+                                        </div>
+                                        <div>
+                                            <h6>Personal relationship manager</h6>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+        
+                    <div class="col-xl-6 col-lg-6">
+                        <a href="https://wa.me/+971586259739" target="_blank">
+                            <div class="item_card">
+                                <div class="d-flex align-items-center justify-content-center">
+                                    <div class="left d-flex align-items-center">
+                                        <div>
+                                            <h6 class="me-3">Know More </h6>
+                                        </div>
+                                        <i class="fa fa-arrow-right ms-3"></i>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 </section>
-<!-- points Area end-->
+<!-- Forex trading end-->
 
 {% include 'web/includes/get_started.html' %}
 
