@@ -177,7 +177,7 @@ body.dark_mode {
 }
 
 .point-area .item_card div h6{
-    font-size: 15px !important;
+    font-size: 18px !important;
 }
 .point-area .item_card {
     color: #000;
@@ -214,4 +214,19 @@ body.dark_mode {
     height: 450px;
     margin-left: 50px;
     margin-top: -40px;
+}
+.forex-section p{
+ font-size: 18px !important;
+}
+.slider_btn{
+    color: white !important;
+}
+.forex-section{
+    padding-bottom: 30px !important;
+}
+.service_section_detail h5{
+    font-size: 27px !important;
+}
+.service_section_detail p {
+    font-size: 18px !important;
 }

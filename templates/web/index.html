@@ -255,41 +255,6 @@
 
 {% include 'web/includes/get_started.html' %}
 
-<!-- blog Area -->
-{% if blogs %}
-<section class="award  section_padding_md " >
-    <div class="container">
-        <div class="section__title text-center wow fadeInDown" data-wow-duration="2s">
-            <h2 class="title">Step into the Financial Arena: Tips, Trends, and Market Insights</h2>
-            <a href="{% url "web:blogs" %}"><p>Read more articles <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="none" viewBox="0 0 20 20">
-                <path stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M7.083 4.167 12.916 10l-5.833 5.834"></path>
-            </svg></p></a>
-        </div>
-        <div class="row justify-content-center pt-30">
-            <div class="col-xl-12">
-                <div class="row">
-                    {% for instance in blogs %}
-                    <a href="{{ instance.get_absolute_url }}">
-                    <div class="col-md-4 mb-3">
-                        <div class="card" >
-                            <img src="{{ instance.photo.url}}" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <p class="card-text">{{ instance.author }}</p>
-                              <h5 class="card-title mt-3 text-black">{{ instance.title }}</h5>
-                            </div>
-                          </div>
-                    </div>
-                </a>
-                    {% endfor %}
-                </div>
-            </div>
-        </div>
-    </div>
-
-</section>
-{% endif %}
-<!-- blog Area-end -->
-
 <!-- registered countries -->
 <section class="section_padding_md wow fadeInRight" data-wow-duration="5s">
     <div class="section__title text-center mb-30">
