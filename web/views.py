@@ -387,23 +387,49 @@ def vacancies_application(request, pk):
 
 
 def upload_cv(request):
-    form = ResumeForm(request.POST or None, request.FILES or None)
     if request.method == "POST":
+        form = ResumeForm(request.POST, request.FILES)
         if form.is_valid():
-            form.save()
-            response_data = {
-                "status": True,
-                "title": "Successfully Submited",
-                "message": "Your CV has been sent successfully.",
-            }
+            data = form.save(commit=False)
+            data.save()
+            
+            subject = "Career Enquiry Information"
+            message = (
+                f'Name: {data.name} \n'
+                f'Email: {data.email}\n'
+                f'Phone: {data.phone}\n'
+                f'Resume: https://morfin.geany.website/{data.resume.url}\n'
+                f'Description: {data.description}\n'
+            )
+            from_email = "support@morfinfx.com"
+            recipient_list = ["pradeep@morfin.world",]
+            send_mail(subject, message, from_email, recipient_list, fail_silently=False)
+            
+            whatsapp_message = (
+                f'Name: {data.name} \n'
+                f'Email: {data.email}\n'
+                f'Phone: {data.phone}\n'
+                f'Resume: https://morfin.geany.website/{data.resume.url}\n'
+                f'Description: {data.description}\n'
+            )
+            whatsapp_api_url = "https://api.whatsapp.com/send"
+            phone_number = "+971545885502"
+            encoded_message = urllib.parse.quote(whatsapp_message)
+            whatsapp_url = f"{whatsapp_api_url}?phone={phone_number}&text={encoded_message}"
+            
+            return redirect(whatsapp_url)
         else:
+            error_messages = {field: form.errors[field][0] for field in form.errors}
+            print("Form Validation Error:", error_messages)  
             response_data = {
-                "status": False,
-                "message": str(form.errors),
-                "title": "Form validation error",
+                "status": "false",
+                "title": "Form Validation Error",
+                "message": error_messages,
             }
-        return JsonResponse(response_data)
-    context = {"is_upload_cv": True, "is_career": True, "form": form}
+            return JsonResponse(response_data)
+    else:
+        form = ResumeForm()
+        context = {"is_upload_cv": True, "is_career": True, "form": form}
     return render(request, "web/career/upload_cv.html", context)
 
 

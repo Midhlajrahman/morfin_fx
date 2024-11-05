@@ -144,7 +144,7 @@ class Resume(models.Model):
     name = models.CharField(max_length=128)
     email = models.EmailField(blank=True, null=True)
     phone = models.CharField(max_length=128)
-    resume = models.FileField(upload_to="testimonial/video", blank=True, null=True)
+    resume = models.FileField(upload_to="resume/", blank=True, null=True)
     description = models.TextField("What kind of Job you are looking for?")
 
     class Meta:
