@@ -8,8 +8,8 @@
 		// Retrieve the dark mode state from localStorage
 		const isDarkMode = localStorage.getItem("darkMode");
 	
-		// If the dark mode state is not set in localStorage, default to dark mode
-		if (isDarkMode === null || isDarkMode === "true") {
+		// Default to light mode if the dark mode state is not set in localStorage
+		if (isDarkMode === "true") {
 			body.classList.add("dark_mode");
 			updateButtonState("dark");
 		} else {

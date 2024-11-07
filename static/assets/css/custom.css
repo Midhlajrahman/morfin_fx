@@ -230,3 +230,6 @@ body.dark_mode {
 .service_section_detail p {
     font-size: 18px !important;
 }
+.tgmenu__navbar-wrap ul li .sub-menu{
+    z-index: 30 !important;
+}
