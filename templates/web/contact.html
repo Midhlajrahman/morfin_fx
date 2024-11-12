@@ -117,7 +117,15 @@
                             <button type="submit" class="btn btn-primary w-100">Send Message</button>
                         </div>
                     </form>
-                    <p class=" mb-0"></p>
+                    <p class="mb-0">
+                        {% if form.errors %}
+                            {% for field, errors in form.errors.items %}
+                                {% for error in errors %}
+                                    {{ error }}<br>
+                                {% endfor %}
+                            {% endfor %}
+                        {% endif %}
+                    </p>
                 </div>
             </div>
         </div>
