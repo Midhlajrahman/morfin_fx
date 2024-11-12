@@ -103,22 +103,15 @@ def contact(request):
             recipient_list = ["pradeep@morfin.world",]
             send_mail(subject, message, from_email, recipient_list, fail_silently=False)
             
-            whatsapp_message = (
-                f'Name: {data.name} \n'
-                f'Email: {data.email}\n'
-                f'Phone: {data.phone}\n'
-                f'Subject: {data.subject}\n'
-                f'Message: {data.message}\n'
-            )
-            whatsapp_api_url = "https://api.whatsapp.com/send"
-            phone_number = "+971586259739"
-            encoded_message = urllib.parse.quote(whatsapp_message)
-            whatsapp_url = f"{whatsapp_api_url}?phone={phone_number}&text={encoded_message}"
-            
-            return redirect(whatsapp_url)
+            response_data = {
+                "status": "true",
+                "title": "Message Sent Successfully",
+                "message": "Thank you for reaching out! We will get back to you soon.",
+            }
+            return JsonResponse(response_data)
         else:
             error_messages = {field: form.errors[field][0] for field in form.errors}
-            print("Form Validation Error:", error_messages)  
+            print("Form Validation Error:", error_messages)
             response_data = {
                 "status": "false",
                 "title": "Form Validation Error",
@@ -398,27 +391,21 @@ def upload_cv(request):
                 f'Name: {data.name} \n'
                 f'Email: {data.email}\n'
                 f'Phone: {data.phone}\n'
-                f'Resume: https://morfin.geany.website/{data.resume.url}\n'
+                f'Resume: https://morfinfx.com/{data.resume.url}\n'
                 f'Description: {data.description}\n'
             )
             from_email = "support@morfinfx.com"
             recipient_list = ["pradeep@morfin.world",]
             send_mail(subject, message, from_email, recipient_list, fail_silently=False)
             
-            whatsapp_message = (
-                f'Name: {data.name} \n'
-                f'Email: {data.email}\n'
-                f'Phone: {data.phone}\n'
-                f'Resume: https://morfin.geany.website/{data.resume.url}\n'
-                f'Description: {data.description}\n'
-            )
-            whatsapp_api_url = "https://api.whatsapp.com/send"
-            phone_number = "+971586259739"
-            encoded_message = urllib.parse.quote(whatsapp_message)
-            whatsapp_url = f"{whatsapp_api_url}?phone={phone_number}&text={encoded_message}"
-            
-            return redirect(whatsapp_url)
+            response_data = {
+                "status": "true",
+                "title": "Submitted",
+                "message": "Your resume has been successfully submitted.",
+            }
+            return JsonResponse(response_data)
         else:
+            # Handle form errors
             error_messages = {field: form.errors[field][0] for field in form.errors}
             print("Form Validation Error:", error_messages)  
             response_data = {
