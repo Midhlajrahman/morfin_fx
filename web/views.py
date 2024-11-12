@@ -111,7 +111,7 @@ def contact(request):
                 f'Message: {data.message}\n'
             )
             whatsapp_api_url = "https://api.whatsapp.com/send"
-            phone_number = "+971545885502"
+            phone_number = "+971586259739"
             encoded_message = urllib.parse.quote(whatsapp_message)
             whatsapp_url = f"{whatsapp_api_url}?phone={phone_number}&text={encoded_message}"
             
@@ -413,7 +413,7 @@ def upload_cv(request):
                 f'Description: {data.description}\n'
             )
             whatsapp_api_url = "https://api.whatsapp.com/send"
-            phone_number = "+971545885502"
+            phone_number = "+971586259739"
             encoded_message = urllib.parse.quote(whatsapp_message)
             whatsapp_url = f"{whatsapp_api_url}?phone={phone_number}&text={encoded_message}"
             

@@ -45,7 +45,10 @@
                                         <div class="col-12">
                                             <div class="form-grp">
                                                 <label for="cv">Upload CV</label>
-                                                {{form.resume}}
+                                                {{form.resume}} 
+                                                <div id="resumeError" style="color: red; display: none;">
+                                                    Please upload your resume.
+                                                </div>
                                             </div>
                                         </div>
 
@@ -58,7 +61,7 @@
 
                                     </div>
                                     <div class="text-center">
-                                        <button type="submit" class="btn w-100 btn-primary">Submit Application</button>
+                                        <button type="submit" class="btn w-100 btn-primary" onclick="validateForm(event)">Submit Application</button>
                                     </div>
 
                                 </form>
@@ -73,4 +76,18 @@
     </section>
     <!-- cv-area-end -->
 </section>
+
+<script>
+    function validateForm(event) {
+        const resumeInput = document.querySelector('#id_resume'); 
+        const resumeError = document.querySelector('#resumeError');
+        
+        if (!resumeInput.value) {
+            event.preventDefault();
+            resumeError.style.display = 'block'; 
+        } else {
+            resumeError.style.display = 'none';
+        }
+    }
+</script>
 {% endblock content %}

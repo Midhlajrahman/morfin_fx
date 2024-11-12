@@ -210,11 +210,7 @@ body.dark_mode {
     font-weight: 500 !important;
 
 }
-.forex-section .forex-img img{
-    height: 450px !important;
-    margin-left: 50px !important;
-    margin-top: -40px !important;
-}
+
 .forex-section p{
  font-size: 18px !important;
 }
@@ -232,4 +228,13 @@ body.dark_mode {
 }
 .tgmenu__navbar-wrap ul li .sub-menu{
     z-index: 30 !important;
+}
+
+.stand-area .forex-img img{
+    height: 450px !important;
+    margin-left: 50px !important;
+    margin-top: -40px !important;
+}
+.categories__item .award-title{
+    margin-bottom: 0rem !important;
 }
