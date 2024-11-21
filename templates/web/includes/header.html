@@ -54,7 +54,9 @@
                                             <li class="{% if is_upload_cv %} active{% endif %}"><a href="{% url 'web:upload_cv' %}"> Upload CV</a></li>
                                         </ul>
                                     </li>
-                                    <li class="{% if is_blogs %} active{% endif %}"><a href="{% url 'web:blogs' %}">Blog</a></li>
+                                    <li class="{% if is_blogs %} active{% endif %}">
+                                        <a href="https://blogs.morfinfx.com" target="_blank">Blog</a>
+                                    </li>
                                     <li class="{% if is_contact %} active{% endif %}"><a href="{% url 'web:contact' %}">Contact</a></li>
 
                                 </ul>
